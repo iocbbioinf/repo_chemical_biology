@@ -4,6 +4,8 @@
 
 This codebase was created following [this tutorial](https://nrp-cz.github.io/docs/installation/create_instance).
 
+Destination repo: https://github.com/iocbbioinf/repo_chemical_biology
+
 ## ./run.sh upgrade or install fails with error
 
 ```
