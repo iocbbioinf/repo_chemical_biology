@@ -18,7 +18,7 @@ dependencies = [
 #    "oarepo-communities==5.*",
 #    "oarepo-dashboard==1.*",
 #    "oarepo-doi==1.*",
-     "oarepo-glitchtip==1.*",
+    "oarepo-glitchtip==1.*",
 #    "oarepo-global-search==1.*",
 #    "oarepo-requests==2.*",
 #    "oarepo-vocabularies==2.*",
@@ -29,6 +29,7 @@ requires-python = ">=3.13,<3.15"
 [project.entry-points."invenio_assets.webpack"]
 i18n = "i18n.webpack:theme"
 components = "ui.components.webpack:theme"
+ui_spectrum = "ui.spectrum.webpack:theme"
 
 [project.entry-points."invenio_i18n.translations"]
 translations = "i18n"
@@ -36,10 +37,23 @@ translations = "i18n"
 [project.entry-points."invenio_db.alembic"]
 repository = "common:alembic"
 
+[project.entry-points."invenio_base.blueprints"]
+ui_spectrum = "ui.spectrum:create_blueprint"
+
+[project.entry-points."invenio_base.finalize_app"]
+ui_spectrum = "ui.spectrum:finalize_app"
+
 [tool.uv.build-backend]
 module-root = ""
-module-name = ["common", "i18n", "ui"]
+module-name = [
+    "common",
+    "i18n",
+    "ui",
+    "spectrum",
+]
 
 [build-system]
-requires = ["uv_build>=0.8.7,<0.9.0"]
+requires = [
+    "uv_build>=0.8.7,<0.9.0",
+]
 build-backend = "uv_build"
