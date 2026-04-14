@@ -7,6 +7,7 @@ from invenio_i18n import lazy_gettext as _
 from invenio_records_permissions.generators import AuthenticatedUser
 from oarepo_model.api import model
 from oarepo_model.customizations import PrependMixin, AddMetadataExport
+from oarepo_model.customizations.patch_json_file import PatchJSONFile
 from oarepo_model.model import ModelMixin
 from oarepo_model.presets.drafts import drafts_preset
 from oarepo_model.presets.records_resources import records_resources_preset
@@ -14,7 +15,9 @@ from oarepo_model.presets.ui_links import ui_links_preset
 from oarepo_model.datatypes.registry import from_yaml
 from oarepo_rdm.model.presets import rdm_complete_preset
 
+from .datatypes import DATATYPES
 from .serializers import DataCiteJSONSerializer
+from .similarity import SimilaritySearchResourceMixin, SimilaritySearchServiceMixin
 
 class SpectrumPermissionPolicyMixin(ModelMixin):
     """Custom permission policy for spectrum."""
@@ -34,7 +37,8 @@ spectrum_model = model(
 
     ],
     types=[
-        from_yaml("metadata.yaml", __file__)
+        DATATYPES,
+        from_yaml("metadata.yaml", __file__),
     ],
     metadata_type="Metadata",
     customizations=[
@@ -45,7 +49,11 @@ spectrum_model = model(
         # specify the keyword "Invenio repository development" inside the subject or
         # mail body of the request.
         # TODO: remove this customization if you use oarepo-communities for RDM 14
-        PrependMixin("PermissionPolicy", SpectrumPermissionPolicyMixin), 
+        PrependMixin("PermissionPolicy", SpectrumPermissionPolicyMixin),
+        PrependMixin("RecordResource", SimilaritySearchResourceMixin),
+        PrependMixin("RecordService", SimilaritySearchServiceMixin),
+        PatchJSONFile("record-mapping", {"settings": {"index": {"knn": True}}}),
+        PatchJSONFile("draft-mapping", {"settings": {"index": {"knn": True}}}),
 
         # export for datacite
         AddMetadataExport(
