@@ -1,0 +1,340 @@
+- id: MS:1000526
+  title:
+    en: Waters raw format
+  props:
+    psi_ms_accession: MS:1000526
+  description:
+    en: Waters data file format found in a Waters RAW directory, generated from an
+      MS acquisition.
+- id: MS:1000562
+  title:
+    en: ABI WIFF format
+  props:
+    psi_ms_accession: MS:1000562
+  description:
+    en: Applied Biosystems WIFF file format.
+- id: MS:1000563
+  title:
+    en: Thermo RAW format
+  props:
+    psi_ms_accession: MS:1000563
+  description:
+    en: Thermo Scientific RAW file format.
+- id: MS:1000564
+  title:
+    en: PSI mzData format
+  props:
+    psi_ms_accession: MS:1000564
+  description:
+    en: Proteomics Standards Initiative mzData file format.
+- id: MS:1000565
+  title:
+    en: Micromass PKL format
+  props:
+    psi_ms_accession: MS:1000565
+  description:
+    en: Micromass PKL file format.
+- id: MS:1000566
+  title:
+    en: ISB mzXML format
+  props:
+    psi_ms_accession: MS:1000566
+  description:
+    en: Institute of Systems Biology mzXML file format.
+- id: MS:1000567
+  title:
+    en: Bruker/Agilent YEP format
+  props:
+    psi_ms_accession: MS:1000567
+  description:
+    en: Bruker/Agilent YEP file format.
+- id: MS:1000584
+  title:
+    en: mzML format
+  props:
+    psi_ms_accession: MS:1000584
+  description:
+    en: Proteomics Standards Initiative mzML file format.
+- id: MS:1000613
+  title:
+    en: DTA format
+  props:
+    psi_ms_accession: MS:1000613
+  description:
+    en: SEQUEST DTA file format.
+- id: MS:1000614
+  title:
+    en: ProteinLynx Global Server mass spectrum XML format
+  props:
+    psi_ms_accession: MS:1000614
+  description:
+    en: Peak list file format used by ProteinLynx Global Server.
+- id: MS:1000740
+  title:
+    en: parameter file
+  props:
+    psi_ms_accession: MS:1000740
+  description:
+    en: Parameter file used to configure the acquisition of raw data on the instrument.
+- id: MS:1000742
+  title:
+    en: Bioworks SRF format
+  props:
+    psi_ms_accession: MS:1000742
+  description:
+    en: Thermo Finnigan SRF file format.
+- id: MS:1000815
+  title:
+    en: Bruker BAF format
+  props:
+    psi_ms_accession: MS:1000815
+  description:
+    en: Bruker BAF raw file format.
+- id: MS:1000816
+  title:
+    en: Bruker U2 format
+  props:
+    psi_ms_accession: MS:1000816
+  description:
+    en: Bruker HyStar U2 file format.
+- id: MS:1000825
+  title:
+    en: Bruker FID format
+  props:
+    psi_ms_accession: MS:1000825
+  description:
+    en: Bruker FID file format.
+- id: MS:1000930
+  title:
+    en: Shimadzu Biotech database entity
+  props:
+    psi_ms_accession: MS:1000930
+  description:
+    en: Shimadzu Biotech format.
+- id: MS:1001062
+  title:
+    en: Mascot MGF format
+  props:
+    psi_ms_accession: MS:1001062
+  description:
+    en: Mascot MGF file format.
+- id: MS:1001185
+  title:
+    en: Mobilion MBI format
+  props:
+    psi_ms_accession: MS:1001185
+  description:
+    en: Mobilion MBI file format.
+- id: MS:1001245
+  title:
+    en: PerSeptive PKS format
+  props:
+    psi_ms_accession: MS:1001245
+  description:
+    en: PerSeptive peak list file format.
+- id: MS:1001246
+  title:
+    en: SCIEX API III format
+  props:
+    psi_ms_accession: MS:1001246
+  description:
+    en: PE SCIEX peak list file format.
+- id: MS:1001247
+  title:
+    en: Bruker XML format
+  props:
+    psi_ms_accession: MS:1001247
+  description:
+    en: Bruker data exchange XML format.
+- id: MS:1001369
+  title:
+    en: text format
+  props:
+    psi_ms_accession: MS:1001369
+  description:
+    en: Simple text file format of &quot;m/z [intensity]&quot; values for a PMF (or
+      single MS2) search.
+- id: MS:1001463
+  title:
+    en: Phenyx XML format
+  props:
+    psi_ms_accession: MS:1001463
+  description:
+    en: Phenyx open XML file format.
+- id: MS:1001466
+  title:
+    en: MS2 format
+  props:
+    psi_ms_accession: MS:1001466
+  description:
+    en: MS2 file format for MS2 spectral data.
+- id: MS:1001481
+  title:
+    en: SCIEX TOF/TOF database
+  props:
+    psi_ms_accession: MS:1001481
+  description:
+    en: Applied Biosystems/MDS Analytical Technologies TOF/TOF instrument database.
+- id: MS:1001509
+  title:
+    en: Agilent MassHunter format
+  props:
+    psi_ms_accession: MS:1001509
+  description:
+    en: A data file format found in an Agilent MassHunter directory which contains
+      raw data acquired by an Agilent mass spectrometer.
+- id: MS:1001527
+  title:
+    en: Proteinscape spectra
+  props:
+    psi_ms_accession: MS:1001527
+  description:
+    en: Spectra from Bruker/Protagen Proteinscape database.
+- id: MS:1001560
+  title:
+    en: SCIEX TOF/TOF T2D format
+  props:
+    psi_ms_accession: MS:1001560
+  description:
+    en: Applied Biosystems/MDS Analytical Technologies TOF/TOF instrument export format.
+- id: MS:1001881
+  title:
+    en: mz5 format
+  props:
+    psi_ms_accession: MS:1001881
+  description:
+    en: mz5 file format, modelled after mzML.
+- id: MS:1002302
+  title:
+    en: Bruker Container format
+  props:
+    psi_ms_accession: MS:1002302
+  description:
+    en: Bruker Container raw file format.
+- id: MS:1002385
+  title:
+    en: SCiLS Lab format
+  props:
+    psi_ms_accession: MS:1002385
+  description:
+    en: SCiLS Lab file format.
+- id: MS:1002441
+  title:
+    en: Andi-MS format
+  props:
+    psi_ms_accession: MS:1002441
+  description:
+    en: AIA Analytical Data Interchange file format for mass spectrometry data.
+- id: MS:1002531
+  title:
+    en: UIMF format
+  props:
+    psi_ms_accession: MS:1002531
+  description:
+    en: SQLite-based file format created at Pacific Northwest National Lab. It stores
+      an intermediate analysis of ion-mobility mass spectrometry data.
+- id: MS:1002597
+  title:
+    en: MS1 format
+  props:
+    psi_ms_accession: MS:1002597
+  description:
+    en: MS1 file format for MS1 spectral data.
+- id: MS:1002817
+  title:
+    en: Bruker TDF format
+  props:
+    psi_ms_accession: MS:1002817
+  description:
+    en: Bruker TDF raw file format.
+- id: MS:1002838
+  title:
+    en: mzMLb format
+  props:
+    psi_ms_accession: MS:1002838
+  description:
+    en: mzMLb file format, mzML encapsulated within HDF5.
+- id: MS:1002899
+  title:
+    en: msalign format
+  props:
+    psi_ms_accession: MS:1002899
+  description:
+    en: msalign file format.
+- id: MS:1002900
+  title:
+    en: feature format
+  props:
+    psi_ms_accession: MS:1002900
+  description:
+    en: TopFD feature file format.
+- id: MS:1002966
+  title:
+    en: chrom format
+  props:
+    psi_ms_accession: MS:1002966
+  description:
+    en: The Lipid Data Analyzer native chrom format.
+- id: MS:1002996
+  title:
+    en: Andromeda:apl file format
+  props:
+    psi_ms_accession: MS:1002996
+  description:
+    en: Peak list file format of the Andromeda search engine.
+- id: MS:1003009
+  title:
+    en: Shimadzu Biotech LCD format
+  props:
+    psi_ms_accession: MS:1003009
+  description:
+    en: Shimadzu Biotech LCD file format.
+- id: MS:1003282
+  title:
+    en: Bruker TSF format
+  props:
+    psi_ms_accession: MS:1003282
+  description:
+    en: Bruker TSF raw file format.
+- id: MS:1003374
+  title:
+    en: Open Chromatography Binary OCB format
+  props:
+    psi_ms_accession: MS:1003374
+  description:
+    en: ChemClipse/OpenChrom file format.
+- id: MS:1003448
+  title:
+    en: SCIEX WIFF2 format
+  props:
+    psi_ms_accession: MS:1003448
+  description:
+    en: SCIEX WIFF2 file format.
+- id: MS:1003610
+  title:
+    en: mzPeak format
+  props:
+    psi_ms_accession: MS:1003610
+  description:
+    en: Proteomics Standards Initiatve mzPeak file format.
+- id: MS:1003611
+  title:
+    en: imzML format
+  props:
+    psi_ms_accession: MS:1003611
+  description:
+    en: IMSIS imzML imaging file format.
+- id: MS:1003810
+  title:
+    en: Ionoptika V1 format
+  props:
+    psi_ms_accession: MS:1003810
+  description:
+    en: Ionoptika data format generated by J105 TOF-SIMS instrument.
+- id: MS:1003811
+  title:
+    en: Ionoptika V3 format
+  props:
+    psi_ms_accession: MS:1003811
+  description:
+    en: Ionoptika data format generated by J105 TOF-SIMS instrument.

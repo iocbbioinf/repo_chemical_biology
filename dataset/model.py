@@ -1,5 +1,5 @@
 """
-A mass spectrum record
+Mass Spectrum Dataset
 """
 from __future__ import annotations
 
@@ -7,39 +7,34 @@ from invenio_i18n import lazy_gettext as _
 from invenio_records_permissions.generators import AuthenticatedUser
 from oarepo_model.api import model
 from oarepo_model.customizations import PrependMixin, AddMetadataExport
-from oarepo_model.customizations.patch_json_file import PatchJSONFile
-from oarepo_model.customizations.high_level.index_mapping import PatchIndexPropertyMapping
 from oarepo_model.model import ModelMixin
 from oarepo_model.presets.drafts import drafts_preset
 from oarepo_model.presets.records_resources import records_resources_preset
 from oarepo_model.presets.ui_links import ui_links_preset
 from oarepo_model.datatypes.registry import from_yaml
-from oarepo_rdm.model.presets import rdm_complete_preset
+from ccmm_invenio.models import ccmm_production_preset_1_1_0
 
-from .datatypes import DATATYPES
 from .serializers import DataCiteJSONSerializer
-from .similarity import SimilaritySearchResourceMixin, SimilaritySearchServiceMixin
 
-class SpectrumPermissionPolicyMixin(ModelMixin):
-    """Custom permission policy for spectrum."""
+class DatasetPermissionPolicyMixin(ModelMixin):
+    """Custom permission policy for dataset."""
 
     can_view_deposit_page = [AuthenticatedUser()]
 
 
 # TODO: Consider letting users add an image/icon for the model,
 # so that the deposit model selection page is more visually appealing.
-spectrum_model = model(
-    "spectrum",
+dataset_model = model(
+    "dataset",
     version="1.0.0",
-    description="A mass spectrum record",
+    description="Mass Spectrum Dataset",
     presets=[
 
-        rdm_complete_preset
+        ccmm_production_preset_1_1_0
 
     ],
     types=[
-        DATATYPES,
-        from_yaml("metadata.yaml", __file__),
+        from_yaml("metadata.yaml", __file__)
     ],
     metadata_type="Metadata",
     customizations=[
@@ -50,19 +45,7 @@ spectrum_model = model(
         # specify the keyword "Invenio repository development" inside the subject or
         # mail body of the request.
         # TODO: remove this customization if you use oarepo-communities for RDM 14
-        PrependMixin("PermissionPolicy", SpectrumPermissionPolicyMixin),
-        PrependMixin("RecordResource", SimilaritySearchResourceMixin),
-        PrependMixin("RecordService", SimilaritySearchServiceMixin),
-        PatchJSONFile("record-mapping", {"settings": {"index": {"knn": True}}}),
-        PatchJSONFile("draft-mapping", {"settings": {"index": {"knn": True}}}),
-        # Exclude binary spectral data from OpenSearch indexing.
-        # The data is stored in PostgreSQL (_source) and returned by the API,
-        # but "enabled: false" prevents OpenSearch from parsing, indexing or
-        # building doc_values for anything inside binary_data_array_list.
-        PatchIndexPropertyMapping(
-            "metadata.binary_data_array_list",
-            {"type": "object", "enabled": False},
-        ),
+        PrependMixin("PermissionPolicy", DatasetPermissionPolicyMixin), 
 
         # export for datacite
         AddMetadataExport(
@@ -73,6 +56,6 @@ spectrum_model = model(
         ),
     ],
     configuration={
-        "ui_blueprint_name": "spectrum_ui"
+        "ui_blueprint_name": "dataset_ui"
     }
 )

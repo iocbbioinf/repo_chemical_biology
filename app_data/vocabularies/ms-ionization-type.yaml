@@ -1,0 +1,476 @@
+- id: MS:1000071
+  title:
+    en: chemical ionization
+  props:
+    psi_ms_accession: MS:1000071
+  description:
+    en: 'The formation of a new ion by the reaction of a neutral species with an ion.
+      The process may involve transfer of an electron, a proton or other charged species
+      between the reactants. When a positive ion results from chemical ionization
+      the term may be used without qualification. When a negative ion '
+- id: MS:1000073
+  title:
+    en: electrospray ionization
+  props:
+    psi_ms_accession: MS:1000073
+  description:
+    en: A process in which ionized species in the gas phase are produced from an analyte-containing
+      solution via highly charged fine droplets, by means of spraying the solution
+      from a narrow-bore needle tip at atmospheric pressure in the presence of a high
+      electric field. When a pressurized gas is used to a
+- id: MS:1000397
+  title:
+    en: microelectrospray
+  props:
+    psi_ms_accession: MS:1000397
+  description:
+    en: Electrospray ionization at a solvent flow rate of 300-800 nL/min where the
+      flow is a result of a mechanical pump. See nanoelectrospray.
+- id: MS:1000398
+  title:
+    en: nanoelectrospray
+  props:
+    psi_ms_accession: MS:1000398
+  description:
+    en: Electrospray ionization at a flow rate less than ~25 nL/min. Nanoelectrospray
+      is synonymous with nanospray. The flow is dependent on the potential on the
+      tip of the electrospray needle and/or a gas pressure to push the sample through
+      the needle. See also electrospray ionization and microelectrospray
+- id: MS:1000074
+  title:
+    en: fast atom bombardment ionization
+  props:
+    psi_ms_accession: MS:1000074
+  description:
+    en: The ionization of any species by the interaction of a focused beam of neutral
+      atoms having a translational energy of several thousand eV with a sample that
+      is typically dissolved in a solvent matrix. See also secondary ionization.
+- id: MS:1000227
+  title:
+    en: multiphoton ionization
+  props:
+    psi_ms_accession: MS:1000227
+  description:
+    en: Photoionization of an atom or molecule in which in two or more photons are
+      absorbed.
+- id: MS:1000240
+  title:
+    en: atmospheric pressure ionization
+  props:
+    psi_ms_accession: MS:1000240
+  description:
+    en: Any ionization process in which ions are formed in the gas phase at atmospheric
+      pressure.
+- id: MS:1000070
+  title:
+    en: atmospheric pressure chemical ionization
+  props:
+    psi_ms_accession: MS:1000070
+  description:
+    en: Chemical ionization that takes place at atmospheric pressure as opposed to
+      the reduced pressure is normally used for chemical ionization.
+- id: MS:1000239
+  title:
+    en: atmospheric pressure matrix-assisted laser desorption ionization
+  props:
+    psi_ms_accession: MS:1000239
+  description:
+    en: Matrix-assisted laser desorption ionization in which the sample target is
+      at atmospheric pressure and the ions formed by the pulsed laser are sampled
+      through a small aperture into the mass spectrometer.
+- id: MS:1000382
+  title:
+    en: atmospheric pressure photoionization
+  props:
+    psi_ms_accession: MS:1000382
+  description:
+    en: Atmospheric pressure chemical ionization in which the reactant ions are generated
+      by photo-ionization.
+- id: MS:1002011
+  title:
+    en: desorption electrospray ionization
+  props:
+    psi_ms_accession: MS:1002011
+  description:
+    en: Combination of electrospray and desorption ionization method that ionizes
+      gases, liquids and solids in open air under atmospheric pressure.
+- id: MS:1003775
+  title:
+    en: secondary electrospray ionization
+  props:
+    psi_ms_accession: MS:1003775
+  description:
+    en: 'Secondary electrospray ionization (SESI) is an atmospheric pressure ionization
+      (API) technique that uses a primary nano-electrospray plume of solvent ions
+      to ionize neutral gaseous molecules in the gas phase via efficient proton transfer
+      reactions. Operating at atmospheric pressure, SESI allows for '
+- id: MS:1000247
+  title:
+    en: desorption ionization
+  props:
+    psi_ms_accession: MS:1000247
+  description:
+    en: The formation of ions from a solid or liquid material after the rapid vaporization
+      of that sample.
+- id: MS:1000075
+  title:
+    en: matrix-assisted laser desorption ionization
+  props:
+    psi_ms_accession: MS:1000075
+  description:
+    en: The formation of gas-phase ions from molecules that are present in a solid
+      or solvent matrix that is irradiated with a pulsed laser. See also laser desorption/ionization.
+- id: MS:1000257
+  title:
+    en: field desorption
+  props:
+    psi_ms_accession: MS:1000257
+  description:
+    en: The formation of gas-phase ions from a material deposited on a solid surface
+      in the presence of a high electric field. Because this process may encompass
+      ionization by field ionization or other mechanisms, it is not recommended as
+      a synonym for field desorption ionization.
+- id: MS:1000387
+  title:
+    en: desorption/ionization on silicon
+  props:
+    psi_ms_accession: MS:1000387
+  description:
+    en: The formation of ions by laser desorption ionization of a sample deposited
+      on a porous silicon surface.
+- id: MS:1000393
+  title:
+    en: laser desorption ionization
+  props:
+    psi_ms_accession: MS:1000393
+  description:
+    en: The formation of gas-phase ions by the interaction of a pulsed laser with
+      a solid or liquid material.
+- id: MS:1000405
+  title:
+    en: surface-assisted laser desorption ionization
+  props:
+    psi_ms_accession: MS:1000405
+  description:
+    en: The formation of gas-phase ions from molecules that are deposited on a particular
+      surface substrate that is irradiated with a pulsed laser. See also matrix-assisted
+      laser desorption ionization.
+- id: MS:1000255
+  title:
+    en: flowing afterglow
+  props:
+    psi_ms_accession: MS:1000255
+  description:
+    en: An ion source immersed in a flow of helium or other inert buffer gas that
+      carries the ions through a meter-long reactor at pressures around 100 Pa.
+- id: MS:1000258
+  title:
+    en: field ionization
+  props:
+    psi_ms_accession: MS:1000258
+  description:
+    en: The removal of electrons from any species by interaction with a high electric
+      field.
+- id: MS:1000259
+  title:
+    en: glow discharge ionization
+  props:
+    psi_ms_accession: MS:1000259
+  description:
+    en: The formation of ions in the gas phase and from solid samples at the cathode
+      by application of a voltage to a low pressure gas.
+- id: MS:1000271
+  title:
+    en: Negative Ion chemical ionization
+  props:
+    psi_ms_accession: MS:1000271
+  description:
+    en: Chemical ionization that results in the formation of negative ions.
+- id: MS:1000272
+  title:
+    en: neutralization reionization mass spectrometry
+  props:
+    psi_ms_accession: MS:1000272
+  description:
+    en: With this technique, m/z selected ions form neutrals by charge transfer to
+      a collision gas or by dissociation. The neutrals are separated from the remaining
+      ions and ionized in collisions with a second gas. This method is used to investigate
+      reaction intermediates and other unstable species.
+- id: MS:1000273
+  title:
+    en: photoionization
+  props:
+    psi_ms_accession: MS:1000273
+  description:
+    en: The ionization of an atom or molecule by a photon, written M + h? ? M^+ +
+      e. The term photon impact is not recommended.
+- id: MS:1000274
+  title:
+    en: pyrolysis mass spectrometry
+  props:
+    psi_ms_accession: MS:1000274
+  description:
+    en: A mass spectrometry technique in which the sample is heated to the point of
+      decomposition and the gaseous decomposition products are introduced into the
+      ion source.
+- id: MS:1000276
+  title:
+    en: resonance enhanced multiphoton ionization
+  props:
+    psi_ms_accession: MS:1000276
+  description:
+    en: Multiphoton ionization in which the ionization cross section is significantly
+      enhanced because the energy of the incident photons is resonant with an intermediate
+      excited state of the neutral species.
+- id: MS:1000380
+  title:
+    en: adiabatic ionization
+  props:
+    psi_ms_accession: MS:1000380
+  description:
+    en: A process whereby an electron is removed from an atom, ion, or molecule to
+      produce an ion in its lowest energy state.
+- id: MS:1000381
+  title:
+    en: associative ionization
+  props:
+    psi_ms_accession: MS:1000381
+  description:
+    en: An ionization process in which two excited atoms or molecules react to form
+      a single positive ion and an electron.
+- id: MS:1000383
+  title:
+    en: autodetachment
+  props:
+    psi_ms_accession: MS:1000383
+  description:
+    en: The formation of a neutral when a negative ion in a discrete state with an
+      energy greater than the detachment threshold loses an electron spontaneously
+      without further interaction with an energy source.
+- id: MS:1000384
+  title:
+    en: autoionization
+  props:
+    psi_ms_accession: MS:1000384
+  description:
+    en: The formation of an ion when an atom or molecule in a discrete state with
+      an energy greater than the ionization threshold loses an electron spontaneously
+      without further interaction with an energy source.
+- id: MS:1000385
+  title:
+    en: charge exchange ionization
+  props:
+    psi_ms_accession: MS:1000385
+  description:
+    en: The interaction of an ion with an atom or molecule in which the charge on
+      the ion is transferred to the neutral without the dissociation of either. Synonymous
+      with charge transfer ionization.
+- id: MS:1000386
+  title:
+    en: chemi-ionization
+  props:
+    psi_ms_accession: MS:1000386
+  description:
+    en: The reaction of a neutral molecule with an internally excited molecule to
+      form an ion. Note that this term is not synonymous with chemical ionization.
+- id: MS:1000388
+  title:
+    en: dissociative ionization
+  props:
+    psi_ms_accession: MS:1000388
+  description:
+    en: The reaction of a gas-phase molecule that results in its decomposition to
+      form products, one of which is an ion.
+- id: MS:1000389
+  title:
+    en: electron ionization
+  props:
+    psi_ms_accession: MS:1000389
+  description:
+    en: The ionization of an atom or molecule by electrons that are typically accelerated
+      to energies between 50 and 150 eV. Usually 70 eV electrons are used to produce
+      positive ions. The term &apos;electron impact&apos; is not recommended.
+- id: MS:1000395
+  title:
+    en: liquid secondary ionization
+  props:
+    psi_ms_accession: MS:1000395
+  description:
+    en: The ionization of any species by the interaction of a focused beam of ions
+      with a sample that is dissolved in a solvent matrix. See also fast atom bombardment
+      and secondary ionization.
+- id: MS:1000399
+  title:
+    en: penning ionization
+  props:
+    psi_ms_accession: MS:1000399
+  description:
+    en: Ionization that occurs through the interaction of two or more neutral gaseous
+      species, at least one of which is internally excited.
+- id: MS:1000400
+  title:
+    en: plasma desorption ionization
+  props:
+    psi_ms_accession: MS:1000400
+  description:
+    en: The ionization of material in a solid sample by bombarding it with ionic or
+      neutral atoms formed as a result of the fission of a suitable nuclide, typically
+      252Cf. Synonymous with fission fragment ionization.
+- id: MS:1000402
+  title:
+    en: secondary ionization
+  props:
+    psi_ms_accession: MS:1000402
+  description:
+    en: The process in which ions are ejected from a sample surface as a result of
+      bombardment by a primary beam of atoms or ions.
+- id: MS:1000403
+  title:
+    en: soft ionization
+  props:
+    psi_ms_accession: MS:1000403
+  description:
+    en: The formation of gas-phase ions without extensive fragmentation.
+- id: MS:1000404
+  title:
+    en: spark ionization
+  props:
+    psi_ms_accession: MS:1000404
+  description:
+    en: The formation of ions from a solid material by an intermittent electrical
+      discharge.
+- id: MS:1000406
+  title:
+    en: surface ionization
+  props:
+    psi_ms_accession: MS:1000406
+  description:
+    en: The ionization of a neutral species when it interacts with a solid surface
+      with an appropriate work function and temperature.
+- id: MS:1000278
+  title:
+    en: surface enhanced laser desorption ionization
+  props:
+    psi_ms_accession: MS:1000278
+  description:
+    en: The formation of ionized species in the gas phase from analytes deposited
+      on a particular surface substrate which is irradiated with a laser beam of which
+      wavelength is absorbed by the surface. See also desorption/ionization on silicon
+      and laser desorption/ionization.
+- id: MS:1000279
+  title:
+    en: surface enhanced neat desorption
+  props:
+    psi_ms_accession: MS:1000279
+  description:
+    en: Matrix-assisted laser desorption ionization in which the matrix is covalently
+      linked to the target surface.
+- id: MS:1000407
+  title:
+    en: thermal ionization
+  props:
+    psi_ms_accession: MS:1000407
+  description:
+    en: The ionization of a neutral species through contact with a high temperature
+      surface.
+- id: MS:1000408
+  title:
+    en: vertical ionization
+  props:
+    psi_ms_accession: MS:1000408
+  description:
+    en: A process in which an electron is removed from or added to a molecule without
+      a change in the positions of the atoms. The resulting ion is typically in an
+      excited vibrational state.
+- id: MS:1000446
+  title:
+    en: fast ion bombardment
+  props:
+    psi_ms_accession: MS:1000446
+  description:
+    en: The ionization of any species by the interaction of a focused beam of ions
+      having a translational energy of several thousand eV with a solid sample.
+- id: MS:1003959
+  title:
+    en: gas cluster ion beam
+  props:
+    psi_ms_accession: MS:1003959
+  description:
+    en: A gas cluster ion beam (GCIB) is an ion source that generates and accelerates
+      large aggregates of gas atoms or molecules to high energies. The low energy
+      per constituent atom minimizes surface damage and molecular fragmentation, making
+      it highly effective for molecular depth profiling and the analys
+- id: MS:1003954
+  title:
+    en: argon gas cluster ion beam
+  props:
+    psi_ms_accession: MS:1003954
+  description:
+    en: Argon gas cluster ion beam (Ar GCIB) bombardment uses a focused beam of large
+      argon cluster ions, typically [Ar500]+ to [Ar10000]+, accelerated to high energies
+      to sputter and generate secondary ions from a surface, enabling molecular depth
+      profiling and imaging of organic and biological materials w
+- id: MS:1003960
+  title:
+    en: liquid metal ion gun
+  props:
+    psi_ms_accession: MS:1003960
+  description:
+    en: A liquid metal ion gun (LMIG) is an ion source that extracts and ionizes a
+      thin layer of liquid metal from a fine heated needle using a high-voltage electric
+      field. It produces a high-brightness, tightly focused beam of metal ions or
+      clusters, enabling high-resolution imaging and analysis in Seconda
+- id: MS:1003958
+  title:
+    en: bismuth liquid metal ion gun
+  props:
+    psi_ms_accession: MS:1003958
+  description:
+    en: Bismuth liquid metal ion gun (Bi LMIG) bombardment uses a focused beam of
+      bismuth ions emitted from a liquid metal ion source to desorb and ionize molecules
+      from a surface. The LMIG source generates a diversity of monomers and clusters,
+      which are filtered prior to the sample in order to select the s
+- id: MS:1003955
+  title:
+    en: singly charged bismuth trimer liquid metal ion gun
+  props:
+    psi_ms_accession: MS:1003955
+  description:
+    en: A beam of singly charged bismuth trimer ([Bi3]+) ions for desorption and ionisation
+      from a surface, providing high spatial resolution imaging and enhanced molecular
+      secondary ion yields compared to monatomic primary ion beams.
+- id: MS:1003956
+  title:
+    en: doubly charged bismuth trimer liquid metal ion gun
+  props:
+    psi_ms_accession: MS:1003956
+  description:
+    en: A beam of doubly charged bismuth trimer ([Bi3]2+) ions for desorption and
+      ionisation from a surface. Ions achieve a higher velocity at a given acceleration
+      voltage compared to singly charged [Bi3]+, resulting in enhanced secondary ion
+      yields for surface analysis.
+- id: MS:1003235
+  title:
+    en: paper spray ionization
+  props:
+    psi_ms_accession: MS:1003235
+  description:
+    en: The ionization of analytes from a piece of paper by applying a solvent and
+      voltage.
+- id: MS:1003248
+  title:
+    en: proton transfer reaction
+  props:
+    psi_ms_accession: MS:1003248
+  description:
+    en: Process to transfer a proton from a hydronium ion (H3O+) to neutral analyte,
+      leading to a protonated analyte, which typically does not lead to fragmentation.
+- id: MS:1003249
+  title:
+    en: proton transfer charge reduction
+  props:
+    psi_ms_accession: MS:1003249
+  description:
+    en: Process to transfer one or more protons from a multiply charged cation (peptide
+      or protein ion) to a proton acceptor anion or neutral basic compound, thereby
+      reducing the charge of the original analyte.

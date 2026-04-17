@@ -1,0 +1,53 @@
+- id: MS:1000571
+  title:
+    en: sum of spectra
+  props:
+    psi_ms_accession: MS:1000571
+  description:
+    en: Spectra Sum.
+- id: MS:1000573
+  title:
+    en: median of spectra
+  props:
+    psi_ms_accession: MS:1000573
+  description:
+    en: Spectra is combined by calculating the median of the spectra.
+- id: MS:1000575
+  title:
+    en: mean of spectra
+  props:
+    psi_ms_accession: MS:1000575
+  description:
+    en: Spectra is combined by calculating the mean of the spectra.
+- id: MS:1000795
+  title:
+    en: no combination
+  props:
+    psi_ms_accession: MS:1000795
+  description:
+    en: Use this term if only one scan was recorded or there is no information about
+      scans available.
+- id: MS:1000235
+  title:
+    en: total ion current chromatogram
+  props:
+    psi_ms_accession: MS:1000235
+  description:
+    en: Chromatogram obtained by plotting the sum of all ion intensities detected
+      in each of a series of mass spectra against the retention time.
+- id: MS:1000627
+  title:
+    en: selected ion current chromatogram
+  props:
+    psi_ms_accession: MS:1000627
+  description:
+    en: Chromatogram obtained by plotting the intensity of a single m/z value against
+      the retention time.
+- id: MS:1000628
+  title:
+    en: basepeak chromatogram
+  props:
+    psi_ms_accession: MS:1000628
+  description:
+    en: Chromatogram obtained by plotting the intensity of the base peak against
+      the retention time.

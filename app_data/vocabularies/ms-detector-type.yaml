@@ -1,0 +1,190 @@
+- id: MS:1000107
+  title:
+    en: channeltron
+  props:
+    psi_ms_accession: MS:1000107
+  description:
+    en: A horn-shaped (or cone-shaped) continuous dynode particle multiplier. The
+      ion strikes the inner surface of the device and induces the production of secondary
+      electrons that in turn impinge on the inner surfaces to produce more secondary
+      electrons. This avalanche effect produces an increase in signal
+- id: MS:1000110
+  title:
+    en: daly detector
+  props:
+    psi_ms_accession: MS:1000110
+  description:
+    en: Detector consisting of a conversion dynode, scintillator and photomultiplier.
+      The metal knob at high potential emits secondary electrons when ions impinge
+      on the surface. The secondary electrons are accelerated onto the scintillator
+      that produces light that is then detected by the photomultiplier de
+- id: MS:1000112
+  title:
+    en: faraday cup
+  props:
+    psi_ms_accession: MS:1000112
+  description:
+    en: A conducting cup or chamber that intercepts a charged particle beam and is
+      electrically connected to a current measuring device.
+- id: MS:1000115
+  title:
+    en: multi-collector
+  props:
+    psi_ms_accession: MS:1000115
+  description:
+    en: A detector system commonly used in inductively coupled plasma mass spectrometers.
+- id: MS:1000116
+  title:
+    en: photomultiplier
+  props:
+    psi_ms_accession: MS:1000116
+  description:
+    en: A detector for conversion of the ion/electron signal into photon(s) which
+      are then amplified and detected.
+- id: MS:1000253
+  title:
+    en: electron multiplier
+  props:
+    psi_ms_accession: MS:1000253
+  description:
+    en: A device to amplify the current of a beam or packet of charged particles or
+      photons by incidence upon the surface of an electrode to produce secondary electrons.
+      The secondary electrons are then accelerated to other electrodes or parts of
+      a continuous electrode to produce further secondary electrons
+- id: MS:1000111
+  title:
+    en: electron multiplier tube
+  props:
+    psi_ms_accession: MS:1000111
+  description:
+    en: A device to amplify the current of a beam or packet of charged particles or
+      photons by incidence upon the surface of an electrode to produce secondary electrons.
+- id: MS:1000345
+  title:
+    en: array detector
+  props:
+    psi_ms_accession: MS:1000345
+  description:
+    en: Detector comprising several ion collection elements, arranged in a line or
+      grid where each element is an individual detector.
+- id: MS:1000114
+  title:
+    en: microchannel plate detector
+  props:
+    psi_ms_accession: MS:1000114
+  description:
+    en: A thin plate that contains a closely spaced array of channels that each act
+      as a continuous dynode particle multiplier. A charged particle, fast neutral
+      particle, or photon striking the plate causes a cascade of secondary electrons
+      that ultimately exits the opposite side of the plate.
+- id: MS:1000621
+  title:
+    en: photodiode array detector
+  props:
+    psi_ms_accession: MS:1000621
+  description:
+    en: An array detector used to record spectra in the ultraviolet and visible region
+      of light.
+- id: MS:1000818
+  title:
+    en: Acquity UPLC PDA
+  props:
+    psi_ms_accession: MS:1000818
+  description:
+    en: Acquity UPLC Photodiode Array Detector.
+- id: MS:1000346
+  title:
+    en: conversion dynode
+  props:
+    psi_ms_accession: MS:1000346
+  description:
+    en: A surface that is held at high potential such that ions striking the surface
+      produce electrons that are subsequently detected.
+- id: MS:1000108
+  title:
+    en: conversion dynode electron multiplier
+  props:
+    psi_ms_accession: MS:1000108
+  description:
+    en: A surface that is held at high potential so that ions striking the surface
+      produce electrons that are subsequently detected.
+- id: MS:1000109
+  title:
+    en: conversion dynode photomultiplier
+  props:
+    psi_ms_accession: MS:1000109
+  description:
+    en: A detector in which ions strike a conversion dynode to produce electrons that
+      in turn generate photons through a phosphorescent screen that are detected by
+      a photomultiplier.
+- id: MS:1000347
+  title:
+    en: dynode
+  props:
+    psi_ms_accession: MS:1000347
+  description:
+    en: One of a series of electrodes in a photomultiplier tube. Such an arrangement
+      is able to amplify the current emitted by the photocathode.
+- id: MS:1000348
+  title:
+    en: focal plane collector
+  props:
+    psi_ms_accession: MS:1000348
+  description:
+    en: A detector for spatially disperse ion beams in which all ions simultaneously
+      impinge on the detector plane.
+- id: MS:1000113
+  title:
+    en: focal plane array
+  props:
+    psi_ms_accession: MS:1000113
+  description:
+    en: An array of detectors for spatially disperse ion beams in which all ions simultaneously
+      impinge on the detector plane.
+- id: MS:1000349
+  title:
+    en: ion-to-photon detector
+  props:
+    psi_ms_accession: MS:1000349
+  description:
+    en: A detector in which ions strike a conversion dynode to produce electrons that
+      in turn strike a phosphor and the resulting photons are detected by a photomultiplier.
+- id: MS:1000350
+  title:
+    en: point collector
+  props:
+    psi_ms_accession: MS:1000350
+  description:
+    en: A detector in which the ion beam is focused onto a point and the individual
+      ions arrive sequentially.
+- id: MS:1000351
+  title:
+    en: postacceleration detector
+  props:
+    psi_ms_accession: MS:1000351
+  description:
+    en: A detector in which the charged particles are accelerated to a high velocity
+      and impinge on a conversion dynode, emitting secondary electrons. The electrons
+      are accelerated onto a phosphor screen, which emits photons that are in turn
+      detected using a photomultiplier or other photon detector.
+- id: MS:1000624
+  title:
+    en: inductive detector
+  props:
+    psi_ms_accession: MS:1000624
+  description:
+    en: Inductive detector.
+- id: MS:1002308
+  title:
+    en: fluorescence detector
+  props:
+    psi_ms_accession: MS:1002308
+  description:
+    en: A detector using a fluorescent signal after excitation with light.
+- id: MS:1000819
+  title:
+    en: Acquity UPLC FLR
+  props:
+    psi_ms_accession: MS:1000819
+  description:
+    en: Acquity UPLC Fluorescence Detector.

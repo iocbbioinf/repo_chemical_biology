@@ -1,17 +1,659 @@
-# Definition of metadata for spectrum. Please do not add ccmm model here,
-# add the ccmm_preset instead.        
+# Definition of metadata for a single Mass Spectrum record.
+# Please do not add ccmm model here; add the ccmm_preset instead.
+#
+# Structure follows mzML 1.1.1 SpectrumType (mzML1.1.1.xsd):
+#
+#   spectrum
+#     @id, @spotID, @index, @defaultArrayLength, @dataProcessingRef, @sourceFileRef
+#     cvParam* / userParam*          ← spectrum-level CV params
+#     scanList
+#       @count + cvParam*            ← spectra-combination method
+#       scan[]
+#         cvParam*                   ← scan attributes, retention time
+#         scanWindowList
+#           scanWindow[]
+#             cvParam*               ← scan window upper/lower limit
+#     precursorList
+#       precursor[]
+#         isolationWindow / cvParam*
+#         selectedIonList / selectedIon[] / cvParam*
+#         activation / cvParam*
+#     productList
+#       product[]
+#         isolationWindow / cvParam*
+#     binaryDataArrayList
+#       binaryDataArray[]
+#         cvParam*                   ← array type, data type, compression
+#         binary (base64)
+#
+# CV term requirements are taken from ms-mapping.xml.
+
+# ---------------------------------------------------------------------------
+# Shared sub-object
+# ---------------------------------------------------------------------------
+
+CvParam:
+  type: object
+  properties:
+    accession:
+      type: keyword
+      label:
+        en: CV term accession
+      help:
+        en: "PSI-MS accession number, e.g. MS:1000514."
+    name:
+      type: keyword
+      label:
+        en: CV term name
+      help:
+        en: "Human-readable PSI-MS term name."
+    value:
+      type: keyword
+      label:
+        en: CV term value
+    unit_accession:
+      type: keyword
+      label:
+        en: Unit CV term accession
+    unit_name:
+      type: keyword
+      label:
+        en: Unit name
+
+# ---------------------------------------------------------------------------
+# Metadata blueprint
+# ---------------------------------------------------------------------------
+
 Metadata:
-  properties:                                                                                                                                                                                                                                                                   
-    title:                                                                                                                                                                                                                                                                      
-      type: fulltext+keyword                                                                                                                                                                                                                                                    
-    attr1:
+  properties:
+    title:
       type: fulltext+keyword
-    languages:                                                                                                                                                                                                                                                                  
-      type: array                                                                                                                                                                                                                                                               
-      items:                                                                                                                                                                                                                                                                    
-        type: vocabulary                                                                                                                                                                                                                                                        
-        vocabulary-type: languages                                                                                                                                                                                                                                              
-    embedding:                                                                                                                                                                                                                                                                  
-      type: vector                                                                                                                                                                                                                                                              
+      label:
+        en: Title
+      help:
+        en: Human-readable title of this spectrum record.
+
+    languages:
+      type: array
+      items:
+        type: vocabulary
+        vocabulary-type: languages
+
+    embedding:
+      type: vector
       dims: 2
-        
+
+    # ----- Back-reference to parent dataset (mzML run) -----
+
+    dataset:
+      type: pid-relation
+      pid_field: "spectrum.datatypes:dataset_pid_field"
+      label:
+        en: Parent dataset
+      help:
+        en: Reference to the dataset record that contains this spectrum.
+      keys:
+        - metadata.run_id
+        - metadata.contacts
+
+    # =========================================================
+    # mzML SpectrumType attributes
+    # =========================================================
+
+    native_id:
+      type: keyword
+      label:
+        en: Native spectrum identifier
+      help:
+        en: >
+          Native identifier string assigned by the instrument software
+          (mzML spectrum/@id). Format is defined by PSI-MS MS:1000767.
+
+    spot_id:
+      type: keyword
+      label:
+        en: MALDI spot identifier
+      help:
+        en: >
+          Spot identifier for MALDI experiments
+          (mzML spectrum/@spotID).
+
+    index:
+      type: int
+      label:
+        en: Spectrum index
+      help:
+        en: >
+          Zero-based index of this spectrum in the spectrumList
+          (mzML spectrum/@index).
+
+    default_array_length:
+      type: int
+      label:
+        en: Default array length
+      help:
+        en: >
+          Default number of data points in the binary data arrays of this
+          spectrum (mzML spectrum/@defaultArrayLength).
+
+    data_processing_ref:
+      type: keyword
+      label:
+        en: Data processing reference
+      help:
+        en: >
+          Reference to the dataProcessing element applied to this spectrum
+          (mzML spectrum/@dataProcessingRef).
+
+    source_file_ref:
+      type: keyword
+      label:
+        en: Source file reference
+      help:
+        en: >
+          Reference to the sourceFile from which this spectrum originates
+          (mzML spectrum/@sourceFileRef).
+
+    # =========================================================
+    # Spectrum-level cvParams (ParamGroupType on SpectrumType)
+    # ms-mapping: spectrum_must  → spectrum type (MS:1000559, MUST)
+    #             spectrum_must  → spectrum representation (MS:1000525, MUST)
+    #             spectrum_may   → spectrum attribute (MS:1000499)
+    #             spectrum_may   → scan polarity (MS:1000465)
+    # =========================================================
+
+    spectrum_type:
+      type: vocabulary
+      vocabulary-type: ms-spectrum-type
+      label:
+        en: Spectrum type
+      help:
+        en: >
+          Type of spectrum (PSI-MS MS:1000559 and children, MUST),
+          e.g. "MS1 spectrum" (MS:1000579), "MSn spectrum" (MS:1000580).
+
+    spectrum_representation:
+      type: vocabulary
+      vocabulary-type: ms-spectrum-representation
+      label:
+        en: Spectrum representation
+      help:
+        en: >
+          "centroid spectrum" (MS:1000127) or "profile spectrum" (MS:1000128).
+          PSI-MS MS:1000525, MUST.
+
+    scan_polarity:
+      type: vocabulary
+      vocabulary-type: ms-scan-polarity
+      label:
+        en: Scan polarity
+      help:
+        en: >
+          "positive scan" (MS:1000130) or "negative scan" (MS:1000129).
+          PSI-MS MS:1000465.
+
+    spectrum_cv_params:
+      type: array
+      label:
+        en: Spectrum CV parameters
+      help:
+        en: >
+          Additional spectrum-level CV parameters (PSI-MS MS:1000499 and children),
+          e.g. ms level (MS:1000511), base peak m/z (MS:1000504),
+          base peak intensity (MS:1000505), total ion current (MS:1000285),
+          lowest/highest observed m/z (MS:1000528 / MS:1000527).
+      items:
+        type: CvParam
+
+    # =========================================================
+    # mzML scanList (ScanListType)
+    # =========================================================
+
+    scan_list:
+      type: object
+      label:
+        en: Scan list
+      help:
+        en: >
+          Container for the scans that produced this spectrum
+          (mzML spectrum/scanList).
+      properties:
+        spectra_combination:
+          type: vocabulary
+          vocabulary-type: ms-spectra-combination
+          label:
+            en: Spectra combination method
+          help:
+            en: >
+              How multiple raw scans were combined (PSI-MS MS:1000570, MUST),
+              e.g. "no combination" (MS:1000795), "sum of spectra" (MS:1000571).
+
+        cv_params:
+          type: array
+          label:
+            en: Scan list CV parameters
+          help:
+            en: Additional CV parameters on the scanList element.
+          items:
+            type: CvParam
+
+        scans:
+          type: array
+          label:
+            en: Scans
+          help:
+            en: >
+              Individual raw scans underlying this spectrum
+              (mzML scanList/scan).
+          items:
+            type: object
+            properties:
+
+              # --- mzML ScanType attributes ---
+              spectrum_ref:
+                type: keyword
+                label:
+                  en: Spectrum reference
+                help:
+                  en: >
+                    Reference to the spectrum corresponding to this scan
+                    within the same file (mzML scan/@spectrumRef).
+
+              source_file_ref:
+                type: keyword
+                label:
+                  en: Source file reference
+                help:
+                  en: >
+                    Reference to the source file for an external spectrum
+                    (mzML scan/@sourceFileRef).
+
+              external_spectrum_id:
+                type: keyword
+                label:
+                  en: External spectrum identifier
+                help:
+                  en: >
+                    Spectrum id in an external file referenced by sourceFileRef
+                    (mzML scan/@externalSpectrumID).
+
+              instrument_configuration_ref:
+                type: keyword
+                label:
+                  en: Instrument configuration reference
+                help:
+                  en: >
+                    Instrument configuration used for this scan
+                    (mzML scan/@instrumentConfigurationRef).
+
+              # --- Scan-level cvParams ---
+              # ms-mapping: scan_may → scan attribute (MS:1000503)
+              #             scan_may → scan direction (MS:1000018)
+              #             scan_may → scan law (MS:1000019)
+              cv_params:
+                type: array
+                label:
+                  en: Scan CV parameters
+                help:
+                  en: >
+                    CV parameters describing this scan (PSI-MS MS:1000503 and children),
+                    e.g. scan start time (MS:1000016), ion injection time (MS:1000927),
+                    scan direction (MS:1000018), scan law (MS:1000019).
+                items:
+                  type: CvParam
+
+              # --- mzML scanWindowList ---
+              scan_window_list:
+                type: array
+                label:
+                  en: Scan windows
+                help:
+                  en: >
+                    m/z windows over which the instrument scanned
+                    (mzML scan/scanWindowList/scanWindow).
+                    Each window MUST have upper limit (MS:1000500) and
+                    lower limit (MS:1000501).
+                items:
+                  type: object
+                  properties:
+                    lower_limit:
+                      type: double
+                      label:
+                        en: Scan window lower limit (m/z)
+                      help:
+                        en: >
+                          Lower m/z boundary of the scan window
+                          (PSI-MS MS:1000501, MUST).
+                    upper_limit:
+                      type: double
+                      label:
+                        en: Scan window upper limit (m/z)
+                      help:
+                        en: >
+                          Upper m/z boundary of the scan window
+                          (PSI-MS MS:1000500, MUST).
+                    cv_params:
+                      type: array
+                      label:
+                        en: Scan window CV parameters
+                      help:
+                        en: >
+                          Additional selection-window CV parameters
+                          (PSI-MS MS:1000549 and children).
+                      items:
+                        type: CvParam
+
+    # =========================================================
+    # mzML precursorList (PrecursorListType)
+    # =========================================================
+
+    precursor_list:
+      type: array
+      label:
+        en: Precursor list
+      help:
+        en: >
+          Precursor ions selected for fragmentation
+          (mzML spectrum/precursorList/precursor).
+          Relevant for MS/MS and higher-order spectra.
+      items:
+        type: object
+        properties:
+
+          # --- mzML PrecursorType attributes ---
+          spectrum_ref:
+            type: keyword
+            label:
+              en: Precursor spectrum reference
+            help:
+              en: >
+                Reference to the precursor spectrum within this file
+                (mzML precursor/@spectrumRef).
+
+          source_file_ref:
+            type: keyword
+            label:
+              en: Source file reference
+            help:
+              en: >
+                Reference to source file for an external precursor spectrum
+                (mzML precursor/@sourceFileRef).
+
+          external_spectrum_id:
+            type: keyword
+            label:
+              en: External spectrum identifier
+            help:
+              en: >
+                Spectrum id in the external file referenced by sourceFileRef
+                (mzML precursor/@externalSpectrumID).
+
+          # --- mzML isolationWindow (ParamGroupType) ---
+          # ms-mapping: precursor_isolationwindow_may → MS:1000792
+          isolation_window:
+            type: object
+            label:
+              en: Isolation window
+            help:
+              en: >
+                m/z window configured to isolate the precursor ion
+                (mzML precursor/isolationWindow, PSI-MS MS:1000792).
+            properties:
+              target_mz:
+                type: double
+                label:
+                  en: Isolation window target m/z
+                help:
+                  en: Centre m/z of the isolation window (PSI-MS MS:1000827).
+              lower_offset:
+                type: double
+                label:
+                  en: Isolation window lower offset (Da)
+                help:
+                  en: Lower m/z offset (PSI-MS MS:1000828).
+              upper_offset:
+                type: double
+                label:
+                  en: Isolation window upper offset (Da)
+                help:
+                  en: Upper m/z offset (PSI-MS MS:1000829).
+              cv_params:
+                type: array
+                label:
+                  en: Isolation window CV parameters
+                help:
+                  en: Additional isolation-window CV parameters (PSI-MS MS:1000792).
+                items:
+                  type: CvParam
+
+          # --- mzML selectedIonList / selectedIon[] (ParamGroupType) ---
+          # ms-mapping: precursor_selectedion_must → MS:1000455
+          selected_ions:
+            type: array
+            label:
+              en: Selected ions
+            help:
+              en: >
+                Ions selected as precursors
+                (mzML precursor/selectedIonList/selectedIon,
+                PSI-MS MS:1000455 and children, MUST).
+            items:
+              type: object
+              properties:
+                selected_ion_mz:
+                  type: double
+                  label:
+                    en: Selected ion m/z
+                  help:
+                    en: m/z of the selected ion (PSI-MS MS:1000744).
+                charge_state:
+                  type: int
+                  label:
+                    en: Charge state
+                  help:
+                    en: Charge state of the selected ion (PSI-MS MS:1000041).
+                intensity:
+                  type: double
+                  label:
+                    en: Peak intensity
+                  help:
+                    en: Intensity of the selected ion (PSI-MS MS:1000042).
+                cv_params:
+                  type: array
+                  label:
+                    en: Selected ion CV parameters
+                  help:
+                    en: Additional ion-selection CV parameters (PSI-MS MS:1000455).
+                  items:
+                    type: CvParam
+
+          # --- mzML activation (ParamGroupType) ---
+          # ms-mapping: precursor_activation_must → MS:1000044 (MUST)
+          #             precursor_activation_may  → MS:1000510
+          activation:
+            type: object
+            label:
+              en: Activation
+            help:
+              en: >
+                Type and energy level used for precursor activation
+                (mzML precursor/activation).
+            properties:
+              dissociation_method:
+                type: vocabulary
+                vocabulary-type: ms-dissociation-method
+                label:
+                  en: Dissociation method
+                help:
+                  en: >
+                    Fragmentation method (PSI-MS MS:1000044, MUST),
+                    e.g. "collision-induced dissociation" (MS:1000133),
+                    "electron transfer dissociation" (MS:1000598).
+              activation_energy:
+                type: double
+                label:
+                  en: Activation energy (eV)
+                help:
+                  en: Collision or activation energy (PSI-MS MS:1000045).
+              cv_params:
+                type: array
+                label:
+                  en: Activation CV parameters
+                help:
+                  en: Additional activation CV parameters (PSI-MS MS:1000510).
+                items:
+                  type: CvParam
+
+    # =========================================================
+    # mzML productList (ProductListType)
+    # =========================================================
+
+    product_list:
+      type: array
+      label:
+        en: Product list
+      help:
+        en: >
+          Product ion isolation windows for precursor ion scans
+          (mzML spectrum/productList/product).
+      items:
+        type: object
+        properties:
+          # --- mzML isolationWindow (ParamGroupType) ---
+          # ms-mapping: product_isolationwindow_may → MS:1000792
+          isolation_window:
+            type: object
+            label:
+              en: Product isolation window
+            help:
+              en: >
+                m/z window configured to isolate the product ion
+                (mzML product/isolationWindow, PSI-MS MS:1000792).
+            properties:
+              target_mz:
+                type: double
+                label:
+                  en: Isolation window target m/z
+                help:
+                  en: Centre m/z of the product isolation window (PSI-MS MS:1000827).
+              lower_offset:
+                type: double
+                label:
+                  en: Isolation window lower offset (Da)
+                help:
+                  en: Lower m/z offset (PSI-MS MS:1000828).
+              upper_offset:
+                type: double
+                label:
+                  en: Isolation window upper offset (Da)
+                help:
+                  en: Upper m/z offset (PSI-MS MS:1000829).
+              cv_params:
+                type: array
+                label:
+                  en: Product isolation window CV parameters
+                items:
+                  type: CvParam
+
+    # =========================================================
+    # mzML binaryDataArrayList (BinaryDataArrayListType)
+    #
+    # The entire binary_data_array_list subtree is excluded from
+    # OpenSearch indexing via PatchIndexPropertyMapping("enabled": False)
+    # in spectrum/model.py — data is stored in PostgreSQL (_source) only
+    # and returned by the API, but never indexed or put into doc_values.
+    # =========================================================
+
+    binary_data_array_list:
+      type: array
+      label:
+        en: Binary data arrays
+      help:
+        en: >
+          Encoded spectral data arrays (mzML spectrum/binaryDataArrayList/binaryDataArray).
+          At least two arrays (m/z and intensity) MUST be present.
+          Each array MUST carry CV terms for array type (MS:1000513),
+          binary data type (MS:1000518), and compression type (MS:1000572).
+          This subtree is not indexed in OpenSearch — see model.py.
+      items:
+        type: object
+        properties:
+
+          # --- mzML BinaryDataArrayType attributes ---
+          array_length:
+            type: int
+            label:
+              en: Array length
+            help:
+              en: >
+                Number of data points in this array if different from
+                spectrum defaultArrayLength (mzML binaryDataArray/@arrayLength).
+
+          data_processing_ref:
+            type: keyword
+            label:
+              en: Data processing reference
+            help:
+              en: >
+                Reference to the dataProcessing element for this array
+                (mzML binaryDataArray/@dataProcessingRef).
+
+          encoded_length:
+            type: int
+            label:
+              en: Encoded length
+            help:
+              en: >
+                Length of the base64-encoded binary string
+                (mzML binaryDataArray/@encodedLength).
+
+          # --- Array-level cvParams ---
+          # ms-mapping: spectrum_binarydataarray_must → MS:1000513 (MUST)
+          #             spectrum_binarydataarray_must → MS:1000518 (MUST)
+          #             spectrum_binarydataarray_must → MS:1000572 (MUST)
+          array_type:
+            type: CvParam
+            label:
+              en: Array type
+            help:
+              en: >
+                What the array encodes (PSI-MS MS:1000513 and children, MUST),
+                e.g. "m/z array" (MS:1000514), "intensity array" (MS:1000515),
+                "time array" (MS:1000595), "charge array" (MS:1000516).
+
+          binary_data_type:
+            type: CvParam
+            label:
+              en: Binary data type
+            help:
+              en: >
+                Numeric precision of the encoded values (PSI-MS MS:1000518, MUST),
+                e.g. "64-bit float" (MS:1000523), "32-bit float" (MS:1000521).
+
+          compression_type:
+            type: CvParam
+            label:
+              en: Compression type
+            help:
+              en: >
+                Compression applied to the binary data (PSI-MS MS:1000572, MUST),
+                e.g. "zlib compression" (MS:1000574), "no compression" (MS:1000576).
+
+          additional_cv_params:
+            type: array
+            label:
+              en: Additional CV parameters
+            help:
+              en: Any further CV parameters on this binary data array.
+            items:
+              type: CvParam
+
+          # --- mzML binary element ---
+          binary:
+            type: keyword
+            label:
+              en: Binary data
+            help:
+              en: >
+                Base64-encoded little-endian binary data
+                (mzML binaryDataArray/binary).

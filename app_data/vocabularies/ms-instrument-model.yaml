@@ -1,0 +1,3571 @@
+- id: MS:1000121
+  title:
+    en: SCIEX instrument model
+  props:
+    psi_ms_accession: MS:1000121
+  description:
+    en: SCIEX instrument model.
+- id: MS:1000139
+  title:
+    en: 4000 QTRAP
+  props:
+    psi_ms_accession: MS:1000139
+  description:
+    en: Applied Biosystems/MDS SCIEX Q 4000 TRAP MS.
+- id: MS:1000143
+  title:
+    en: API 150EX
+  props:
+    psi_ms_accession: MS:1000143
+  description:
+    en: Applied Biosystems/MDS SCIEX API 150EX MS.
+- id: MS:1000144
+  title:
+    en: API 150EX Prep
+  props:
+    psi_ms_accession: MS:1000144
+  description:
+    en: Applied Biosystems/MDS SCIEX API 150EX Prep MS.
+- id: MS:1000145
+  title:
+    en: API 2000
+  props:
+    psi_ms_accession: MS:1000145
+  description:
+    en: Applied Biosystems/MDS SCIEX API 2000 MS.
+- id: MS:1000146
+  title:
+    en: API 3000
+  props:
+    psi_ms_accession: MS:1000146
+  description:
+    en: Applied Biosystems/MDS SCIEX API 3000 MS.
+- id: MS:1000147
+  title:
+    en: API 4000
+  props:
+    psi_ms_accession: MS:1000147
+  description:
+    en: Applied Biosystems/MDS SCIEX API 4000 MS.
+- id: MS:1000186
+  title:
+    en: proteomics solution 1
+  props:
+    psi_ms_accession: MS:1000186
+  description:
+    en: Applied Biosystems/MDS SCIEX Proteomics Solution 1 MS.
+- id: MS:1000187
+  title:
+    en: Q TRAP
+  props:
+    psi_ms_accession: MS:1000187
+  description:
+    en: Applied Biosystems/MDS SCIEX Q TRAP MS.
+- id: MS:1000190
+  title:
+    en: QSTAR
+  props:
+    psi_ms_accession: MS:1000190
+  description:
+    en: Applied Biosystems/MDS SCIEX QSTAR MS.
+- id: MS:1000194
+  title:
+    en: SymBiot I
+  props:
+    psi_ms_accession: MS:1000194
+  description:
+    en: Applied Biosystems/MDS SCIEX SymBiot I MS.
+- id: MS:1000195
+  title:
+    en: SymBiot XVI
+  props:
+    psi_ms_accession: MS:1000195
+  description:
+    en: Applied Biosystems/MDS SCIEX SymBiot XVI MS.
+- id: MS:1000651
+  title:
+    en: 3200 QTRAP
+  props:
+    psi_ms_accession: MS:1000651
+  description:
+    en: SCIEX or Applied Biosystems|MDS SCIEX QTRAP 3200.
+- id: MS:1000652
+  title:
+    en: 4800 Plus MALDI TOF/TOF
+  props:
+    psi_ms_accession: MS:1000652
+  description:
+    en: SCIEX or Applied Biosystems|MDS SCIEX 4800 Plus MALDI TOF-TOF Analyzer.
+- id: MS:1000653
+  title:
+    en: API 3200
+  props:
+    psi_ms_accession: MS:1000653
+  description:
+    en: SCIEX or Applied Biosystems|MDS SCIEX API 3200 MS.
+- id: MS:1000654
+  title:
+    en: API 5000
+  props:
+    psi_ms_accession: MS:1000654
+  description:
+    en: SCIEX or Applied Biosystems|MDS SCIEX API 5000 MS.
+- id: MS:1000655
+  title:
+    en: QSTAR Elite
+  props:
+    psi_ms_accession: MS:1000655
+  description:
+    en: SCIEX or Applied Biosystems|MDS SCIEX QSTAR Elite.
+- id: MS:1000656
+  title:
+    en: QSTAR Pulsar
+  props:
+    psi_ms_accession: MS:1000656
+  description:
+    en: Applied Biosystems|MDS SCIEX QSTAR Pulsar.
+- id: MS:1000657
+  title:
+    en: QSTAR XL
+  props:
+    psi_ms_accession: MS:1000657
+  description:
+    en: Applied Biosystems|MDS SCIEX QSTAR XL.
+- id: MS:1000931
+  title:
+    en: QTRAP 5500
+  props:
+    psi_ms_accession: MS:1000931
+  description:
+    en: Applied Biosystems|MDS SCIEX QTRAP 5500.
+- id: MS:1000932
+  title:
+    en: TripleTOF 5600
+  props:
+    psi_ms_accession: MS:1000932
+  description:
+    en: SCIEX TripleTOF 5600, a quadrupole - quadrupole - time-of-flight mass spectrometer.
+- id: MS:1001482
+  title:
+    en: 5800 TOF/TOF
+  props:
+    psi_ms_accession: MS:1001482
+  description:
+    en: SCIEX 5800 TOF-TOF Analyzer.
+- id: MS:1002533
+  title:
+    en: TripleTOF 6600
+  props:
+    psi_ms_accession: MS:1002533
+  description:
+    en: SCIEX TripleTOF 6600, a quadrupole - quadrupole - time-of-flight mass spectrometer.
+- id: MS:1002577
+  title:
+    en: 2000 QTRAP
+  props:
+    psi_ms_accession: MS:1002577
+  description:
+    en: SCIEX 2000 QTRAP.
+- id: MS:1002578
+  title:
+    en: 2500 QTRAP
+  props:
+    psi_ms_accession: MS:1002578
+  description:
+    en: SCIEX 2500 QTRAP.
+- id: MS:1002579
+  title:
+    en: 3500 QTRAP
+  props:
+    psi_ms_accession: MS:1002579
+  description:
+    en: SCIEX 3500 QTRAP.
+- id: MS:1002580
+  title:
+    en: QTRAP 4500
+  props:
+    psi_ms_accession: MS:1002580
+  description:
+    en: SCIEX QTRAP 4500.
+- id: MS:1002581
+  title:
+    en: QTRAP 6500
+  props:
+    psi_ms_accession: MS:1002581
+  description:
+    en: SCIEX QTRAP 6500.
+- id: MS:1002582
+  title:
+    en: QTRAP 6500+
+  props:
+    psi_ms_accession: MS:1002582
+  description:
+    en: SCIEX QTRAP 6500+.
+- id: MS:1002583
+  title:
+    en: TripleTOF 4600
+  props:
+    psi_ms_accession: MS:1002583
+  description:
+    en: SCIEX TripleTOF 4600 time-of-flight mass spectrometer.
+- id: MS:1002584
+  title:
+    en: TripleTOF 5600+
+  props:
+    psi_ms_accession: MS:1002584
+  description:
+    en: SCIEX TripleTOF 5600+ time-of-flight mass spectrometer.
+- id: MS:1002585
+  title:
+    en: API 100
+  props:
+    psi_ms_accession: MS:1002585
+  description:
+    en: Applied Biosystems/MDS SCIEX API 100 MS.
+- id: MS:1002586
+  title:
+    en: API 100LC
+  props:
+    psi_ms_accession: MS:1002586
+  description:
+    en: Applied Biosystems/MDS SCIEX API 100LC MS.
+- id: MS:1002587
+  title:
+    en: API 165
+  props:
+    psi_ms_accession: MS:1002587
+  description:
+    en: Applied Biosystems/MDS SCIEX API 165 MS.
+- id: MS:1002588
+  title:
+    en: API 300
+  props:
+    psi_ms_accession: MS:1002588
+  description:
+    en: Applied Biosystems/MDS SCIEX API 300 MS.
+- id: MS:1002589
+  title:
+    en: API 350
+  props:
+    psi_ms_accession: MS:1002589
+  description:
+    en: Applied Biosystems/MDS SCIEX API 350 MS.
+- id: MS:1002590
+  title:
+    en: API 365
+  props:
+    psi_ms_accession: MS:1002590
+  description:
+    en: Applied Biosystems/MDS SCIEX API 365 MS.
+- id: MS:1002591
+  title:
+    en: Triple Quad 3500
+  props:
+    psi_ms_accession: MS:1002591
+  description:
+    en: SCIEX Triple Quad 3500.
+- id: MS:1002592
+  title:
+    en: Triple Quad 4500
+  props:
+    psi_ms_accession: MS:1002592
+  description:
+    en: SCIEX Triple Quad 4500.
+- id: MS:1002593
+  title:
+    en: Triple Quad 5500
+  props:
+    psi_ms_accession: MS:1002593
+  description:
+    en: SCIEX Triple Quad 5500.
+- id: MS:1002594
+  title:
+    en: Triple Quad 6500
+  props:
+    psi_ms_accession: MS:1002594
+  description:
+    en: SCIEX Triple Quad 6500.
+- id: MS:1002595
+  title:
+    en: Triple Quad 6500+
+  props:
+    psi_ms_accession: MS:1002595
+  description:
+    en: SCIEX Triple Quad 6500+.
+- id: MS:1002674
+  title:
+    en: X500R QTOF
+  props:
+    psi_ms_accession: MS:1002674
+  description:
+    en: SCIEX X500R QTOF, a quadrupole - quadrupole - time-of-flight mass spectrometer.
+- id: MS:1003144
+  title:
+    en: Triple Quad 7500
+  props:
+    psi_ms_accession: MS:1003144
+  description:
+    en: SCIEX Triple Quad 7500.
+- id: MS:1003293
+  title:
+    en: ZenoTOF 7600
+  props:
+    psi_ms_accession: MS:1003293
+  description:
+    en: SCIEX ZenoTOF 7600.
+- id: MS:1003443
+  title:
+    en: ZenoTOF 8600
+  props:
+    psi_ms_accession: MS:1003443
+  description:
+    en: SCIEX ZenoTOF 8600 system.
+- id: MS:1003444
+  title:
+    en: ZenoTOF 7600+
+  props:
+    psi_ms_accession: MS:1003444
+  description:
+    en: SCIEX ZenoTOF 7600+ system.
+- id: MS:1003445
+  title:
+    en: SCIEX 7500+
+  props:
+    psi_ms_accession: MS:1003445
+  description:
+    en: SCIEX 7500+ system.
+- id: MS:1003456
+  title:
+    en: TripleTOF 6600+
+  props:
+    psi_ms_accession: MS:1003456
+  description:
+    en: SCIEX TripleTOF 6600+ triple quadrupole - time-of-flight mass spectrometer.
+- id: MS:1003457
+  title:
+    en: Triple Quad 5500+
+  props:
+    psi_ms_accession: MS:1003457
+  description:
+    en: SCIEX Triple Quad 5500+ triple quadrupole mass spectrometer.
+- id: MS:1003458
+  title:
+    en: Triple Quad 5500+ QTRAP Ready
+  props:
+    psi_ms_accession: MS:1003458
+  description:
+    en: SCIEX Triple Quad 5500+ QTRAP Ready quadrupole - linear ion trap mass spectrometer.
+- id: MS:1000122
+  title:
+    en: Bruker Daltonics instrument model
+  props:
+    psi_ms_accession: MS:1000122
+  description:
+    en: Bruker Daltonics&apos; instrument model.
+- id: MS:1000141
+  title:
+    en: apex IV
+  props:
+    psi_ms_accession: MS:1000141
+  description:
+    en: 'Bruker Daltonics&apos; apex IV: ESI, MALDI, Nanospray, APCI, APPI, Qh-FT_ICR.'
+- id: MS:1000142
+  title:
+    en: apex Q
+  props:
+    psi_ms_accession: MS:1000142
+  description:
+    en: 'Bruker Daltonics&apos; apex Q: ESI, MALDI, Nanospray, APCI, APPI, Qh-FT_ICR.'
+- id: MS:1000148
+  title:
+    en: autoflex II
+  props:
+    psi_ms_accession: MS:1000148
+  description:
+    en: 'Bruker Daltonics&apos; autoflex II: MALDI TOF.'
+- id: MS:1000149
+  title:
+    en: autoflex TOF/TOF
+  props:
+    psi_ms_accession: MS:1000149
+  description:
+    en: 'Bruker Daltonics&apos; autoflex TOF/TOF MS: MALDI TOF.'
+- id: MS:1000151
+  title:
+    en: BioTOF II
+  props:
+    psi_ms_accession: MS:1000151
+  description:
+    en: 'Bruker Daltonics&apos; BioTOF II: ESI TOF.'
+- id: MS:1000152
+  title:
+    en: BioTOF-Q
+  props:
+    psi_ms_accession: MS:1000152
+  description:
+    en: 'Bruker Daltonics&apos; BioTOF-Q: ESI Q-TOF.'
+- id: MS:1000156
+  title:
+    en: esquire 4000
+  props:
+    psi_ms_accession: MS:1000156
+  description:
+    en: 'Bruker Daltonics&apos; esquire 4000: linear ion trap, ESI, MALDI, Nanospray,
+      APCI, APPI.'
+- id: MS:1000157
+  title:
+    en: esquire 6000
+  props:
+    psi_ms_accession: MS:1000157
+  description:
+    en: 'Bruker Daltonics&apos; esquire 6000: linear ion trap, ESI, MALDI, Nanospray,
+      APCI, APPI.'
+- id: MS:1000160
+  title:
+    en: HCT
+  props:
+    psi_ms_accession: MS:1000160
+  description:
+    en: 'Bruker Daltonics&apos; HCT: ESI Q-TOF, Nanospray, APCI, APPI.'
+- id: MS:1000161
+  title:
+    en: HCTplus
+  props:
+    psi_ms_accession: MS:1000161
+  description:
+    en: 'Bruker Daltonics&apos; HCTplus: ESI Q-TOF, Nanospray, APCI, APPI.'
+- id: MS:1000177
+  title:
+    en: microflex
+  props:
+    psi_ms_accession: MS:1000177
+  description:
+    en: 'Bruker Daltonics&apos; microflex: MALDI TOF.'
+- id: MS:1000178
+  title:
+    en: microTOF LC
+  props:
+    psi_ms_accession: MS:1000178
+  description:
+    en: 'Bruker Daltonics&apos; microTOF LC: ESI TOF, Nanospray, APCI, APPI.'
+- id: MS:1000183
+  title:
+    en: OmniFlex
+  props:
+    psi_ms_accession: MS:1000183
+  description:
+    en: 'Bruker Daltonics&apos; OmniFlex: MALDI TOF.'
+- id: MS:1000201
+  title:
+    en: ultraflex
+  props:
+    psi_ms_accession: MS:1000201
+  description:
+    en: 'Bruker Daltonics&apos; ultraflex: MALDI TOF.'
+- id: MS:1000202
+  title:
+    en: ultraflex TOF/TOF
+  props:
+    psi_ms_accession: MS:1000202
+  description:
+    en: 'Bruker Daltonics&apos; ultraflex TOF/TOF: MALDI TOF.'
+- id: MS:1000695
+  title:
+    en: apex ultra
+  props:
+    psi_ms_accession: MS:1000695
+  description:
+    en: 'Bruker Daltonics&apos; apex ultra: ESI, MALDI, Nanospray, APCI, APPI, Qh-FT_ICR.'
+- id: MS:1000696
+  title:
+    en: autoflex III smartbeam
+  props:
+    psi_ms_accession: MS:1000696
+  description:
+    en: 'Bruker Daltonics&apos; autoflex III smartbeam: MALDI TOF.'
+- id: MS:1000697
+  title:
+    en: Bruker Daltonics HCT Series
+  props:
+    psi_ms_accession: MS:1000697
+  description:
+    en: Bruker Daltonics&apos; HCT Series.
+- id: MS:1000698
+  title:
+    en: HCTultra
+  props:
+    psi_ms_accession: MS:1000698
+  description:
+    en: 'Bruker Daltonics&apos; HCTultra: ESI TOF, Nanospray, APCI, APPI.'
+- id: MS:1000699
+  title:
+    en: HCTultra PTM
+  props:
+    psi_ms_accession: MS:1000699
+  description:
+    en: 'Bruker Daltonics&apos; HCTultra PTM: ESI TOF, Nanospray, APCI, APPI, PTR.'
+- id: MS:1000700
+  title:
+    en: HCTultra ETD II
+  props:
+    psi_ms_accession: MS:1000700
+  description:
+    en: 'Bruker Daltonics&apos; HCTultra ETD II: ESI Q-TOF, Nanospray, APCI, APPI,
+      ETD.'
+- id: MS:1000701
+  title:
+    en: microflex LT
+  props:
+    psi_ms_accession: MS:1000701
+  description:
+    en: 'Bruker Daltonics&apos; microflex LT: MALDI TOF.'
+- id: MS:1000702
+  title:
+    en: micrOTOF
+  props:
+    psi_ms_accession: MS:1000702
+  description:
+    en: 'Bruker Daltonics&apos; micrOTOF: ESI TOF, APCI, APPI.'
+- id: MS:1000703
+  title:
+    en: micrOTOF-Q
+  props:
+    psi_ms_accession: MS:1000703
+  description:
+    en: 'Bruker Daltonics&apos; micrOTOF-Q: ESI Q-TOF, Nanospray, APCI, APPI.'
+- id: MS:1000704
+  title:
+    en: micrOTOF-Q II
+  props:
+    psi_ms_accession: MS:1000704
+  description:
+    en: 'Bruker Daltonics&apos; micrOTOF-Q II: ESI Q-TOF, Nanospray, APCI, APPI.'
+- id: MS:1000705
+  title:
+    en: ultraflex III TOF/TOF
+  props:
+    psi_ms_accession: MS:1000705
+  description:
+    en: 'Bruker Daltonics&apos; ultraflex III TOF/TOF: MALDI TOF.'
+- id: MS:1001533
+  title:
+    en: Bruker Daltonics esquire series
+  props:
+    psi_ms_accession: MS:1001533
+  description:
+    en: Bruker Daltonics&apos; esquire series.
+- id: MS:1001534
+  title:
+    en: Bruker Daltonics flex series
+  props:
+    psi_ms_accession: MS:1001534
+  description:
+    en: Bruker Daltonics&apos; flex series.
+- id: MS:1001535
+  title:
+    en: Bruker Daltonics BioTOF series
+  props:
+    psi_ms_accession: MS:1001535
+  description:
+    en: Bruker Daltonics&apos; BioTOF series.
+- id: MS:1001536
+  title:
+    en: Bruker Daltonics micrOTOF series
+  props:
+    psi_ms_accession: MS:1001536
+  description:
+    en: Bruker Daltonics&apos; micrOTOF series.
+- id: MS:1001537
+  title:
+    en: BioTOF
+  props:
+    psi_ms_accession: MS:1001537
+  description:
+    en: 'Bruker Daltonics&apos; BioTOF: ESI TOF.'
+- id: MS:1001538
+  title:
+    en: BioTOF III
+  props:
+    psi_ms_accession: MS:1001538
+  description:
+    en: 'Bruker Daltonics&apos; BioTOF III: ESI TOF.'
+- id: MS:1001539
+  title:
+    en: UltroTOF-Q
+  props:
+    psi_ms_accession: MS:1001539
+  description:
+    en: 'Bruker Daltonics&apos; UltroTOF-Q: ESI Q-TOF (MALDI optional).'
+- id: MS:1001540
+  title:
+    en: micrOTOF II
+  props:
+    psi_ms_accession: MS:1001540
+  description:
+    en: 'Bruker Daltonics&apos; micrOTOF II: ESI TOF, Nanospray, APCI, APPI.'
+- id: MS:1001541
+  title:
+    en: maXis
+  props:
+    psi_ms_accession: MS:1001541
+  description:
+    en: 'Bruker Daltonics&apos; maXis: ESI Q-TOF, Nanospray, APCI, APPI.'
+- id: MS:1001542
+  title:
+    en: amaZon ETD
+  props:
+    psi_ms_accession: MS:1001542
+  description:
+    en: 'Bruker Daltonics&apos; amaZon ETD: ESI quadrupole ion trap, Nanospray, APCI,
+      APPI, ETD, PTR.'
+- id: MS:1001543
+  title:
+    en: microflex LRF
+  props:
+    psi_ms_accession: MS:1001543
+  description:
+    en: 'Bruker Daltonics&apos; microflex LRF: MALDI TOF.'
+- id: MS:1001544
+  title:
+    en: ultrafleXtreme
+  props:
+    psi_ms_accession: MS:1001544
+  description:
+    en: 'Bruker Daltonics&apos; ultrafleXtreme: MALDI TOF.'
+- id: MS:1001545
+  title:
+    en: Bruker Daltonics amaZon series
+  props:
+    psi_ms_accession: MS:1001545
+  description:
+    en: Bruker Daltonics&apos; amaZon series.
+- id: MS:1001546
+  title:
+    en: amaZon X
+  props:
+    psi_ms_accession: MS:1001546
+  description:
+    en: 'Bruker Daltonics&apos; amaZon X: ESI quadrupole ion trap, APCI, APPI, ETD,
+      PTR.'
+- id: MS:1001547
+  title:
+    en: Bruker Daltonics maXis series
+  props:
+    psi_ms_accession: MS:1001547
+  description:
+    en: Bruker Daltonics&apos; maXis series.
+- id: MS:1001548
+  title:
+    en: Bruker Daltonics solarix series
+  props:
+    psi_ms_accession: MS:1001548
+  description:
+    en: 'Bruker Daltonics&apos; solarix: ESI quadrupole ion trap, APCI, APPI, ETD,
+      PTR.'
+- id: MS:1001549
+  title:
+    en: solariX
+  props:
+    psi_ms_accession: MS:1001549
+  description:
+    en: 'Bruker Daltonics&apos; solariX: ESI, MALDI, Qh-FT_ICR.'
+- id: MS:1001550
+  title:
+    en: microflex II
+  props:
+    psi_ms_accession: MS:1001550
+  description:
+    en: 'Bruker Daltonics&apos; microflex II: MALDI TOF.'
+- id: MS:1001553
+  title:
+    en: autoflex II TOF/TOF
+  props:
+    psi_ms_accession: MS:1001553
+  description:
+    en: 'Bruker Daltonics&apos; autoflex II TOF/TOF: MALDI TOF.'
+- id: MS:1001554
+  title:
+    en: autoflex III TOF/TOF smartbeam
+  props:
+    psi_ms_accession: MS:1001554
+  description:
+    en: 'Bruker Daltonics&apos; autoflex III TOF/TOF smartbeam: MALDI TOF.'
+- id: MS:1001555
+  title:
+    en: autoflex
+  props:
+    psi_ms_accession: MS:1001555
+  description:
+    en: 'Bruker Daltonics&apos; autoflex: MALDI TOF.'
+- id: MS:1001556
+  title:
+    en: Bruker Daltonics apex series
+  props:
+    psi_ms_accession: MS:1001556
+  description:
+    en: Bruker Daltonics&apos; apex series.
+- id: MS:1002077
+  title:
+    en: impact
+  props:
+    psi_ms_accession: MS:1002077
+  description:
+    en: 'Bruker Daltonics&apos; impact: ESI Q-TOF, Nanospray, APCI, APPI, GC-APCI,
+      CaptiveSpray.'
+- id: MS:1002279
+  title:
+    en: maXis 4G
+  props:
+    psi_ms_accession: MS:1002279
+  description:
+    en: 'Bruker Daltonics&apos; maXis 4G: ESI Q-TOF, Nanospray, APCI, APPI, GC-APCI,
+      CaptiveSpray.'
+- id: MS:1002280
+  title:
+    en: compact
+  props:
+    psi_ms_accession: MS:1002280
+  description:
+    en: 'Bruker Daltonics&apos; compact: ESI Q-TOF, Nanospray, APCI, APPI, GC-APCI,
+      CaptiveSpray.'
+- id: MS:1002293
+  title:
+    en: Bruker Daltonics SCION series
+  props:
+    psi_ms_accession: MS:1002293
+  description:
+    en: Bruker Daltonics&apos; SCION series.
+- id: MS:1002294
+  title:
+    en: Bruker Daltonics EVOQ series
+  props:
+    psi_ms_accession: MS:1002294
+  description:
+    en: Bruker Daltonics&apos; EVOQ series.
+- id: MS:1002295
+  title:
+    en: SCION SQ
+  props:
+    psi_ms_accession: MS:1002295
+  description:
+    en: 'Bruker Daltonics&apos; SCION SQ: GC-single quadrupole.'
+- id: MS:1002296
+  title:
+    en: SCION TQ
+  props:
+    psi_ms_accession: MS:1002296
+  description:
+    en: 'Bruker Daltonics&apos; SCION TQ: GC-triple quadrupole.'
+- id: MS:1002297
+  title:
+    en: EVOQ Elite
+  props:
+    psi_ms_accession: MS:1002297
+  description:
+    en: 'Bruker Daltonics&apos; EVOQ Elite: LC-triple quadrupole.'
+- id: MS:1002298
+  title:
+    en: EVOQ Qube
+  props:
+    psi_ms_accession: MS:1002298
+  description:
+    en: 'Bruker Daltonics&apos; EVOQ Qube: LC-triple quadrupole.'
+- id: MS:1002299
+  title:
+    en: micrOTOF-Q III
+  props:
+    psi_ms_accession: MS:1002299
+  description:
+    en: 'Bruker Daltonics&apos; micrOTOF-Q III: ESI Q-TOF, Nanospray, APCI, APPI,
+      GC-APCI, CaptiveSpray.'
+- id: MS:1002300
+  title:
+    en: amaZon Speed ETD
+  props:
+    psi_ms_accession: MS:1002300
+  description:
+    en: 'Bruker Daltonics&apos; amaZon Speed ETD: ESI quadrupole ion trap, Nanospray,
+      APCI, APPI, ETD, PTR, GC-APCI, CaptiveSpray.'
+- id: MS:1002301
+  title:
+    en: amaZon Speed
+  props:
+    psi_ms_accession: MS:1002301
+  description:
+    en: 'Bruker Daltonics&apos; amaZon ETD: ESI quadrupole ion trap, Nanospray, APCI,
+      APPI, GC-APCI, CaptiveSpray.'
+- id: MS:1002666
+  title:
+    en: impact II
+  props:
+    psi_ms_accession: MS:1002666
+  description:
+    en: Bruker Daltonics&apos; impact II.
+- id: MS:1002667
+  title:
+    en: impact HD
+  props:
+    psi_ms_accession: MS:1002667
+  description:
+    en: Bruker Daltonics&apos; impact HD.
+- id: MS:1003004
+  title:
+    en: maXis II
+  props:
+    psi_ms_accession: MS:1003004
+  description:
+    en: Bruker Daltonics&apos; maXis II.
+- id: MS:1003005
+  title:
+    en: timsTOF Pro
+  props:
+    psi_ms_accession: MS:1003005
+  description:
+    en: Bruker Daltonics&apos; timsTOF Pro.
+- id: MS:1003122
+  title:
+    en: rapifleX
+  props:
+    psi_ms_accession: MS:1003122
+  description:
+    en: 'Bruker Daltonics&apos; rapiflex: MALDI TOF/TOF.'
+- id: MS:1003123
+  title:
+    en: Bruker Daltonics timsTOF series
+  props:
+    psi_ms_accession: MS:1003123
+  description:
+    en: Bruker Daltonics timsTOF series
+- id: MS:1003124
+  title:
+    en: timsTOF fleX
+  props:
+    psi_ms_accession: MS:1003124
+  description:
+    en: Bruker Daltonics&apos; timsTOF fleX
+- id: MS:1003229
+  title:
+    en: timsTOF
+  props:
+    psi_ms_accession: MS:1003229
+  description:
+    en: Bruker Daltonics&apos; timsTOF.
+- id: MS:1003230
+  title:
+    en: timsTOF Pro 2
+  props:
+    psi_ms_accession: MS:1003230
+  description:
+    en: Bruker Daltonics&apos; timsTOF Pro 2.
+- id: MS:1003231
+  title:
+    en: timsTOF SCP
+  props:
+    psi_ms_accession: MS:1003231
+  description:
+    en: Bruker Daltonics&apos; timsTOF SCP.
+- id: MS:1003383
+  title:
+    en: timsTOF Ultra
+  props:
+    psi_ms_accession: MS:1003383
+  description:
+    en: Bruker Daltonics&apos; timsTOF Ultra.
+- id: MS:1003397
+  title:
+    en: timsTOF fleX MALDI-2
+  props:
+    psi_ms_accession: MS:1003397
+  description:
+    en: Bruker Daltonics&apos; timsTOF fleX MALDI-2.
+- id: MS:1003404
+  title:
+    en: timsTOF HT
+  props:
+    psi_ms_accession: MS:1003404
+  description:
+    en: Bruker Daltonics&apos; timsTOF HT.
+- id: MS:1003412
+  title:
+    en: timsTOF Ultra 2
+  props:
+    psi_ms_accession: MS:1003412
+  description:
+    en: Bruker Daltonics timsTOF Ultra 2.
+- id: MS:1003459
+  title:
+    en: APEX-Qe
+  props:
+    psi_ms_accession: MS:1003459
+  description:
+    en: Bruker APEX-Qe FT-ICR-MS mass spectrometer.
+- id: MS:1003460
+  title:
+    en: autoflex speed TOF/TOF
+  props:
+    psi_ms_accession: MS:1003460
+  description:
+    en: Bruker autoflex speed TOF/TOF MALDI TOF/TOF mass spectrometer.
+- id: MS:1003461
+  title:
+    en: esquire 3000
+  props:
+    psi_ms_accession: MS:1003461
+  description:
+    en: Bruker esquire 3000 ion trap mass spectrometer.
+- id: MS:1003462
+  title:
+    en: maXis impact
+  props:
+    psi_ms_accession: MS:1003462
+  description:
+    en: Bruker maXis impact quadrupole time-of-flight mass spectrometer.
+- id: MS:1003463
+  title:
+    en: maXis impact HD
+  props:
+    psi_ms_accession: MS:1003463
+  description:
+    en: Bruker maXis impact HD quadrupole time-of-flight mass spectrometer.
+- id: MS:1003464
+  title:
+    en: maXis 3G
+  props:
+    psi_ms_accession: MS:1003464
+  description:
+    en: Bruker maXis 3G quadrupole time-of-flight mass spectrometer.
+- id: MS:1003465
+  title:
+    en: solariX XR
+  props:
+    psi_ms_accession: MS:1003465
+  description:
+    en: Bruker solariX XR FT-ICR-MS mass spectrometer.
+- id: MS:1003466
+  title:
+    en: amaZon SL
+  props:
+    psi_ms_accession: MS:1003466
+  description:
+    en: Bruker amaZon SL ion trap mass spectrometer.
+- id: MS:1003467
+  title:
+    en: EVOQ DART-TQ+
+  props:
+    psi_ms_accession: MS:1003467
+  description:
+    en: Bruker EVOQ DART-TQ+ triple quadrupole mass spectrometer with Direct Analysis
+      in Real Time (DART) ion source.
+- id: MS:1003468
+  title:
+    en: EVOQ LC-TQ
+  props:
+    psi_ms_accession: MS:1003468
+  description:
+    en: Bruker EVOQ LC-TQ triple quadrupole mass spectrometer.
+- id: MS:1003469
+  title:
+    en: EVOQ GC-TQ
+  props:
+    psi_ms_accession: MS:1003469
+  description:
+    en: Bruker EVOQ GC-TQ gas chromatograph - triple quadrupole mass spectrometer.
+- id: MS:1003470
+  title:
+    en: Toxtyper
+  props:
+    psi_ms_accession: MS:1003470
+  description:
+    en: Bruker Toxtyper ion trap mass spectrometer.
+- id: MS:1003471
+  title:
+    en: impact II VIP
+  props:
+    psi_ms_accession: MS:1003471
+  description:
+    en: Bruker impact II VIP quadrupole time-of-flight mass spectrometer.
+- id: MS:1003472
+  title:
+    en: ecTOF
+  props:
+    psi_ms_accession: MS:1003472
+  description:
+    en: Bruker ecTOF gas chromatograph - time-of-flight mass spectrometer.
+- id: MS:1003473
+  title:
+    en: autoflex maX
+  props:
+    psi_ms_accession: MS:1003473
+  description:
+    en: Bruker autoflex maX MALDI TOF mass spectrometer.
+- id: MS:1003474
+  title:
+    en: rapifleX MALDI PharmaPulse
+  props:
+    psi_ms_accession: MS:1003474
+  description:
+    en: Bruker rapifleX MALDI PharmaPulse MALDI TOF mass spectrometer with ultra-high-throughput
+      screening (uHTS) capability.
+- id: MS:1003475
+  title:
+    en: smartfleX
+  props:
+    psi_ms_accession: MS:1003475
+  description:
+    en: Bruker smartfleX MALDI TOF mass spectrometer.
+- id: MS:1003476
+  title:
+    en: neofleX
+  props:
+    psi_ms_accession: MS:1003476
+  description:
+    en: Bruker neofleX MALDI TOF/TOF mass spectrometer.
+- id: MS:1003477
+  title:
+    en: MALDI Biotyper
+  props:
+    psi_ms_accession: MS:1003477
+  description:
+    en: Bruker MALDI Biotyper MALDI TOF mass spectrometer.
+- id: MS:1003478
+  title:
+    en: scimaX
+  props:
+    psi_ms_accession: MS:1003478
+  description:
+    en: Bruker scimaX FT-ICR-MS mass spectrometer.
+- id: MS:1003479
+  title:
+    en: timsMetabo
+  props:
+    psi_ms_accession: MS:1003479
+  description:
+    en: Bruker timsMetabo TIMS-Q-TOF mass spectrometer.
+- id: MS:1003480
+  title:
+    en: timsUltra AIP
+  props:
+    psi_ms_accession: MS:1003480
+  description:
+    en: Bruker timsUltra AIP TIMS-Q-TOF mass spectrometer.
+- id: MS:1003481
+  title:
+    en: timsOmni
+  props:
+    psi_ms_accession: MS:1003481
+  description:
+    en: Bruker timsOmni TIMS-Q-TOF mass spectrometer.
+- id: MS:1003482
+  title:
+    en: timsTOF MALDI PharmaPulse
+  props:
+    psi_ms_accession: MS:1003482
+  description:
+    en: Bruker timsTOF MALDI PharmaPulse MALDI TIMS-Q-TOF mass spectrometer with ultra-high-throughput
+      screening (uHTS) capability.
+- id: MS:1000124
+  title:
+    en: Shimadzu instrument model
+  props:
+    psi_ms_accession: MS:1000124
+  description:
+    en: Shimadzu corporation instrument model.
+- id: MS:1000602
+  title:
+    en: Shimadzu MALDI-TOF instrument model
+  props:
+    psi_ms_accession: MS:1000602
+  description:
+    en: Shimadzu MALDI-TOF instrument model.
+- id: MS:1000603
+  title:
+    en: Shimadzu Scientific Instruments instrument model
+  props:
+    psi_ms_accession: MS:1000603
+  description:
+    en: Shimadzu Scientific Instruments instrument model.
+- id: MS:1000604
+  title:
+    en: LCMS-IT-TOF
+  props:
+    psi_ms_accession: MS:1000604
+  description:
+    en: Shimadzu Scientific Instruments LCMS-IT-TOF MS.
+- id: MS:1000605
+  title:
+    en: LCMS-2010EV
+  props:
+    psi_ms_accession: MS:1000605
+  description:
+    en: Shimadzu Scientific Instruments LCMS-2010EV MS.
+- id: MS:1000606
+  title:
+    en: LCMS-2010A
+  props:
+    psi_ms_accession: MS:1000606
+  description:
+    en: Shimadzu Scientific Instruments LCMS-2010A MS.
+- id: MS:1000607
+  title:
+    en: AXIMA CFR MALDI-TOF
+  props:
+    psi_ms_accession: MS:1000607
+  description:
+    en: Shimadzu Biotech AXIMA CFR MALDI-TOF MS.
+- id: MS:1000608
+  title:
+    en: AXIMA-QIT
+  props:
+    psi_ms_accession: MS:1000608
+  description:
+    en: Shimadzu Biotech AXIMA-QIT MS.
+- id: MS:1000609
+  title:
+    en: AXIMA-CFR plus
+  props:
+    psi_ms_accession: MS:1000609
+  description:
+    en: Shimadzu Biotech AXIMA-CFR plus MS.
+- id: MS:1000610
+  title:
+    en: AXIMA Performance MALDI-TOF/TOF
+  props:
+    psi_ms_accession: MS:1000610
+  description:
+    en: Shimadzu Biotech AXIMA Performance MALDI-TOF/TOF MS.
+- id: MS:1000611
+  title:
+    en: AXIMA Confidence MALDI-TOF
+  props:
+    psi_ms_accession: MS:1000611
+  description:
+    en: Shimadzu Biotech AXIMA Confidence MALDI-TOF (curved field reflectron) MS.
+- id: MS:1000612
+  title:
+    en: AXIMA Assurance Linear MALDI-TOF
+  props:
+    psi_ms_accession: MS:1000612
+  description:
+    en: Shimadzu Biotech AXIMA Assurance Linear MALDI-TOF MS.
+- id: MS:1002382
+  title:
+    en: Shimadzu MALDI-7090
+  props:
+    psi_ms_accession: MS:1002382
+  description:
+    en: 'Shimadzu MALDI-7090: MALDI-TOF-TOF.'
+- id: MS:1002998
+  title:
+    en: LCMS-9030
+  props:
+    psi_ms_accession: MS:1002998
+  description:
+    en: Shimadzu Scientific Instruments LCMS-9030 Q-TOF MS.
+- id: MS:1002999
+  title:
+    en: LCMS-8060
+  props:
+    psi_ms_accession: MS:1002999
+  description:
+    en: Shimadzu Scientific Instruments LCMS-8060 MS.
+- id: MS:1003000
+  title:
+    en: LCMS-8050
+  props:
+    psi_ms_accession: MS:1003000
+  description:
+    en: Shimadzu Scientific Instruments LCMS-8050 MS.
+- id: MS:1003001
+  title:
+    en: LCMS-8045
+  props:
+    psi_ms_accession: MS:1003001
+  description:
+    en: Shimadzu Scientific Instruments LCMS-8045 MS.
+- id: MS:1003002
+  title:
+    en: LCMS-8040
+  props:
+    psi_ms_accession: MS:1003002
+  description:
+    en: Shimadzu Scientific Instruments LCMS-8040 MS.
+- id: MS:1003003
+  title:
+    en: LCMS-2020
+  props:
+    psi_ms_accession: MS:1003003
+  description:
+    en: Shimadzu Scientific Instruments LCMS-2020.
+- id: MS:1003152
+  title:
+    en: GCMS-QP2010SE
+  props:
+    psi_ms_accession: MS:1003152
+  description:
+    en: Shimadzu Scientific Instruments GCMS-QP2010SE.
+- id: MS:1003485
+  title:
+    en: LCMS-8030
+  props:
+    psi_ms_accession: MS:1003485
+  description:
+    en: Shimadzu LCMS-8030 triple quadrupole mass spectrometer.
+- id: MS:1003486
+  title:
+    en: LCMS-8030 Plus
+  props:
+    psi_ms_accession: MS:1003486
+  description:
+    en: Shimadzu LCMS-8030 Plus triple quadrupole mass spectrometer.
+- id: MS:1003487
+  title:
+    en: GCMS-QP2010 Plus
+  props:
+    psi_ms_accession: MS:1003487
+  description:
+    en: Shimadzu GCMS-QP2010 Plus gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003488
+  title:
+    en: LCMS-8060NX
+  props:
+    psi_ms_accession: MS:1003488
+  description:
+    en: Shimadzu LCMS-8060NX triple quadrupole mass spectrometer.
+- id: MS:1003489
+  title:
+    en: GCMS-TQ8050NX
+  props:
+    psi_ms_accession: MS:1003489
+  description:
+    en: Shimadzu GCMS-TQ8050NX gas chromatograph - triple quadrupole mass spectrometer.
+- id: MS:1003490
+  title:
+    en: GCMS-TQ8040NX
+  props:
+    psi_ms_accession: MS:1003490
+  description:
+    en: Shimadzu GCMS-TQ8040NX gas chromatograph - triple quadrupole mass spectrometer.
+- id: MS:1003491
+  title:
+    en: GCMS-TQ8040
+  props:
+    psi_ms_accession: MS:1003491
+  description:
+    en: Shimadzu GCMS-TQ8040 gas chromatograph - triple quadrupole mass spectrometer.
+- id: MS:1003492
+  title:
+    en: GCMS-QP5000
+  props:
+    psi_ms_accession: MS:1003492
+  description:
+    en: Shimadzu GCMS-QP5000 gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003493
+  title:
+    en: GCMS-QP2020
+  props:
+    psi_ms_accession: MS:1003493
+  description:
+    en: Shimadzu GCMS-QP2020 gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003494
+  title:
+    en: GCMS-QP2010 Ultra
+  props:
+    psi_ms_accession: MS:1003494
+  description:
+    en: Shimadzu GCMS-QP2010 Ultra gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003555
+  title:
+    en: AXIMA-LNR
+  props:
+    psi_ms_accession: MS:1003555
+  description:
+    en: Shimadzu AXIMA-LNR MALDI TOF mass spectrometer.
+- id: MS:1003556
+  title:
+    en: AXIMA-TOF²
+  props:
+    psi_ms_accession: MS:1003556
+  description:
+    en: Shimadzu AXIMA-TOF² MALDI TOF/TOF mass spectrometer.
+- id: MS:1003557
+  title:
+    en: AXIMA Resonance
+  props:
+    psi_ms_accession: MS:1003557
+  description:
+    en: Shimadzu AXIMA Resonance MALDI TOF mass spectrometerwith Ion Trap for MSn.
+- id: MS:1003558
+  title:
+    en: MALDI-8020
+  props:
+    psi_ms_accession: MS:1003558
+  description:
+    en: Shimadzu MALDI-8020 benchtop MALDI TOF mass spectrometer.
+- id: MS:1003559
+  title:
+    en: MALDI-8030
+  props:
+    psi_ms_accession: MS:1003559
+  description:
+    en: Shimadzu MALDI-8030 benchtop MALDI TOF mass spectrometer.
+- id: MS:1003560
+  title:
+    en: MALDI-8020 EasyCare
+  props:
+    psi_ms_accession: MS:1003560
+  description:
+    en: Shimadzu MALDI-8020 EasyCare benchtop MALDI TOF mass spectrometer.
+- id: MS:1003561
+  title:
+    en: MALDI-8030 EasyCare
+  props:
+    psi_ms_accession: MS:1003561
+  description:
+    en: Shimadzu MALDI-8030 EasyCare benchtop MALDI TOF mass spectrometer.
+- id: MS:1003562
+  title:
+    en: LCMS-2010
+  props:
+    psi_ms_accession: MS:1003562
+  description:
+    en: Shimadzu LCMS-2010 quadrupole mass spectrometer.
+- id: MS:1003563
+  title:
+    en: LCMS-2050
+  props:
+    psi_ms_accession: MS:1003563
+  description:
+    en: Shimadzu LCMS-2050 quadrupole mass spectrometer.
+- id: MS:1003564
+  title:
+    en: LCMS-8045RX
+  props:
+    psi_ms_accession: MS:1003564
+  description:
+    en: Shimadzu LCMS-8045RX triple quadrupole mass spectrometer.
+- id: MS:1003565
+  title:
+    en: LCMS-8050RX
+  props:
+    psi_ms_accession: MS:1003565
+  description:
+    en: Shimadzu LCMS-8050RX triple quadrupole mass spectrometer.
+- id: MS:1003566
+  title:
+    en: LCMS-8060RX
+  props:
+    psi_ms_accession: MS:1003566
+  description:
+    en: Shimadzu LCMS-8060RX triple quadrupole mass spectrometer.
+- id: MS:1003567
+  title:
+    en: LCMS-8065XE
+  props:
+    psi_ms_accession: MS:1003567
+  description:
+    en: Shimadzu LCMS-8065XE triple quadrupole mass spectrometer.
+- id: MS:1003568
+  title:
+    en: LCMS-9050
+  props:
+    psi_ms_accession: MS:1003568
+  description:
+    en: Shimadzu LCMS-9050 quadrupole time-of-flight mass spectrometer.
+- id: MS:1003569
+  title:
+    en: GCMS-QP5050A
+  props:
+    psi_ms_accession: MS:1003569
+  description:
+    en: Shimadzu GCMS-QP5050A gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003570
+  title:
+    en: GCMS-QP2010S
+  props:
+    psi_ms_accession: MS:1003570
+  description:
+    en: Shimadzu GCMS-QP2010S gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003571
+  title:
+    en: GCMS-QP2010
+  props:
+    psi_ms_accession: MS:1003571
+  description:
+    en: Shimadzu GCMS-QP2010 gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003572
+  title:
+    en: GCMS-QP2020NX
+  props:
+    psi_ms_accession: MS:1003572
+  description:
+    en: Shimadzu GCMS-QP2020NX gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003573
+  title:
+    en: GCMS-QP2050
+  props:
+    psi_ms_accession: MS:1003573
+  description:
+    en: Shimadzu GCMS-QP2050 gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003574
+  title:
+    en: GCMS-TQ 8030
+  props:
+    psi_ms_accession: MS:1003574
+  description:
+    en: Shimadzu GCMS-TQ 8030 gas chromatograph - triple quadrupole mass spectrometer.
+- id: MS:1003575
+  title:
+    en: GCMS-TQ 8050
+  props:
+    psi_ms_accession: MS:1003575
+  description:
+    en: Shimadzu GCMS-TQ 8050 gas chromatograph - triple quadrupole mass spectrometer.
+- id: MS:1000126
+  title:
+    en: Waters instrument model
+  props:
+    psi_ms_accession: MS:1000126
+  description:
+    en: Waters Corporation instrument model.
+- id: MS:1000150
+  title:
+    en: Auto Spec Ultima NT
+  props:
+    psi_ms_accession: MS:1000150
+  description:
+    en: Waters magnetic sector based AutoSpec Ultima NT MS.
+- id: MS:1000159
+  title:
+    en: GCT
+  props:
+    psi_ms_accession: MS:1000159
+  description:
+    en: Waters oa-ToF based GCT.
+- id: MS:1000164
+  title:
+    en: IsoPrime
+  props:
+    psi_ms_accession: MS:1000164
+  description:
+    en: Waters IsoPrime MS.
+- id: MS:1000165
+  title:
+    en: IsoProbe
+  props:
+    psi_ms_accession: MS:1000165
+  description:
+    en: Waters IsoProbe MS.
+- id: MS:1000166
+  title:
+    en: IsoProbe T
+  props:
+    psi_ms_accession: MS:1000166
+  description:
+    en: Waters IsoProbe T MS.
+- id: MS:1000170
+  title:
+    en: M@LDI L
+  props:
+    psi_ms_accession: MS:1000170
+  description:
+    en: Waters oa-ToF based MALDI L.
+- id: MS:1000171
+  title:
+    en: M@LDI LR
+  props:
+    psi_ms_accession: MS:1000171
+  description:
+    en: Waters oa-ToF based MALDI LR.
+- id: MS:1000180
+  title:
+    en: NG-5400
+  props:
+    psi_ms_accession: MS:1000180
+  description:
+    en: Waters NG-5400 MS.
+- id: MS:1000184
+  title:
+    en: Platform ICP
+  props:
+    psi_ms_accession: MS:1000184
+  description:
+    en: Waters Platform ICP MS.
+- id: MS:1000188
+  title:
+    en: Q-Tof micro
+  props:
+    psi_ms_accession: MS:1000188
+  description:
+    en: Waters oa-ToF based Q-Tof micro.
+- id: MS:1000189
+  title:
+    en: Q-Tof Ultima
+  props:
+    psi_ms_accession: MS:1000189
+  description:
+    en: Waters oa-ToF based Q-Tof Ultima.
+- id: MS:1000191
+  title:
+    en: quattro micro
+  props:
+    psi_ms_accession: MS:1000191
+  description:
+    en: Waters (triple) quadrupole based micro.
+- id: MS:1000192
+  title:
+    en: Quattro Ultima
+  props:
+    psi_ms_accession: MS:1000192
+  description:
+    en: Waters (triple) quadrupole based Ultima.
+- id: MS:1000632
+  title:
+    en: Q-Tof Premier
+  props:
+    psi_ms_accession: MS:1000632
+  description:
+    en: Waters oa-ToF based Q-Tof Premier.
+- id: MS:1000660
+  title:
+    en: Xevo MRT MS
+  props:
+    psi_ms_accession: MS:1000660
+  description:
+    en: Waters Corporation Xevo MRT Mass Spectrometer.
+- id: MS:1000818
+  title:
+    en: Acquity UPLC PDA
+  props:
+    psi_ms_accession: MS:1000818
+  description:
+    en: Acquity UPLC Photodiode Array Detector.
+- id: MS:1000819
+  title:
+    en: Acquity UPLC FLR
+  props:
+    psi_ms_accession: MS:1000819
+  description:
+    en: Acquity UPLC Fluorescence Detector.
+- id: MS:1001770
+  title:
+    en: GCT Premier
+  props:
+    psi_ms_accession: MS:1001770
+  description:
+    en: Waters oa-ToF based GCT Premier.
+- id: MS:1001771
+  title:
+    en: MALDI Synapt G2 HDMS
+  props:
+    psi_ms_accession: MS:1001771
+  description:
+    en: Waters oa-ToF based MALDI Synapt G2 HDMS.
+- id: MS:1001772
+  title:
+    en: MALDI Synapt G2 MS
+  props:
+    psi_ms_accession: MS:1001772
+  description:
+    en: Waters oa-ToF based MALDI Synapt G2 MS.
+- id: MS:1001773
+  title:
+    en: MALDI Synapt G2-S HDMS
+  props:
+    psi_ms_accession: MS:1001773
+  description:
+    en: Waters oa-ToF based MALDI Synapt G2 MS.
+- id: MS:1001774
+  title:
+    en: MALDI Synapt G2-S MS
+  props:
+    psi_ms_accession: MS:1001774
+  description:
+    en: Waters oa-ToF based MALDI Synapt G2-S MS.
+- id: MS:1001775
+  title:
+    en: MALDI Synapt HDMS
+  props:
+    psi_ms_accession: MS:1001775
+  description:
+    en: Waters oa-ToF based MALDI Synapt HDMS.
+- id: MS:1001776
+  title:
+    en: MALDI Synapt MS
+  props:
+    psi_ms_accession: MS:1001776
+  description:
+    en: Waters oa-ToF based MALDI Synapt MS.
+- id: MS:1001777
+  title:
+    en: Synapt G2 HDMS
+  props:
+    psi_ms_accession: MS:1001777
+  description:
+    en: Waters oa-ToF based Synapt G2 HDMS.
+- id: MS:1001778
+  title:
+    en: Synapt G2 MS
+  props:
+    psi_ms_accession: MS:1001778
+  description:
+    en: Waters oa-ToF based Synapt G2 MS.
+- id: MS:1001779
+  title:
+    en: Synapt G2-S HDMS
+  props:
+    psi_ms_accession: MS:1001779
+  description:
+    en: Waters oa-ToF based Synapt G2-S HDMS.
+- id: MS:1001780
+  title:
+    en: Synapt G2-S MS
+  props:
+    psi_ms_accession: MS:1001780
+  description:
+    en: Waters oa-ToF based Synapt G2-S MS.
+- id: MS:1001781
+  title:
+    en: Synapt HDMS
+  props:
+    psi_ms_accession: MS:1001781
+  description:
+    en: Waters oa-ToF based Synapt HDMS.
+- id: MS:1001782
+  title:
+    en: Synapt MS
+  props:
+    psi_ms_accession: MS:1001782
+  description:
+    en: Waters oa-ToF based Synapt MS.
+- id: MS:1001783
+  title:
+    en: Xevo G2 Q-Tof
+  props:
+    psi_ms_accession: MS:1001783
+  description:
+    en: Waters oa-ToF based Xevo G2 Q-Tof.
+- id: MS:1001784
+  title:
+    en: Xevo G2 Tof
+  props:
+    psi_ms_accession: MS:1001784
+  description:
+    en: Waters oa-ToF based Xevo G2 Tof.
+- id: MS:1001785
+  title:
+    en: Xevo Q-Tof
+  props:
+    psi_ms_accession: MS:1001785
+  description:
+    en: Waters oa-ToF based Xevo Q-Tof.
+- id: MS:1001786
+  title:
+    en: '3100'
+  props:
+    psi_ms_accession: MS:1001786
+  description:
+    en: Waters quadrupole based 3100.
+- id: MS:1001787
+  title:
+    en: Acquity SQD
+  props:
+    psi_ms_accession: MS:1001787
+  description:
+    en: Waters quadrupole based Acquity SQD.
+- id: MS:1001788
+  title:
+    en: Acquity TQD
+  props:
+    psi_ms_accession: MS:1001788
+  description:
+    en: Waters quadrupole based Acquity TQD.
+- id: MS:1001789
+  title:
+    en: Quattro micro GC
+  props:
+    psi_ms_accession: MS:1001789
+  description:
+    en: Waters (triple) quadrupole based Quattro micro GC.
+- id: MS:1001790
+  title:
+    en: Xevo TQ MS
+  props:
+    psi_ms_accession: MS:1001790
+  description:
+    en: Waters quadrupole based Xevo TQ MS.
+- id: MS:1001791
+  title:
+    en: Xevo TQD
+  props:
+    psi_ms_accession: MS:1001791
+  description:
+    en: Waters quadrupole based Xevo TQD.
+- id: MS:1001792
+  title:
+    en: Xevo TQ-S
+  props:
+    psi_ms_accession: MS:1001792
+  description:
+    en: Waters quadrupole based Xevo TQ-S.
+- id: MS:1002274
+  title:
+    en: SQ Detector 2
+  props:
+    psi_ms_accession: MS:1002274
+  description:
+    en: Waters quadrupole based SQ Detector 2.
+- id: MS:1002275
+  title:
+    en: Xevo G2-S Tof
+  props:
+    psi_ms_accession: MS:1002275
+  description:
+    en: Waters oa-ToF based Xevo G2-S Tof.
+- id: MS:1002276
+  title:
+    en: Xevo G2-S QTof
+  props:
+    psi_ms_accession: MS:1002276
+  description:
+    en: Waters oa-ToF based Xevo G2-S QTof.
+- id: MS:1002277
+  title:
+    en: AutoSpec Premier
+  props:
+    psi_ms_accession: MS:1002277
+  description:
+    en: Waters AutoSpec Premier magnetic sector instrument.
+- id: MS:1002726
+  title:
+    en: SYNAPT G2-Si
+  props:
+    psi_ms_accession: MS:1002726
+  description:
+    en: Waters Corporation SYNAPT G2-Si orthogonal acceleration time-of-flight mass
+      spectrometer.
+- id: MS:1002727
+  title:
+    en: MALDI SYNAPT G2-Si
+  props:
+    psi_ms_accession: MS:1002727
+  description:
+    en: Waters Corporation MALDI SYNAPT G2-Si orthogonal acceleration time-of-flight
+      mass spectrometer.
+- id: MS:1002728
+  title:
+    en: Vion IMS QTof
+  props:
+    psi_ms_accession: MS:1002728
+  description:
+    en: Waters Corporation Vion IMS QTof orthogonal acceleration time-of-flight mass
+      spectrometer.
+- id: MS:1002729
+  title:
+    en: Xevo G2-XS Tof
+  props:
+    psi_ms_accession: MS:1002729
+  description:
+    en: Waters Corporation Xevo G2 XS Tof orthogonal acceleration time-of-flight mass
+      spectrometer.
+- id: MS:1002730
+  title:
+    en: Xevo TQ-XS
+  props:
+    psi_ms_accession: MS:1002730
+  description:
+    en: Waters Corporation Xevo TQ-XS triple quadrupole mass spectrometer.
+- id: MS:1002731
+  title:
+    en: Xevo TQ-S micro
+  props:
+    psi_ms_accession: MS:1002731
+  description:
+    en: Waters Corporation Xevo TQ-S micro triple quadrupole mass spectrometer.
+- id: MS:1003183
+  title:
+    en: Synapt XS
+  props:
+    psi_ms_accession: MS:1003183
+  description:
+    en: Waters oa-ToF based Synapt XS.
+- id: MS:1003184
+  title:
+    en: SELECT SERIES Cyclic IMS
+  props:
+    psi_ms_accession: MS:1003184
+  description:
+    en: Waters oa-ToF based SELECT SERIES Cyclic IMS.
+- id: MS:1003185
+  title:
+    en: SELECT SERIES MRT
+  props:
+    psi_ms_accession: MS:1003185
+  description:
+    en: Waters oa-ToF based SELECT SERIES MRT.
+- id: MS:1003252
+  title:
+    en: Xevo G2-XS QTof
+  props:
+    psi_ms_accession: MS:1003252
+  description:
+    en: Waters Corporation Xevo G2-XS QTof quadrupole time-of-flight mass spectrometer.
+- id: MS:1003380
+  title:
+    en: Xevo G3 QTof
+  props:
+    psi_ms_accession: MS:1003380
+  description:
+    en: Waters Corporation Xevo G3 QTof quadrupole time-of-flight mass spectrometer.
+- id: MS:1003381
+  title:
+    en: ACQUITY RDa Detector
+  props:
+    psi_ms_accession: MS:1003381
+  description:
+    en: Waters Corporation RDa time-of-flight mass detector.
+- id: MS:1003505
+  title:
+    en: ACQUITY QDa
+  props:
+    psi_ms_accession: MS:1003505
+  description:
+    en: Waters ACQUITY QDa quadrupole mass spectrometer.
+- id: MS:1003506
+  title:
+    en: LCT Premier
+  props:
+    psi_ms_accession: MS:1003506
+  description:
+    en: Waters LCT Premier time-of-flight mass spectrometer.
+- id: MS:1003507
+  title:
+    en: Quattro Premier XE
+  props:
+    psi_ms_accession: MS:1003507
+  description:
+    en: Waters Quattro Premier XE triple quadrupole mass spectrometer.
+- id: MS:1003508
+  title:
+    en: Synapt G1 HDMS
+  props:
+    psi_ms_accession: MS:1003508
+  description:
+    en: Waters Synapt G1 HDMS quadrupole - ion mobility - time-of-flight mass spectrometer.
+- id: MS:1003509
+  title:
+    en: Synapt G2-Si HDMS
+  props:
+    psi_ms_accession: MS:1003509
+  description:
+    en: Waters Synapt G2-Si HDMS quadrupole - ion mobility - time-of-flight mass spectrometer.
+- id: MS:1003510
+  title:
+    en: Synapt G1
+  props:
+    psi_ms_accession: MS:1003510
+  description:
+    en: Waters Synapt G1 quadrupole - ion mobility - time-of-flight mass spectrometer.
+- id: MS:1003511
+  title:
+    en: Synapt G2 XS QTOF
+  props:
+    psi_ms_accession: MS:1003511
+  description:
+    en: Waters Synapt G2 XS QTOF quadrupole - ion mobility - time-of-flight mass spectrometer.
+- id: MS:1003512
+  title:
+    en: Xevo TQ Absolute
+  props:
+    psi_ms_accession: MS:1003512
+  description:
+    en: Waters Xevo TQ Absolute triple quadrupole mass spectrometer.
+- id: MS:1003513
+  title:
+    en: Xevo TQ Absolute XR
+  props:
+    psi_ms_accession: MS:1003513
+  description:
+    en: Waters Xevo TQ Absolute XR triple quadrupole mass spectrometer.
+- id: MS:1000483
+  title:
+    en: Thermo Fisher Scientific instrument model
+  props:
+    psi_ms_accession: MS:1000483
+  description:
+    en: Thermo Fisher Scientific instrument model. The company has gone through several
+      names including Thermo Finnigan, Thermo Scientific.
+- id: MS:1000125
+  title:
+    en: Thermo Finnigan instrument model
+  props:
+    psi_ms_accession: MS:1000125
+  description:
+    en: ThermoFinnigan from Thermo Electron Corporation instrument model.
+- id: MS:1000153
+  title:
+    en: DELTA plusAdvantage
+  props:
+    psi_ms_accession: MS:1000153
+  description:
+    en: ThermoFinnigan DELTA plusAdvantage MS.
+- id: MS:1000154
+  title:
+    en: DELTAplusXP
+  props:
+    psi_ms_accession: MS:1000154
+  description:
+    en: ThermoFinnigan DELTAplusXP MS.
+- id: MS:1000167
+  title:
+    en: LCQ Advantage
+  props:
+    psi_ms_accession: MS:1000167
+  description:
+    en: ThermoFinnigan LCQ Advantage MS.
+- id: MS:1000168
+  title:
+    en: LCQ Classic
+  props:
+    psi_ms_accession: MS:1000168
+  description:
+    en: ThermoFinnigan LCQ Classic MS.
+- id: MS:1000169
+  title:
+    en: LCQ Deca XP Plus
+  props:
+    psi_ms_accession: MS:1000169
+  description:
+    en: ThermoFinnigan LCQ Deca XP Plus MS.
+- id: MS:1000172
+  title:
+    en: MAT253
+  props:
+    psi_ms_accession: MS:1000172
+  description:
+    en: ThermoFinnigan MAT253 MS.
+- id: MS:1000173
+  title:
+    en: MAT900XP
+  props:
+    psi_ms_accession: MS:1000173
+  description:
+    en: ThermoFinnigan MAT900XP MS.
+- id: MS:1000174
+  title:
+    en: MAT900XP Trap
+  props:
+    psi_ms_accession: MS:1000174
+  description:
+    en: ThermoFinnigan MAT900XP Trap MS.
+- id: MS:1000175
+  title:
+    en: MAT95XP
+  props:
+    psi_ms_accession: MS:1000175
+  description:
+    en: ThermoFinnigan MAT95XP MS.
+- id: MS:1000176
+  title:
+    en: MAT95XP Trap
+  props:
+    psi_ms_accession: MS:1000176
+  description:
+    en: ThermoFinnigan MAT95XP Trap MS.
+- id: MS:1000179
+  title:
+    en: neptune
+  props:
+    psi_ms_accession: MS:1000179
+  description:
+    en: ThermoFinnigan NEPTUNE MS.
+- id: MS:1000185
+  title:
+    en: PolarisQ
+  props:
+    psi_ms_accession: MS:1000185
+  description:
+    en: ThermoFinnigan PolarisQ MS.
+- id: MS:1000193
+  title:
+    en: Surveyor MSQ
+  props:
+    psi_ms_accession: MS:1000193
+  description:
+    en: ThermoFinnigan Surveyor MSQ MS.
+- id: MS:1000196
+  title:
+    en: TEMPUS TOF
+  props:
+    psi_ms_accession: MS:1000196
+  description:
+    en: ThermoFinnigan TEMPUS TOF MS.
+- id: MS:1000197
+  title:
+    en: TRACE DSQ
+  props:
+    psi_ms_accession: MS:1000197
+  description:
+    en: ThermoFinnigan TRACE DSQ MS.
+- id: MS:1000198
+  title:
+    en: TRITON
+  props:
+    psi_ms_accession: MS:1000198
+  description:
+    en: ThermoFinnigan TRITON MS.
+- id: MS:1000199
+  title:
+    en: TSQ Quantum
+  props:
+    psi_ms_accession: MS:1000199
+  description:
+    en: ThermoFinnigan TSQ Quantum MS.
+- id: MS:1000447
+  title:
+    en: LTQ
+  props:
+    psi_ms_accession: MS:1000447
+  description:
+    en: Finnigan LTQ MS.
+- id: MS:1000448
+  title:
+    en: LTQ FT
+  props:
+    psi_ms_accession: MS:1000448
+  description:
+    en: Finnigan LTQ FT MS.
+- id: MS:1000449
+  title:
+    en: LTQ Orbitrap
+  props:
+    psi_ms_accession: MS:1000449
+  description:
+    en: Finnigan LTQ Orbitrap MS.
+- id: MS:1000450
+  title:
+    en: LXQ
+  props:
+    psi_ms_accession: MS:1000450
+  description:
+    en: Finnigan LXQ MS.
+- id: MS:1000492
+  title:
+    en: Thermo Electron instrument model
+  props:
+    psi_ms_accession: MS:1000492
+  description:
+    en: Thermo Electron Corporation instrument model.
+- id: MS:1000493
+  title:
+    en: Finnigan MAT instrument model
+  props:
+    psi_ms_accession: MS:1000493
+  description:
+    en: Finnigan MAT instrument model.
+- id: MS:1000494
+  title:
+    en: Thermo Scientific instrument model
+  props:
+    psi_ms_accession: MS:1000494
+  description:
+    en: Thermo Scientific instrument model.
+- id: MS:1000554
+  title:
+    en: LCQ Deca
+  props:
+    psi_ms_accession: MS:1000554
+  description:
+    en: ThermoFinnigan LCQ Deca.
+- id: MS:1000555
+  title:
+    en: LTQ Orbitrap Discovery
+  props:
+    psi_ms_accession: MS:1000555
+  description:
+    en: LTQ Orbitrap Discovery.
+- id: MS:1000556
+  title:
+    en: LTQ Orbitrap XL
+  props:
+    psi_ms_accession: MS:1000556
+  description:
+    en: LTQ Orbitrap XL.
+- id: MS:1000557
+  title:
+    en: LTQ FT Ultra
+  props:
+    psi_ms_accession: MS:1000557
+  description:
+    en: LTQ FT Ultra.
+- id: MS:1000558
+  title:
+    en: GC Quantum
+  props:
+    psi_ms_accession: MS:1000558
+  description:
+    en: GC Quantum.
+- id: MS:1000578
+  title:
+    en: LCQ Fleet
+  props:
+    psi_ms_accession: MS:1000578
+  description:
+    en: LCQ Fleet.
+- id: MS:1000622
+  title:
+    en: Surveyor PDA
+  props:
+    psi_ms_accession: MS:1000622
+  description:
+    en: Surveyor PDA.
+- id: MS:1000623
+  title:
+    en: Accela PDA
+  props:
+    psi_ms_accession: MS:1000623
+  description:
+    en: Accela PDA.
+- id: MS:1000634
+  title:
+    en: DSQ
+  props:
+    psi_ms_accession: MS:1000634
+  description:
+    en: ThermoFinnigan DSQ GC-MS.
+- id: MS:1000635
+  title:
+    en: ITQ 700
+  props:
+    psi_ms_accession: MS:1000635
+  description:
+    en: Thermo Scientific ITQ 700 GC-MS.
+- id: MS:1000636
+  title:
+    en: ITQ 900
+  props:
+    psi_ms_accession: MS:1000636
+  description:
+    en: Thermo Scientific ITQ 900 GC-MS.
+- id: MS:1000637
+  title:
+    en: ITQ 1100
+  props:
+    psi_ms_accession: MS:1000637
+  description:
+    en: Thermo Scientific ITQ 1100 GC-MS.
+- id: MS:1000638
+  title:
+    en: LTQ XL ETD
+  props:
+    psi_ms_accession: MS:1000638
+  description:
+    en: Thermo Scientific LTQ XL MS with ETD.
+- id: MS:1000639
+  title:
+    en: LTQ Orbitrap XL ETD
+  props:
+    psi_ms_accession: MS:1000639
+  description:
+    en: Thermo Scientific LTQ Orbitrap XL MS with ETD.
+- id: MS:1000640
+  title:
+    en: DFS
+  props:
+    psi_ms_accession: MS:1000640
+  description:
+    en: Thermo Scientific DFS HR GC-MS.
+- id: MS:1000641
+  title:
+    en: DSQ II
+  props:
+    psi_ms_accession: MS:1000641
+  description:
+    en: Thermo Scientific DSQ II GC-MS.
+- id: MS:1000642
+  title:
+    en: MALDI LTQ XL
+  props:
+    psi_ms_accession: MS:1000642
+  description:
+    en: Thermo Scientific MALDI LTQ XL MS.
+- id: MS:1000643
+  title:
+    en: MALDI LTQ Orbitrap
+  props:
+    psi_ms_accession: MS:1000643
+  description:
+    en: Thermo Scientific MALDI LTQ Orbitrap MS.
+- id: MS:1000644
+  title:
+    en: TSQ Quantum Access
+  props:
+    psi_ms_accession: MS:1000644
+  description:
+    en: Thermo Scientific TSQ Quantum Access MS.
+- id: MS:1000645
+  title:
+    en: Element XR
+  props:
+    psi_ms_accession: MS:1000645
+  description:
+    en: Thermo Scientific Element XR HR-ICP-MS.
+- id: MS:1000646
+  title:
+    en: Element 2
+  props:
+    psi_ms_accession: MS:1000646
+  description:
+    en: Thermo Scientific Element 2 HR-ICP-MS.
+- id: MS:1000647
+  title:
+    en: Element GD
+  props:
+    psi_ms_accession: MS:1000647
+  description:
+    en: Thermo Scientific Element GD Glow Discharge MS.
+- id: MS:1000648
+  title:
+    en: GC IsoLink
+  props:
+    psi_ms_accession: MS:1000648
+  description:
+    en: Thermo Scientific GC IsoLink Isotope Ratio MS.
+- id: MS:1000649
+  title:
+    en: Exactive
+  props:
+    psi_ms_accession: MS:1000649
+  description:
+    en: Thermo Scientific Exactive MS.
+- id: MS:1000743
+  title:
+    en: TSQ Quantum Ultra AM
+  props:
+    psi_ms_accession: MS:1000743
+  description:
+    en: Thermo Scientific TSQ Quantum Ultra AM.
+- id: MS:1000748
+  title:
+    en: SSQ 7000
+  props:
+    psi_ms_accession: MS:1000748
+  description:
+    en: ThermoFinnigan SSQ 7000 MS.
+- id: MS:1000749
+  title:
+    en: TSQ 7000
+  props:
+    psi_ms_accession: MS:1000749
+  description:
+    en: ThermoFinnigan TSQ 7000 MS.
+- id: MS:1000750
+  title:
+    en: TSQ
+  props:
+    psi_ms_accession: MS:1000750
+  description:
+    en: ThermoFinnigan TSQ MS.
+- id: MS:1000751
+  title:
+    en: TSQ Quantum Ultra
+  props:
+    psi_ms_accession: MS:1000751
+  description:
+    en: Thermo Scientific TSQ Quantum Ultra.
+- id: MS:1000854
+  title:
+    en: LTQ XL
+  props:
+    psi_ms_accession: MS:1000854
+  description:
+    en: Thermo Scientific LTQ XL MS.
+- id: MS:1000855
+  title:
+    en: LTQ Velos
+  props:
+    psi_ms_accession: MS:1000855
+  description:
+    en: Thermo Scientific LTQ Velos MS.
+- id: MS:1000856
+  title:
+    en: LTQ Velos/ETD
+  props:
+    psi_ms_accession: MS:1000856
+  description:
+    en: Thermo Scientific LTQ Velos MS with ETD.
+- id: MS:1001510
+  title:
+    en: TSQ Vantage
+  props:
+    psi_ms_accession: MS:1001510
+  description:
+    en: TSQ Vantage.
+- id: MS:1001742
+  title:
+    en: LTQ Orbitrap Velos
+  props:
+    psi_ms_accession: MS:1001742
+  description:
+    en: Finnigan LTQ Orbitrap Velos MS.
+- id: MS:1001908
+  title:
+    en: ISQ
+  props:
+    psi_ms_accession: MS:1001908
+  description:
+    en: Thermo Scientific ISQ single quadrupole MS with the ExtractraBrite source.
+- id: MS:1001909
+  title:
+    en: Velos Plus
+  props:
+    psi_ms_accession: MS:1001909
+  description:
+    en: Thermo Scientific second generation Velos.
+- id: MS:1001910
+  title:
+    en: Orbitrap Elite
+  props:
+    psi_ms_accession: MS:1001910
+  description:
+    en: Thermo Scientific Orbitrap Elite, sometimes referred to as the LTQ Orbitrap
+      Elite.
+- id: MS:1001911
+  title:
+    en: Q Exactive
+  props:
+    psi_ms_accession: MS:1001911
+  description:
+    en: Thermo Scientific Q Exactive.
+- id: MS:1002416
+  title:
+    en: Orbitrap Fusion
+  props:
+    psi_ms_accession: MS:1002416
+  description:
+    en: Thermo Scientific Orbitrap Fusion.
+- id: MS:1002417
+  title:
+    en: Orbitrap Fusion ETD
+  props:
+    psi_ms_accession: MS:1002417
+  description:
+    en: Thermo Scientific Orbitrap Fusion with ETD.
+- id: MS:1002418
+  title:
+    en: TSQ Quantiva
+  props:
+    psi_ms_accession: MS:1002418
+  description:
+    en: Thermo Scientific TSQ Quantiva MS.
+- id: MS:1002419
+  title:
+    en: TSQ Endura
+  props:
+    psi_ms_accession: MS:1002419
+  description:
+    en: Thermo Scientific TSQ Endura MS.
+- id: MS:1002523
+  title:
+    en: Q Exactive HF
+  props:
+    psi_ms_accession: MS:1002523
+  description:
+    en: Thermo Scientific Q Exactive.
+- id: MS:1002525
+  title:
+    en: TSQ 8000 Evo
+  props:
+    psi_ms_accession: MS:1002525
+  description:
+    en: Thermo Scientific TSQ 8000 Evo MS.
+- id: MS:1002526
+  title:
+    en: Exactive Plus
+  props:
+    psi_ms_accession: MS:1002526
+  description:
+    en: Thermo Scientific Exactive Plus MS.
+- id: MS:1002634
+  title:
+    en: Q Exactive Plus
+  props:
+    psi_ms_accession: MS:1002634
+  description:
+    en: Thermo Scientific Q Exactive Plus.
+- id: MS:1002732
+  title:
+    en: Orbitrap Fusion Lumos
+  props:
+    psi_ms_accession: MS:1002732
+  description:
+    en: Thermo Scientific Orbitrap Fusion Lumos mass spectrometer with Tribrid architecture
+      consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers.
+- id: MS:1002835
+  title:
+    en: LTQ Orbitrap Classic
+  props:
+    psi_ms_accession: MS:1002835
+  description:
+    en: Thermo Fisher Scientific LTQ Orbitrap Classic.
+- id: MS:1002874
+  title:
+    en: TSQ Altis
+  props:
+    psi_ms_accession: MS:1002874
+  description:
+    en: Thermo Scientific TSQ Altis Triple Quadrupole MS.
+- id: MS:1002875
+  title:
+    en: TSQ Quantis
+  props:
+    psi_ms_accession: MS:1002875
+  description:
+    en: Thermo Scientific TSQ Quantis Triple Quadrupole MS.
+- id: MS:1002876
+  title:
+    en: TSQ 9000
+  props:
+    psi_ms_accession: MS:1002876
+  description:
+    en: Thermo Scientific TSQ 9000 Triple Quadrupole MS.
+- id: MS:1002877
+  title:
+    en: Q Exactive HF-X
+  props:
+    psi_ms_accession: MS:1002877
+  description:
+    en: Thermo Scientific Q Exactive HF-X Hybrid Quadrupole Orbitrap MS.
+- id: MS:1002992
+  title:
+    en: Orbitrap Exploris GC-MS
+  props:
+    psi_ms_accession: MS:1002992
+  description:
+    en: Thermo Scientific Orbitrap Exploris GC-MS.
+- id: MS:1002993
+  title:
+    en: Q Exactive Focus
+  props:
+    psi_ms_accession: MS:1002993
+  description:
+    en: Q Exactive Focus Hybrid Quadrupole-Orbitrap Mass Spectrometer.
+- id: MS:1002994
+  title:
+    en: Orbitrap Excedion Pro
+  props:
+    psi_ms_accession: MS:1002994
+  description:
+    en: Thermo Scientific Orbitrap Excedion Pro.
+- id: MS:1003028
+  title:
+    en: Orbitrap Exploris 480
+  props:
+    psi_ms_accession: MS:1003028
+  description:
+    en: Thermo Scientific Orbitrap Exploris 480 Quadrupole Orbitrap MS.
+- id: MS:1003029
+  title:
+    en: Orbitrap Eclipse
+  props:
+    psi_ms_accession: MS:1003029
+  description:
+    en: Thermo Scientific Orbitrap Eclipse mass spectrometer with Tribrid architecture
+      consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers.
+- id: MS:1003094
+  title:
+    en: Orbitrap Exploris 240
+  props:
+    psi_ms_accession: MS:1003094
+  description:
+    en: Thermo Scientific Orbitrap Exploris 240 Quadrupole Orbitrap MS.
+- id: MS:1003095
+  title:
+    en: Orbitrap Exploris 120
+  props:
+    psi_ms_accession: MS:1003095
+  description:
+    en: Thermo Scientific Orbitrap Exploris 120 Quadrupole Orbitrap MS.
+- id: MS:1003096
+  title:
+    en: Orbitrap Velos Pro
+  props:
+    psi_ms_accession: MS:1003096
+  description:
+    en: Thermo Scientific LTQ Orbitrap Velos Pro, often just referred to as the Orbitrap
+      Velos Pro.
+- id: MS:1003112
+  title:
+    en: Orbitrap ID-X
+  props:
+    psi_ms_accession: MS:1003112
+  description:
+    en: Thermo Scientific Orbitrap ID-X mass spectrometer with Tribrid architecture
+      consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers.
+- id: MS:1003245
+  title:
+    en: Q Exactive UHMR
+  props:
+    psi_ms_accession: MS:1003245
+  description:
+    en: Thermo Scientific Q Exactive UHMR (Ultra High Mass Range) Hybrid Quadrupole
+      Orbitrap MS.
+- id: MS:1003292
+  title:
+    en: TSQ Altis Plus
+  props:
+    psi_ms_accession: MS:1003292
+  description:
+    en: Thermo Scientific TSQ Altis Plus Triple Quadrupole MS.
+- id: MS:1003356
+  title:
+    en: Orbitrap Ascend
+  props:
+    psi_ms_accession: MS:1003356
+  description:
+    en: Thermo Scientific Orbitrap Ascend mass spectrometer with Tribrid architecture
+      consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers.
+- id: MS:1003378
+  title:
+    en: Orbitrap Astral
+  props:
+    psi_ms_accession: MS:1003378
+  description:
+    en: 'Thermo Scientific Orbitrap Astral mass spectrometer contains three mass analyzers:
+      a quadrupole analyzer, an Orbitrap analyzer, and the Astral analyzer.'
+- id: MS:1003395
+  title:
+    en: Q Exactive GC Orbitrap
+  props:
+    psi_ms_accession: MS:1003395
+  description:
+    en: Q Exactive GC Orbitrap GC-MS/MS hybrid quadrupole Orbitrap mass spectrometer.
+- id: MS:1003409
+  title:
+    en: Stellar
+  props:
+    psi_ms_accession: MS:1003409
+  description:
+    en: Thermo Scientific Stellar mass spectrometer contains a quadrupole mass filter,
+      a collision cell, and a quadrupole linear ion trap mass analyzer.
+- id: MS:1003411
+  title:
+    en: Orbitrap IQ-X
+  props:
+    psi_ms_accession: MS:1003411
+  description:
+    en: Thermo Scientific Orbitrap IQ-X mass spectrometer with Tribrid architecture
+      consisting of quadrupole mass filter, linear ion trap and Orbitrap mass analyzers.
+- id: MS:1003423
+  title:
+    en: Orbitrap Exploris GC 240
+  props:
+    psi_ms_accession: MS:1003423
+  description:
+    en: Orbitrap Exploris GC 240 Mass Spectrometer.
+- id: MS:1003442
+  title:
+    en: Orbitrap Astral Zoom
+  props:
+    psi_ms_accession: MS:1003442
+  description:
+    en: 'Thermo Scientific Orbitrap Astral Zoom mass spectrometer contains three mass
+      analyzers: a quadrupole analyzer, an Orbitrap analyzer, and an Astral analyzer.'
+- id: MS:1003449
+  title:
+    en: ISQ 7000
+  props:
+    psi_ms_accession: MS:1003449
+  description:
+    en: Thermo Scientific ISQ 7000 Single Quadrupole GC-MS System.
+- id: MS:1003495
+  title:
+    en: Velos Pro
+  props:
+    psi_ms_accession: MS:1003495
+  description:
+    en: Thermo Fisher Scientific Velos Pro ion trap - mass spectrometer.
+- id: MS:1003496
+  title:
+    en: MALDI LTQ Orbitrap XL
+  props:
+    psi_ms_accession: MS:1003496
+  description:
+    en: Thermo Fisher Scientific MALDI LTQ Orbitrap XL linear ion trap - orbitrap
+      mass spectrometer.
+- id: MS:1003497
+  title:
+    en: MALDI LTQ Orbitrap Discovery
+  props:
+    psi_ms_accession: MS:1003497
+  description:
+    en: Thermo Fisher Scientific MALDI LTQ Orbitrap Discovery linear ion trap - orbitrap
+      mass spectrometer.
+- id: MS:1003498
+  title:
+    en: TSQ Quantum Access MAX
+  props:
+    psi_ms_accession: MS:1003498
+  description:
+    en: Thermo Fisher Scientific TSQ Quantum Access MAX triple quadrupole mass spectrometer.
+- id: MS:1003499
+  title:
+    en: LTQ Orbitrap Velos/ETD
+  props:
+    psi_ms_accession: MS:1003499
+  description:
+    en: Thermo Fisher Scientific LTQ Orbitrap Velos/ETD linear ion trap - orbitrap
+      mass spectrometer.
+- id: MS:1003500
+  title:
+    en: ISQ LT
+  props:
+    psi_ms_accession: MS:1003500
+  description:
+    en: Thermo Fisher Scientific ISQ LT gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003501
+  title:
+    en: ITQ
+  props:
+    psi_ms_accession: MS:1003501
+  description:
+    en: Thermo Fisher Scientific ITQ ion trap mass spectrometer.
+- id: MS:1003502
+  title:
+    en: TSQ Quantum XLS
+  props:
+    psi_ms_accession: MS:1003502
+  description:
+    en: Thermo Fisher Scientific TSQ Quantum XLS gas chromatograph - triple quadrupole
+      mass spectrometer.
+- id: MS:1003503
+  title:
+    en: TSQ 8000
+  props:
+    psi_ms_accession: MS:1003503
+  description:
+    en: Thermo Fisher Scientific TSQ 8000 gas chromatograph - triple quadrupole mass
+      spectrometer.
+- id: MS:1003504
+  title:
+    en: DeltaPlus IRMS
+  props:
+    psi_ms_accession: MS:1003504
+  description:
+    en: Thermo Fisher Scientific DeltaPlus IRMS isotope ratio mass spectrometer.
+- id: MS:1003554
+  title:
+    en: ThermoQuest Voyager
+  props:
+    psi_ms_accession: MS:1003554
+  description:
+    en: Thermo Finnigan ThermoQuest Voyager gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003800
+  title:
+    en: TSQ Certis
+  props:
+    psi_ms_accession: MS:1003800
+  description:
+    en: Thermo Scientific TSQ Certis Triple Quadrupole MS.
+- id: MS:1000488
+  title:
+    en: Hitachi instrument model
+  props:
+    psi_ms_accession: MS:1000488
+  description:
+    en: Hitachi instrument model.
+- id: MS:1000489
+  title:
+    en: Varian instrument model
+  props:
+    psi_ms_accession: MS:1000489
+  description:
+    en: Varian instrument model.
+- id: MS:1000123
+  title:
+    en: IonSpec instrument model
+  props:
+    psi_ms_accession: MS:1000123
+  description:
+    en: IonSpec corporation instrument model.
+- id: MS:1000158
+  title:
+    en: explorer
+  props:
+    psi_ms_accession: MS:1000158
+  description:
+    en: IonSpec Explorer MS.
+- id: MS:1000162
+  title:
+    en: HiRes ESI
+  props:
+    psi_ms_accession: MS:1000162
+  description:
+    en: IonSpec HiResESI MS.
+- id: MS:1000163
+  title:
+    en: HiRes MALDI
+  props:
+    psi_ms_accession: MS:1000163
+  description:
+    en: IonSpec HiResMALDI MS.
+- id: MS:1000181
+  title:
+    en: OMEGA
+  props:
+    psi_ms_accession: MS:1000181
+  description:
+    en: IonSpec OMEGA MS.
+- id: MS:1000182
+  title:
+    en: OMEGA-2001
+  props:
+    psi_ms_accession: MS:1000182
+  description:
+    en: IonSpec OMEGA-2001 MS.
+- id: MS:1000200
+  title:
+    en: ultima
+  props:
+    psi_ms_accession: MS:1000200
+  description:
+    en: IonSpec Ultima MS.
+- id: MS:1003483
+  title:
+    en: 4000 GC/MS
+  props:
+    psi_ms_accession: MS:1003483
+  description:
+    en: Varian 4000 GC/MS gas chromatograph - ion trap mass spectrometer.
+- id: MS:1003484
+  title:
+    en: 210-MS GC/MS Ion Trap
+  props:
+    psi_ms_accession: MS:1003484
+  description:
+    en: Varian 210-MS GC/MS Ion Trap gas chromatograph - ion trap mass spectrometer.
+- id: MS:1000490
+  title:
+    en: Agilent instrument model
+  props:
+    psi_ms_accession: MS:1000490
+  description:
+    en: Agilent instrument model.
+- id: MS:1000467
+  title:
+    en: 1200 series LC/MSD SL
+  props:
+    psi_ms_accession: MS:1000467
+  description:
+    en: The 1200 Series LC/MSD SL ion trap belongs to the Agilent LC/MSD ion trap
+      family. It provides fast polarity switching and multisignal data acquisition
+      capabilities in a single run while also providing 5 stages of automated data
+      dependent MS2 and 11 stages of manual MS2.
+- id: MS:1000468
+  title:
+    en: 6110 Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1000468
+  description:
+    en: The 6110 Quadrupole LC/MS system is a Agilent liquid chromatography instrument
+      combined with an entry level single quadrupole mass spectrometer from the 6100
+      Series of Agilent quadrupole mass spectrometers. 6110 Quadrupole mass spectrometer
+      has m/z range of 10-1500 and 2500 u/s scan speed. It proves
+- id: MS:1000469
+  title:
+    en: 6120A Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1000469
+  description:
+    en: The 6120A Quadrupole LC/MS system is a Agilent liquid chromatography instrument
+      combined with a single quadrupole mass spectrometer from the 6100 Series of
+      Agilent mass spectrometers. 6120 quadrupole mass spectrometer has m/z range
+      of 10-1500, 2500 u/s scan speed and utilizes multiple signal acquisi
+- id: MS:1000470
+  title:
+    en: 6130 Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1000470
+  description:
+    en: The 6130 Quadrupole LC/MS system is a Agilent liquid chromatography instrument
+      combined with a single quadrupole mass spectrometer from the 6100 series of
+      Agilent mass spectrometers. The 6130 quadrupole mass spectrometer has m/z range
+      of 2-3000, 2500 u/s scan speed in standard mode and 5250 u/s spee
+- id: MS:1000471
+  title:
+    en: 6140 Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1000471
+  description:
+    en: The 6140 Quadrupole LC/MS system is a Agilent liquid chromatography instrument
+      combined with a single quadrupole mass spectrometer from the 6100 Series of
+      Agilent quadrupole mass spectrometers. 6140 Quadrupole mass spectrometer has
+      m/z range of 10-1350, 2500 u/s scan speed in standard mode and 10000
+- id: MS:1000472
+  title:
+    en: 6210 Time-of-Flight LC/MS
+  props:
+    psi_ms_accession: MS:1000472
+  description:
+    en: The 6210 Time-of-Flight LC/MS is a Agilent liquid chromatography instrument
+      combined with a Agilent time of flight mass spectrometer. This time of flight
+      mass spectrometer has a m/z range of 50-12000, mass accuracy of less than 2
+      ppm and resolution greater than 13,000 at m/z 2722. It has multiple io
+- id: MS:1000473
+  title:
+    en: 6310 Ion Trap LC/MS
+  props:
+    psi_ms_accession: MS:1000473
+  description:
+    en: The 6310 Ion Trap LC/MS is a Agilent liquid chromatography instrument combined
+      with a 6300 series Agilent ion trap. It has a mass range of 50-2200 between
+      0.6 to 0.35 resolution and mass range of 200-4000 with resolution of 3-4. The
+      scan speed varies from 1650-27000 for the respective mass ranges.
+- id: MS:1000474
+  title:
+    en: 6320 Ion Trap LC/MS
+  props:
+    psi_ms_accession: MS:1000474
+  description:
+    en: The 6320 Ion Trap LC/MS is a Agilent liquid chromatography instrument combined
+      with a 6300 series Agilent ion trap. It has a mass range of 50-2200 between
+      0.6 to 0.25 resolution and mass range of 200-4000 with resolution of less than
+      3. The scan speed varies from 1650-27000 for the respective mass r
+- id: MS:1000475
+  title:
+    en: 6330 Ion Trap LC/MS
+  props:
+    psi_ms_accession: MS:1000475
+  description:
+    en: The 6330 Ion Trap LC/MS is a Agilent liquid chromatography instrument combined
+      with a 6300 series Agilent ion trap. It has a mass range of 50-2200 between
+      0.6 to 0.25 resolution and mass range of 200-4000 with resolution of less than
+      3. The scan speed varies from 1650-27000 for the respective mass r
+- id: MS:1000476
+  title:
+    en: 6340 Ion Trap LC/MS
+  props:
+    psi_ms_accession: MS:1000476
+  description:
+    en: The 6340 Ion Trap LC/MS is a Agilent liquid chromatography instrument combined
+      with a 6300 series Agilent ion trap. It has a mass range of 50-2200 between
+      0.6 to 0.25 resolution and mass range of 200-4000 with resolution of less than
+      3. The scan speed varies from 1650-27000 for the respective mass r
+- id: MS:1000477
+  title:
+    en: 6410 Triple Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1000477
+  description:
+    en: The 6410 Quadrupole LC/MS system is a Agilent liquid chromatography instrument
+      combined with a Agilent triple quadrupole mass spectrometer. Mass range of the
+      mass spectrometer is 15-1650 m/z, resolution is at three settings of 0.7 u (unit),
+      1.2 u (wide) and 2.5 u (widest). The mass accuracy for 6410
+- id: MS:1000478
+  title:
+    en: 1200 series LC/MSD VL
+  props:
+    psi_ms_accession: MS:1000478
+  description:
+    en: The LC/MSD VL ion trap is part of the family of Agilent ion trap mass spectrometers.
+      It has ESI, APCI and APPI ion sources and is a useful ion trap when the amount
+      of sample is not the limiting factor.
+- id: MS:1000675
+  title:
+    en: 6220 Time-of-Flight LC/MS
+  props:
+    psi_ms_accession: MS:1000675
+  description:
+    en: The 6220 Time-of-Flight LC/MS is a Agilent liquid chromatography instrument
+      combined with a Agilent time of flight mass spectrometer. This time of flight
+      mass spectrometer has a m/z range of 50-12000, mass accuracy of less than 2
+      ppm and resolution greater than 13,000 at m/z 2722. It has multiple io
+- id: MS:1000676
+  title:
+    en: 6510 Quadrupole Time-of-Flight LC/MS
+  props:
+    psi_ms_accession: MS:1000676
+  description:
+    en: 'The 6510 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography
+      instrument combined with a Agilent time of flight mass spectrometer. This time
+      of flight mass spectrometer has a m/z range of 50-12000, mass accuracy of less
+      than 2 ppm and resolution greater than 13,000 at m/z 2722. It has '
+- id: MS:1000677
+  title:
+    en: 6520A Quadrupole Time-of-Flight LC/MS
+  props:
+    psi_ms_accession: MS:1000677
+  description:
+    en: The 6520A Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography
+      instrument combined with a Agilent time of flight mass spectrometer. This time
+      of flight mass spectrometer has a m/z range of 50-12000, mass accuracy of less
+      than 2 ppm and resolution greater than 26,000 at m/z 2722. It has
+- id: MS:1000935
+  title:
+    en: 6470A Triple Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1000935
+  description:
+    en: The 6470A Quadrupole LC/MS system is a Agilent liquid chromatography instrument
+      combined with a Agilent triple quadrupole mass spectrometer.
+- id: MS:1000936
+  title:
+    en: 6470B Triple Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1000936
+  description:
+    en: The 6470B Quadrupole LC/MS system is a Agilent liquid chromatography instrument
+      combined with a Agilent triple quadrupole mass spectrometer.
+- id: MS:1000937
+  title:
+    en: 6495C Triple Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1000937
+  description:
+    en: The 6495C Quadrupole LC/MS system is a Agilent liquid chromatography instrument
+      combined with a Agilent triple quadrupole mass spectrometer.
+- id: MS:1002444
+  title:
+    en: 6420 Triple Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1002444
+  description:
+    en: The 6420 Quadrupole LC/MS system is a Agilent liquid chromatography instrument
+      combined with a Agilent triple quadrupole mass spectrometer.
+- id: MS:1002445
+  title:
+    en: 6460 Triple Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1002445
+  description:
+    en: The 6460 Quadrupole LC/MS system is a Agilent liquid chromatography instrument
+      combined with a Agilent triple quadrupole mass spectrometer. It is similar to
+      the 6420 but adds Agilent Jet Stream (AJS) technology to increase sensitivity.
+- id: MS:1002446
+  title:
+    en: 6490 Triple Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1002446
+  description:
+    en: The 6490 Quadrupole LC/MS system is a Agilent liquid chromatography instrument
+      combined with a Agilent triple quadrupole mass spectrometer. It is similar to
+      the 6420 but adds the Agilent iFunnel technology to increase sensitivity.
+- id: MS:1002783
+  title:
+    en: 6550 iFunnel Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1002783
+  description:
+    en: The 6550 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography
+      instrument combined with a Agilent time of flight mass spectrometer.
+- id: MS:1002784
+  title:
+    en: 6550A iFunnel Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1002784
+  description:
+    en: The 6550A Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography
+      instrument combined with a Agilent time of flight mass spectrometer.
+- id: MS:1002785
+  title:
+    en: 6520B Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1002785
+  description:
+    en: The 6520B Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography
+      instrument combined with a Agilent time of flight mass spectrometer.
+- id: MS:1002786
+  title:
+    en: 6530A Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1002786
+  description:
+    en: The 6530A Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography
+      instrument combined with a Agilent time of flight mass spectrometer.
+- id: MS:1002787
+  title:
+    en: 6530B Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1002787
+  description:
+    en: The 6530B Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography
+      instrument combined with a Agilent time of flight mass spectrometer.
+- id: MS:1002788
+  title:
+    en: 6538 Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1002788
+  description:
+    en: The 6538 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography
+      instrument combined with a Agilent time of flight mass spectrometer.
+- id: MS:1002789
+  title:
+    en: 6540 Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1002789
+  description:
+    en: The 6540 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography
+      instrument combined with a Agilent time of flight mass spectrometer.
+- id: MS:1002790
+  title:
+    en: 6542 Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1002790
+  description:
+    en: The 6542 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography
+      instrument combined with a Agilent time of flight mass spectrometer.
+- id: MS:1002791
+  title:
+    en: 6545 Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1002791
+  description:
+    en: The 6545 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography
+      instrument combined with a Agilent time of flight mass spectrometer.
+- id: MS:1002792
+  title:
+    en: 6560 Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1002792
+  description:
+    en: The 6560 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography
+      instrument combined with a Agilent time of flight mass spectrometer.
+- id: MS:1002793
+  title:
+    en: 6570 Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1002793
+  description:
+    en: The 6570 Quadrupole Time-of-Flight LC/MS is a Agilent liquid chromatography
+      instrument combined with a Agilent time of flight mass spectrometer.
+- id: MS:1002794
+  title:
+    en: 6120B Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1002794
+  description:
+    en: The 6120B Quadrupole LC/MS system is a Agilent liquid chromatography instrument
+      combined with a single quadrupole mass spectrometer from the 6100 Series of
+      Agilent mass spectrometers.
+- id: MS:1002795
+  title:
+    en: 6150 Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1002795
+  description:
+    en: The 6150 Quadrupole LC/MS system is a Agilent liquid chromatography instrument
+      combined with a single quadrupole mass spectrometer from the 6100 Series of
+      Agilent mass spectrometers.
+- id: MS:1002796
+  title:
+    en: 6224 Time-of-Flight LC/MS
+  props:
+    psi_ms_accession: MS:1002796
+  description:
+    en: The 6224 Time-of-Flight LC/MS is a Agilent liquid chromatography instrument
+      combined with a Agilent time of flight mass spectrometer.
+- id: MS:1002797
+  title:
+    en: 6230A Time-of-Flight LC/MS
+  props:
+    psi_ms_accession: MS:1002797
+  description:
+    en: The 6230A Time-of-Flight LC/MS is a Agilent liquid chromatography instrument
+      combined with a Agilent time of flight mass spectrometer.
+- id: MS:1002798
+  title:
+    en: 6230B Time-of-Flight LC/MS
+  props:
+    psi_ms_accession: MS:1002798
+  description:
+    en: The 6230B Time-of-Flight LC/MS is a Agilent liquid chromatography instrument
+      combined with a Agilent time of flight mass spectrometer.
+- id: MS:1002799
+  title:
+    en: 6430 Triple Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1002799
+  description:
+    en: The 6430 Quadrupole LC/MS system is a Agilent liquid chromatography instrument
+      combined with a Agilent triple quadrupole mass spectrometer.
+- id: MS:1002800
+  title:
+    en: 6495A Triple Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1002800
+  description:
+    en: The 6495A Quadrupole LC/MS system is a Agilent liquid chromatography instrument
+      combined with a Agilent triple quadrupole mass spectrometer.
+- id: MS:1002801
+  title:
+    en: 6495B Triple Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1002801
+  description:
+    en: The 6495B Quadrupole LC/MS system is a Agilent liquid chromatography instrument
+      combined with a Agilent triple quadrupole mass spectrometer.
+- id: MS:1002802
+  title:
+    en: 7000A Triple Quadrupole GC/MS
+  props:
+    psi_ms_accession: MS:1002802
+  description:
+    en: The 7000A Quadrupole GC/MS system is a Agilent gas chromatography instrument
+      combined with a Agilent triple quadrupole mass spectrometer.
+- id: MS:1002803
+  title:
+    en: 7000B Triple Quadrupole GC/MS
+  props:
+    psi_ms_accession: MS:1002803
+  description:
+    en: The 7000B Quadrupole GC/MS system is a Agilent gas chromatography instrument
+      combined with a Agilent triple quadrupole mass spectrometer.
+- id: MS:1002804
+  title:
+    en: 7800 Quadrupole ICP-MS
+  props:
+    psi_ms_accession: MS:1002804
+  description:
+    en: The 7800 Quadrupole ICP-MS system is a Agilent inductively couple plasma instrument
+      combined with a Agilent quadrupole mass spectrometer.
+- id: MS:1002805
+  title:
+    en: 8800 Triple Quadrupole ICP-MS
+  props:
+    psi_ms_accession: MS:1002805
+  description:
+    en: The 8800 Quadrupole ICP-MS system is a Agilent inductively couple plasma instrument
+      combined with a Agilent quadrupole mass spectrometer.
+- id: MS:1003514
+  title:
+    en: 5973 MSD
+  props:
+    psi_ms_accession: MS:1003514
+  description:
+    en: Agilent 5973 MSD gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003515
+  title:
+    en: 5973N MSD
+  props:
+    psi_ms_accession: MS:1003515
+  description:
+    en: Agilent 5973N MSD gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003516
+  title:
+    en: 5975 MSD
+  props:
+    psi_ms_accession: MS:1003516
+  description:
+    en: Agilent 5975 MSD gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003517
+  title:
+    en: 5975B MSD
+  props:
+    psi_ms_accession: MS:1003517
+  description:
+    en: Agilent 5975B MSD gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003518
+  title:
+    en: 5975C inert XL MSD
+  props:
+    psi_ms_accession: MS:1003518
+  description:
+    en: Agilent 5975C inert XL MSD gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003519
+  title:
+    en: 5975C MSD
+  props:
+    psi_ms_accession: MS:1003519
+  description:
+    en: Agilent 5975C MSD gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003520
+  title:
+    en: 5975T MSD
+  props:
+    psi_ms_accession: MS:1003520
+  description:
+    en: Agilent 5975T MSD gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003521
+  title:
+    en: 5977 MSD
+  props:
+    psi_ms_accession: MS:1003521
+  description:
+    en: Agilent 5977 MSD gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003522
+  title:
+    en: 5977A MSD
+  props:
+    psi_ms_accession: MS:1003522
+  description:
+    en: Agilent 5977A MSD gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003523
+  title:
+    en: 5977B MSD
+  props:
+    psi_ms_accession: MS:1003523
+  description:
+    en: Agilent 5977B MSD gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003524
+  title:
+    en: 5977C MSD
+  props:
+    psi_ms_accession: MS:1003524
+  description:
+    en: Agilent 5977C MSD gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003525
+  title:
+    en: 6230 Time-of-Flight LC/MS
+  props:
+    psi_ms_accession: MS:1003525
+  description:
+    en: Agilent 6230 Time-of-Flight LC/MS time-of-flight mass spectrometer.
+- id: MS:1003526
+  title:
+    en: 6410A Triple Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1003526
+  description:
+    en: Agilent 6410A Triple Quadrupole LC/MS triple quadrupole mass spectrometer.
+- id: MS:1003527
+  title:
+    en: 6445 Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1003527
+  description:
+    en: Agilent 6445 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer.
+- id: MS:1003528
+  title:
+    en: 6456 Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1003528
+  description:
+    en: Agilent 6456 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer.
+- id: MS:1003529
+  title:
+    en: 6470 Triple Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1003529
+  description:
+    en: Agilent 6470 Triple Quadrupole LC/MS triple quadrupole mass spectrometer.
+- id: MS:1003530
+  title:
+    en: 6490A Triple Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1003530
+  description:
+    en: Agilent 6490A Triple Quadrupole LC/MS triple quadrupole mass spectrometer.
+- id: MS:1003531
+  title:
+    en: 6495 Triple Quadrupole LC/MS
+  props:
+    psi_ms_accession: MS:1003531
+  description:
+    en: Agilent 6495 Triple Quadrupole LC/MS triple quadrupole mass spectrometer.
+- id: MS:1003532
+  title:
+    en: 6520 Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1003532
+  description:
+    en: Agilent 6520 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer.
+- id: MS:1003533
+  title:
+    en: 6530 Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1003533
+  description:
+    en: Agilent 6530 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer.
+- id: MS:1003534
+  title:
+    en: 6543 Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1003534
+  description:
+    en: Agilent 6543 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer.
+- id: MS:1003535
+  title:
+    en: 6545XT Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1003535
+  description:
+    en: Agilent 6545XT Q-TOF LC/MS quadrupole time-of-flight mass spectrometer.
+- id: MS:1003536
+  title:
+    en: 6546 Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1003536
+  description:
+    en: Agilent 6546 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer.
+- id: MS:1003537
+  title:
+    en: 6600 Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1003537
+  description:
+    en: Agilent 6600 Q-TOF LC/MS quadrupole time-of-flight mass spectrometer.
+- id: MS:1003538
+  title:
+    en: 7000C Triple Quadrupole GC/MS
+  props:
+    psi_ms_accession: MS:1003538
+  description:
+    en: Agilent 7000C Triple Quadrupole GC/MS gas chromatograph - triple quadrupole
+      mass spectrometer.
+- id: MS:1003539
+  title:
+    en: 7000D Triple Quadrupole GC/MS
+  props:
+    psi_ms_accession: MS:1003539
+  description:
+    en: Agilent 7000D Triple Quadrupole GC/MS gas chromatograph - triple quadrupole
+      mass spectrometer.
+- id: MS:1003540
+  title:
+    en: 7010 Triple Quadrupole GC/MS
+  props:
+    psi_ms_accession: MS:1003540
+  description:
+    en: Agilent 7010 Triple Quadrupole GC/MS gas chromatograph - triple quadrupole
+      mass spectrometer.
+- id: MS:1003541
+  title:
+    en: 7010B Triple Quadrupole GC/MS
+  props:
+    psi_ms_accession: MS:1003541
+  description:
+    en: Agilent 7010B Triple Quadrupole GC/MS gas chromatograph - triple quadrupole
+      mass spectrometer.
+- id: MS:1003542
+  title:
+    en: 7200 Q-TOF GC/MS
+  props:
+    psi_ms_accession: MS:1003542
+  description:
+    en: Agilent 7200 Q-TOF GC/MS gas chromatograph - quadrupole time-of-flight mass
+      spectrometer.
+- id: MS:1003543
+  title:
+    en: 7250 Q-TOF GC/MS
+  props:
+    psi_ms_accession: MS:1003543
+  description:
+    en: Agilent 7250 Q-TOF GC/MS gas chromatograph - quadrupole time-of-flight mass
+      spectrometer.
+- id: MS:1003544
+  title:
+    en: CE-TOFMS
+  props:
+    psi_ms_accession: MS:1003544
+  description:
+    en: Agilent CE-TOFMS capillary electrophoresis - time-of-flight mass spectrometer.
+- id: MS:1003545
+  title:
+    en: G3250AA Time-of-Flight LC/MS
+  props:
+    psi_ms_accession: MS:1003545
+  description:
+    en: Agilent G3250AA Time-of-Flight LC/MS time-of-flight mass spectrometer.
+- id: MS:1003546
+  title:
+    en: Revident Q-TOF LC/MS
+  props:
+    psi_ms_accession: MS:1003546
+  description:
+    en: Agilent Revident Q-TOF LC/MS quadrupole time-of-flight mass spectrometer.
+- id: MS:1000491
+  title:
+    en: Dionex instrument model
+  props:
+    psi_ms_accession: MS:1000491
+  description:
+    en: Dionex instrument model.
+- id: MS:1000495
+  title:
+    en: Applied Biosystems instrument model
+  props:
+    psi_ms_accession: MS:1000495
+  description:
+    en: Applied Biosystems instrument model.
+- id: MS:1000140
+  title:
+    en: 4700 Proteomics Analyzer
+  props:
+    psi_ms_accession: MS:1000140
+  description:
+    en: Applied Biosystems/MDS SCIEX 4700 Proteomics Analyzer MS.
+- id: MS:1000203
+  title:
+    en: Voyager-DE PRO
+  props:
+    psi_ms_accession: MS:1000203
+  description:
+    en: Applied Biosystems/MDS SCIEX Voyager-DE PRO MS.
+- id: MS:1000204
+  title:
+    en: Voyager-DE STR
+  props:
+    psi_ms_accession: MS:1000204
+  description:
+    en: Applied Biosystems/MDS SCIEX Voyager-DE STR MS.
+- id: MS:1000658
+  title:
+    en: 4800 Proteomics Analyzer
+  props:
+    psi_ms_accession: MS:1000658
+  description:
+    en: Applied Biosystems|MDS SCIEX 4800 Proteomics Analyzer.
+- id: MS:1001800
+  title:
+    en: LECO instrument model
+  props:
+    psi_ms_accession: MS:1001800
+  description:
+    en: LECO instrument model.
+- id: MS:1001801
+  title:
+    en: Pegasus HRT
+  props:
+    psi_ms_accession: MS:1001801
+  description:
+    en: LECO high resolution time-of-flight GC mass spectrometer.
+- id: MS:1001802
+  title:
+    en: Citius HRT
+  props:
+    psi_ms_accession: MS:1001802
+  description:
+    en: LECO high resolution time-of-flight LC mass spectrometer.
+- id: MS:1001803
+  title:
+    en: Pegasus
+  props:
+    psi_ms_accession: MS:1001803
+  description:
+    en: LECO GC time-of-flight mass spectrometer.
+- id: MS:1001804
+  title:
+    en: TruTOF
+  props:
+    psi_ms_accession: MS:1001804
+  description:
+    en: LECO bench-top GC time-of-flight mass spectrometer.
+- id: MS:1001945
+  title:
+    en: Pegasus 4D
+  props:
+    psi_ms_accession: MS:1001945
+  description:
+    en: LECO nominal mass resolution time-of-flight GCxGC mass spectrometer.
+- id: MS:1002278
+  title:
+    en: Pegasus III
+  props:
+    psi_ms_accession: MS:1002278
+  description:
+    en: LECO nominal mass resolution time-of-flight GC mass spectrometer.
+- id: MS:1002719
+  title:
+    en: Pegasus BT
+  props:
+    psi_ms_accession: MS:1002719
+  description:
+    en: LECO bench-top GC time-of-flight mass spectrometer.
+- id: MS:1003547
+  title:
+    en: Pegasus BT 4D
+  props:
+    psi_ms_accession: MS:1003547
+  description:
+    en: LECO Pegasus BT 4D GCxGC - time-of-flight mass spectrometer.
+- id: MS:1003548
+  title:
+    en: Pegasus HT
+  props:
+    psi_ms_accession: MS:1003548
+  description:
+    en: LECO Pegasus HT gas chromatograph - time-of-flight mass spectrometer.
+- id: MS:1003549
+  title:
+    en: Pegasus IV
+  props:
+    psi_ms_accession: MS:1003549
+  description:
+    en: LECO Pegasus IV time-of-flight mass spectrometer.
+- id: MS:1003452
+  title:
+    en: Ionicon Analytik instrument model
+  props:
+    psi_ms_accession: MS:1003452
+  description:
+    en: Ionicon Analytik instrument model.
+- id: MS:1003550
+  title:
+    en: PTR-TOF 8000
+  props:
+    psi_ms_accession: MS:1003550
+  description:
+    en: Ionicon Analytik PTR-TOF 8000 proton-transfer-reaction - time-of-flight mass
+      spectrometer.
+- id: MS:1003453
+  title:
+    en: JEOL instrument model
+  props:
+    psi_ms_accession: MS:1003453
+  description:
+    en: JEOL instrument model.
+- id: MS:1003551
+  title:
+    en: AccuTOF GCv
+  props:
+    psi_ms_accession: MS:1003551
+  description:
+    en: JEOL AccuTOF GCv gas chromatograph - time-of-flight mass spectrometer.
+- id: MS:1003454
+  title:
+    en: IONTOF instrument model
+  props:
+    psi_ms_accession: MS:1003454
+  description:
+    en: IONTOF instrument model.
+- id: MS:1003552
+  title:
+    en: TOF.SIMS 5
+  props:
+    psi_ms_accession: MS:1003552
+  description:
+    en: IONTOF TOF.SIMS 5 time-of-flight secondary ion mass spectrometer.
+- id: MS:1003455
+  title:
+    en: PerkinElmer instrument model
+  props:
+    psi_ms_accession: MS:1003455
+  description:
+    en: PerkinElmer instrument model.
+- id: MS:1003553
+  title:
+    en: TurboMass GC/MS
+  props:
+    psi_ms_accession: MS:1003553
+  description:
+    en: PerkinElmer TurboMass GC/MS gas chromatograph - quadrupole mass spectrometer.
+- id: MS:1003802
+  title:
+    en: Ionoptika instrument model
+  props:
+    psi_ms_accession: MS:1003802
+  description:
+    en: Ionoptika Ltd. instrument model.
+- id: MS:1003804
+  title:
+    en: Ionoptika J105
+  props:
+    psi_ms_accession: MS:1003804
+  description:
+    en: Ionoptika J105 time-of-flight secondary ion mass spectrometer.
+- id: MS:1003805
+  title:
+    en: J Series III
+  props:
+    psi_ms_accession: MS:1003805
+  description:
+    en: Ionoptika J Series III time-of-flight secondary ion mass spectrometer.

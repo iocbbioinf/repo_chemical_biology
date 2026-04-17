@@ -1,5 +1,21 @@
+from __future__ import annotations
+
+from typing import Any
+
 import marshmallow as ma
 from oarepo_model.datatypes.base import DataType
+
+
+def dataset_pid_field(element: dict[str, Any]) -> Any:
+    """Return the PID field context for the dataset record.
+
+    Used as pid_field in the spectrum metadata.yaml pid-relation for the
+    back-reference to the parent dataset.  Imported lazily to avoid circular
+    imports during app initialisation.
+    """
+    from dataset import dataset_model  # noqa: PLC0415
+
+    return dataset_model.Record.pid
 
 
 class VectorMarshmallowField(ma.fields.List):

@@ -1,0 +1,14 @@
+- id: MS:1000129
+  title:
+    en: negative scan
+  props:
+    psi_ms_accession: MS:1000129
+  description:
+    en: Polarity of the scan is negative.
+- id: MS:1000130
+  title:
+    en: positive scan
+  props:
+    psi_ms_accession: MS:1000130
+  description:
+    en: Polarity of the scan is positive.

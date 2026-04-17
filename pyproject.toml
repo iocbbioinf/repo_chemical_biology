@@ -5,24 +5,18 @@ description = "The mass spectra repository will be a platform that enables simil
 packages = []
 authors = []
 dependencies = [
+    "ccmm-invenio>=1.1.0a1",
     "json5",
-    "oarepo[s3,rdm]>=14.0.0,<15.0.0",
-    "oarepo-runtime>=2.0.0dev0,<3.0.0",
-    "oarepo-ui>=7.0.0dev0,<8.0.0",
+    "marshmallow-i18n-messages",
+    "oarepo-dashboard>=2.0.0dev1,<3.0.0",
+    "oarepo-glitchtip==1.*",
     "oarepo-model>=0.1.0dev0,<1.0.0",
     "oarepo-rdm>=1.0.0dev0,<2.0.0",
+    "oarepo-runtime>=2.0.0dev0,<3.0.0",
     "oarepo-theme>=1.0.0dev3,<2.0.0",
-    "oarepo-dashboard>=2.0.0dev1,<3.0.0",
+    "oarepo-ui>=7.0.0dev0,<8.0.0",
+    "oarepo[s3,rdm]>=14.0.0,<15.0.0",
     "python-dotenv",
-    "marshmallow-i18n-messages",
-#    "oarepo-communities==5.*",
-#    "oarepo-dashboard==1.*",
-#    "oarepo-doi==1.*",
-    "oarepo-glitchtip==1.*",
-#    "oarepo-global-search==1.*",
-#    "oarepo-requests==2.*",
-#    "oarepo-vocabularies==2.*",
-#    "oarepo-workflows==1.*",
 ]
 requires-python = ">=3.13,<3.15"
 
@@ -30,6 +24,7 @@ requires-python = ">=3.13,<3.15"
 i18n = "i18n.webpack:theme"
 components = "ui.components.webpack:theme"
 ui_spectrum = "ui.spectrum.webpack:theme"
+ui_dataset = "ui.dataset.webpack:theme"
 
 [project.entry-points."invenio_i18n.translations"]
 translations = "i18n"
@@ -39,9 +34,11 @@ repository = "common:alembic"
 
 [project.entry-points."invenio_base.blueprints"]
 ui_spectrum = "ui.spectrum:create_blueprint"
+ui_dataset = "ui.dataset:create_blueprint"
 
 [project.entry-points."invenio_base.finalize_app"]
 ui_spectrum = "ui.spectrum:finalize_app"
+ui_dataset = "ui.dataset:finalize_app"
 
 [tool.uv.build-backend]
 module-root = ""
@@ -50,6 +47,7 @@ module-name = [
     "i18n",
     "ui",
     "spectrum",
+    "dataset",
 ]
 
 [build-system]

@@ -1,0 +1,106 @@
+- id: MS:1000079
+  title:
+    en: fourier transform ion cyclotron resonance
+  props:
+    psi_ms_accession: MS:1000079
+  description:
+    en: 'A device based on the principle of ion cyclotron resonance in which an ion
+      in a magnetic field moves in a circular orbit at a frequency characteristic
+      of its m/z value. Ions are coherently excited to a larger radius orbit using
+      a pulse of radio frequency energy and their image charge is detected on '
+- id: MS:1000080
+  title:
+    en: magnetic sector
+  props:
+    psi_ms_accession: MS:1000080
+  description:
+    en: A device that produces a magnetic field perpendicular to a charged particle
+      beam that deflects the beam to an extent that is proportional to the particle
+      momentum per unit charge. For a monoenergetic beam, the deflection is proportional
+      to m/z.
+- id: MS:1000081
+  title:
+    en: quadrupole
+  props:
+    psi_ms_accession: MS:1000081
+  description:
+    en: A device that consists of four parallel rods whose centers form the corners
+      of a square and whose opposing poles are connected. The voltage applied to the
+      rods is a superposition of a static potential and a sinusoidal radio frequency
+      potential. The motion of an ion in the x and y dimensions is descr
+- id: MS:1000084
+  title:
+    en: time-of-flight
+  props:
+    psi_ms_accession: MS:1000084
+  description:
+    en: Instrument that separates ions by m/z in a field-free region after acceleration
+      to a fixed acceleration energy.
+- id: MS:1003379
+  title:
+    en: asymmetric track lossless time-of-flight analyzer
+  props:
+    psi_ms_accession: MS:1003379
+  description:
+    en: A TOF-like mass analyzer with asymmetric ion mirrors to direct ions into transversal
+      asymmetric oscillations and ion foil shapes and maintains ion packet for transmission
+      and resolution.
+- id: MS:1000254
+  title:
+    en: electrostatic energy analyzer
+  props:
+    psi_ms_accession: MS:1000254
+  description:
+    en: A device consisting of conducting parallel plates, concentric cylinders or
+      concentric spheres that separates charged particles according to their kinetic
+      energy by means of an electric field that is constant in time.
+- id: MS:1000264
+  title:
+    en: ion trap
+  props:
+    psi_ms_accession: MS:1000264
+  description:
+    en: A device for spatially confining ions using electric and magnetic fields alone
+      or in combination.
+- id: MS:1000082
+  title:
+    en: quadrupole ion trap
+  props:
+    psi_ms_accession: MS:1000082
+  description:
+    en: Quadrupole Ion Trap mass analyzer captures the ions in a three dimensional
+      ion trap and then selectively ejects them by varying the RF and DC potentials.
+- id: MS:1000291
+  title:
+    en: linear ion trap
+  props:
+    psi_ms_accession: MS:1000291
+  description:
+    en: A two dimensional Paul ion trap in which ions are confined in the axial dimension
+      by means of an electric field at the ends of the trap.
+- id: MS:1000078
+  title:
+    en: axial ejection linear ion trap
+  props:
+    psi_ms_accession: MS:1000078
+  description:
+    en: A linear ion trap mass analyzer where ions are ejected along the axis of the
+      analyzer.
+- id: MS:1000083
+  title:
+    en: radial ejection linear ion trap
+  props:
+    psi_ms_accession: MS:1000083
+  description:
+    en: A linear ion trap mass analyzer where ions are ejected along the radius of
+      the analyzer.
+- id: MS:1000484
+  title:
+    en: orbitrap
+  props:
+    psi_ms_accession: MS:1000484
+  description:
+    en: 'An ion trapping device that consists of an outer barrel-like electrode and
+      a coaxial inner spindle-like electrode that form an electrostatic field with
+      quadro-logarithmic potential distribution. The frequency of harmonic oscillations
+      of the orbitally trapped ions along the axis of the electrostatic '
