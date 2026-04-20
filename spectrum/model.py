@@ -17,6 +17,7 @@ from oarepo_model.datatypes.registry import from_yaml
 from oarepo_rdm.model.presets import rdm_complete_preset
 
 from .datatypes import DATATYPES
+from .pids import SpectrumNoDOIServiceConfigMixin
 from .serializers import DataCiteJSONSerializer
 from .similarity import SimilaritySearchResourceMixin, SimilaritySearchServiceMixin
 
@@ -51,6 +52,7 @@ spectrum_model = model(
         # mail body of the request.
         # TODO: remove this customization if you use oarepo-communities for RDM 14
         PrependMixin("PermissionPolicy", SpectrumPermissionPolicyMixin),
+        PrependMixin("RecordServiceConfig", SpectrumNoDOIServiceConfigMixin),
         PrependMixin("RecordResource", SimilaritySearchResourceMixin),
         PrependMixin("RecordService", SimilaritySearchServiceMixin),
         PatchJSONFile("record-mapping", {"settings": {"index": {"knn": True}}}),

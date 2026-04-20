@@ -1,0 +1,831 @@
+# Definition of metadata for one MS Run record (one mzML file).
+#
+# Structure follows the mzML 1.1.1 root element (mzML1.1.1.xsd) minus the
+# spectrumList (spectra are stored as individual Spectrum records).
+#
+#   mzML
+#     @accession, @version, @id
+#     cvList / cv[]
+#     fileDescription
+#       fileContent  cvParam*
+#       sourceFileList / sourceFile[]
+#       contact[]
+#     referenceableParamGroupList / referenceableParamGroup[]
+#     sampleList / sample[]
+#     softwareList / software[]
+#     scanSettingsList / scanSettings[]
+#     instrumentConfigurationList / instrumentConfiguration[]
+#     dataProcessingList / dataProcessing[]
+#     run  @id, @defaultInstrumentConfigurationRef, ...
+#       chromatogramList / chromatogram[]
+
+# ---------------------------------------------------------------------------
+# Shared sub-object
+# ---------------------------------------------------------------------------
+
+CvParam:
+  type: object
+  properties:
+    accession:
+      type: keyword
+      label:
+        en: CV term accession
+      help:
+        en: "PSI-MS accession number, e.g. MS:1000073."
+    name:
+      type: keyword
+      label:
+        en: CV term name
+      help:
+        en: "Human-readable PSI-MS term name."
+    value:
+      type: keyword
+      label:
+        en: CV term value
+    unit_accession:
+      type: keyword
+      label:
+        en: Unit CV term accession
+    unit_name:
+      type: keyword
+      label:
+        en: Unit name
+
+# ---------------------------------------------------------------------------
+# Metadata blueprint
+# ---------------------------------------------------------------------------
+
+Metadata:
+  properties:
+
+    # Back-reference to parent Dataset record
+    dataset:
+      type: pid-relation
+      pid_field: "msrun.datatypes:dataset_pid_field"
+      label:
+        en: Parent dataset
+      help:
+        en: Reference to the Dataset record that contains this MS run.
+      keys:
+        - metadata.title
+
+    # =========================================================
+    # mzML root attributes
+    # =========================================================
+
+    mzml_accession:
+      type: keyword
+      label:
+        en: mzML accession
+      help:
+        en: >
+          Optional accession number for the mzML document
+          (mzML/@accession).
+
+    mzml_version:
+      type: keyword
+      label:
+        en: mzML version
+      help:
+        en: Version of the mzML schema used (mzML/@version).
+
+    mzml_id:
+      type: keyword
+      label:
+        en: mzML document identifier
+      help:
+        en: Optional identifier for the mzML document (mzML/@id).
+
+    # =========================================================
+    # mzML cvList
+    # =========================================================
+
+    cv_list:
+      type: array
+      label:
+        en: Controlled vocabulary list
+      help:
+        en: >
+          Controlled vocabulary sources referenced in this mzML file
+          (mzML/cvList/cv).
+      items:
+        type: object
+        properties:
+          cv_ref:
+            type: keyword
+            label:
+              en: CV reference identifier
+            help:
+              en: Short label used as reference tag (mzML cv/@id), e.g. "MS".
+          full_name:
+            type: keyword
+            label:
+              en: CV full name
+            help:
+              en: Full name of the controlled vocabulary (mzML cv/@fullName).
+          version:
+            type: keyword
+            label:
+              en: CV version
+            help:
+              en: Version of the CV (mzML cv/@version).
+          uri:
+            type: keyword
+            label:
+              en: CV URI
+            help:
+              en: URI for the controlled vocabulary resource (mzML cv/@URI).
+
+    # =========================================================
+    # mzML fileDescription
+    # =========================================================
+
+    file_content:
+      type: array
+      label:
+        en: File content
+      help:
+        en: >
+          CV terms summarising the data types present in this file
+          (mzML/fileDescription/fileContent, PSI-MS MS:1000524, MUST).
+      items:
+        type: CvParam
+
+    source_files:
+      type: array
+      label:
+        en: Source files
+      help:
+        en: >
+          Raw or intermediate files from which this mzML was derived
+          (mzML/fileDescription/sourceFileList/sourceFile).
+      items:
+        type: object
+        properties:
+          source_file_id:
+            type: keyword
+            label:
+              en: Source file identifier
+            help:
+              en: Unique identifier for this source file (mzML sourceFile/@id).
+          name:
+            type: keyword
+            label:
+              en: File name
+            help:
+              en: Name of the source file without path (mzML sourceFile/@name).
+          location:
+            type: keyword
+            label:
+              en: File location
+            help:
+              en: URI-formatted location of the source file (mzML sourceFile/@location).
+          file_format:
+            type: CvParam
+            label:
+              en: File format
+            help:
+              en: >
+                Mass spectrometer file format (PSI-MS MS:1000560 and children, MUST).
+          checksum_type:
+            type: CvParam
+            label:
+              en: Checksum type
+            help:
+              en: Algorithm used for the file checksum (PSI-MS MS:1000561, MUST).
+          checksum_value:
+            type: keyword
+            label:
+              en: Checksum value
+          native_id_format:
+            type: CvParam
+            label:
+              en: Native spectrum identifier format
+            help:
+              en: >
+                Format used for native spectrum IDs (PSI-MS MS:1000767, MUST).
+          additional_cv_params:
+            type: array
+            label:
+              en: Additional CV parameters
+            items:
+              type: CvParam
+
+    contacts:
+      type: array
+      label:
+        en: Contacts
+      help:
+        en: >
+          People or organisations responsible for this run
+          (mzML/fileDescription/contact).
+      items:
+        type: object
+        properties:
+          name:
+            type: keyword
+            label:
+              en: Contact name
+            help:
+              en: Name of the contact person (PSI-MS MS:1000586, MUST).
+          affiliation:
+            type: keyword
+            label:
+              en: Contact affiliation
+            help:
+              en: Home institution (PSI-MS MS:1000590, MUST).
+          email:
+            type: keyword
+            label:
+              en: Contact e-mail
+            help:
+              en: E-mail address (PSI-MS MS:1000587).
+          address:
+            type: keyword
+            label:
+              en: Contact address
+            help:
+              en: Postal address (PSI-MS MS:1000588).
+          url:
+            type: keyword
+            label:
+              en: Contact URL
+            help:
+              en: URL of the contact (PSI-MS MS:1000589).
+          additional_cv_params:
+            type: array
+            label:
+              en: Additional CV parameters
+            items:
+              type: CvParam
+
+    # =========================================================
+    # mzML referenceableParamGroupList
+    # =========================================================
+
+    referenceable_param_groups:
+      type: array
+      label:
+        en: Referenceable parameter groups
+      help:
+        en: >
+          Reusable named groups of cvParams
+          (mzML/referenceableParamGroupList/referenceableParamGroup).
+      items:
+        type: object
+        properties:
+          group_id:
+            type: keyword
+            label:
+              en: Group identifier
+            help:
+              en: Unique identifier for this parameter group (mzML referenceableParamGroup/@id).
+          cv_params:
+            type: array
+            label:
+              en: CV parameters
+            items:
+              type: CvParam
+
+    # =========================================================
+    # mzML sampleList
+    # =========================================================
+
+    samples:
+      type: array
+      label:
+        en: Samples
+      help:
+        en: >
+          Descriptions of samples used (mzML/sampleList/sample, PSI-MS MS:1000548).
+      items:
+        type: object
+        properties:
+          sample_id:
+            type: keyword
+            label:
+              en: Sample identifier
+            help:
+              en: Unique identifier for this sample (mzML sample/@id).
+          name:
+            type: keyword
+            label:
+              en: Sample name
+            help:
+              en: Optional name for the sample (mzML sample/@name).
+          cv_params:
+            type: array
+            label:
+              en: Sample CV parameters
+            items:
+              type: CvParam
+
+    # =========================================================
+    # mzML softwareList
+    # =========================================================
+
+    software_list:
+      type: array
+      label:
+        en: Software list
+      help:
+        en: >
+          Software used to acquire and/or process the data
+          (mzML/softwareList/software, PSI-MS MS:1000531, MUST).
+      items:
+        type: object
+        properties:
+          software_id:
+            type: keyword
+            label:
+              en: Software identifier
+            help:
+              en: Unique identifier for this software (mzML software/@id).
+          version:
+            type: keyword
+            label:
+              en: Version
+            help:
+              en: Software version string (mzML software/@version).
+          cv_params:
+            type: array
+            label:
+              en: Software CV parameters
+            items:
+              type: CvParam
+
+    # =========================================================
+    # mzML scanSettingsList
+    # =========================================================
+
+    scan_settings_list:
+      type: array
+      label:
+        en: Scan settings list
+      help:
+        en: >
+          Acquisition settings configured prior to the run
+          (mzML/scanSettingsList/scanSettings).
+      items:
+        type: object
+        properties:
+          scan_settings_id:
+            type: keyword
+            label:
+              en: Scan settings identifier
+            help:
+              en: Unique identifier for these scan settings (mzML scanSettings/@id).
+          cv_params:
+            type: array
+            label:
+              en: Scan settings CV parameters
+            items:
+              type: CvParam
+          source_file_refs:
+            type: array
+            label:
+              en: Source file references
+            help:
+              en: >
+                References to source files containing acquisition settings
+                (mzML scanSettings/sourceFileRefList/sourceFileRef).
+            items:
+              type: keyword
+          targets:
+            type: array
+            label:
+              en: Target list
+            help:
+              en: >
+                Inclusion list of target m/z values configured before the run
+                (mzML scanSettings/targetList/target).
+            items:
+              type: object
+              properties:
+                cv_params:
+                  type: array
+                  label:
+                    en: Target CV parameters
+                  items:
+                    type: CvParam
+
+    # =========================================================
+    # mzML instrumentConfigurationList
+    # =========================================================
+
+    instrument_configurations:
+      type: array
+      label:
+        en: Instrument configurations
+      help:
+        en: >
+          Hardware configurations of the mass spectrometer
+          (mzML/instrumentConfigurationList/instrumentConfiguration).
+      items:
+        type: object
+        properties:
+          config_id:
+            type: keyword
+            label:
+              en: Configuration identifier
+            help:
+              en: Unique identifier for this configuration (mzML instrumentConfiguration/@id).
+          scan_settings_ref:
+            type: keyword
+            label:
+              en: Scan settings reference
+            help:
+              en: Reference to the scanSettings element (mzML instrumentConfiguration/@scanSettingsRef).
+          instrument_model:
+            type: CvParam
+            label:
+              en: Instrument model
+            help:
+              en: Instrument model name (PSI-MS MS:1000031, MUST).
+          instrument_cv_params:
+            type: array
+            label:
+              en: Instrument CV parameters
+            items:
+              type: CvParam
+          sources:
+            type: array
+            label:
+              en: Ion sources
+            help:
+              en: Ion source components (mzML componentList/source).
+            items:
+              type: object
+              properties:
+                order:
+                  type: int
+                  label:
+                    en: Component order
+                  help:
+                    en: Position in the instrument signal path (mzML source/@order).
+                ionization_type:
+                  type: CvParam
+                  label:
+                    en: Ionization type
+                  help:
+                    en: Ionization method (PSI-MS MS:1000008, MUST).
+                cv_params:
+                  type: array
+                  label:
+                    en: Source CV parameters
+                  items:
+                    type: CvParam
+          analyzers:
+            type: array
+            label:
+              en: Mass analyzers
+            help:
+              en: Mass analyzer components (mzML componentList/analyzer).
+            items:
+              type: object
+              properties:
+                order:
+                  type: int
+                  label:
+                    en: Component order
+                  help:
+                    en: Position in the instrument signal path (mzML analyzer/@order).
+                mass_analyzer_type:
+                  type: CvParam
+                  label:
+                    en: Mass analyzer type
+                  help:
+                    en: Type of mass analyzer (PSI-MS MS:1000443, MUST).
+                cv_params:
+                  type: array
+                  label:
+                    en: Analyzer CV parameters
+                  items:
+                    type: CvParam
+          detectors:
+            type: array
+            label:
+              en: Detectors
+            help:
+              en: Detector components (mzML componentList/detector).
+            items:
+              type: object
+              properties:
+                order:
+                  type: int
+                  label:
+                    en: Component order
+                  help:
+                    en: Position in the instrument signal path (mzML detector/@order).
+                detector_type:
+                  type: CvParam
+                  label:
+                    en: Detector type
+                  help:
+                    en: Type of detector (PSI-MS MS:1000026, MUST).
+                cv_params:
+                  type: array
+                  label:
+                    en: Detector CV parameters
+                  items:
+                    type: CvParam
+          software_ref:
+            type: keyword
+            label:
+              en: Software reference
+            help:
+              en: Reference to the software used for this configuration (mzML instrumentConfiguration/softwareRef/@ref).
+
+    # =========================================================
+    # mzML dataProcessingList
+    # =========================================================
+
+    data_processing_list:
+      type: array
+      label:
+        en: Data processing list
+      help:
+        en: >
+          Data processing steps applied to produce this run
+          (mzML/dataProcessingList/dataProcessing).
+      items:
+        type: object
+        properties:
+          processing_id:
+            type: keyword
+            label:
+              en: Data processing identifier
+            help:
+              en: Unique identifier for this dataProcessing element (mzML dataProcessing/@id).
+          processing_methods:
+            type: array
+            label:
+              en: Processing methods
+            help:
+              en: Ordered list of processing steps (mzML dataProcessing/processingMethod).
+            items:
+              type: object
+              properties:
+                order:
+                  type: int
+                  label:
+                    en: Processing step order
+                  help:
+                    en: Sequential order of this step (mzML processingMethod/@order).
+                software_ref:
+                  type: keyword
+                  label:
+                    en: Software reference
+                  help:
+                    en: Reference to the software that performed this step (mzML processingMethod/@softwareRef).
+                cv_params:
+                  type: array
+                  label:
+                    en: Processing CV parameters
+                  help:
+                    en: >
+                      Data transformation types applied (PSI-MS MS:1000452, MUST),
+                      e.g. "peak picking" (MS:1000035), "conversion to mzML" (MS:1000543).
+                  items:
+                    type: CvParam
+
+    # =========================================================
+    # mzML run
+    # =========================================================
+
+    run_id:
+      type: keyword
+      label:
+        en: Run identifier
+      help:
+        en: Unique identifier for this run (mzML run/@id).
+
+    default_instrument_configuration_ref:
+      type: keyword
+      label:
+        en: Default instrument configuration reference
+      help:
+        en: Reference to the default instrument configuration (mzML run/@defaultInstrumentConfigurationRef).
+
+    default_source_file_ref:
+      type: keyword
+      label:
+        en: Default source file reference
+      help:
+        en: Reference to the default source file (mzML run/@defaultSourceFileRef).
+
+    sample_ref:
+      type: keyword
+      label:
+        en: Sample reference
+      help:
+        en: Reference to the sample used in this run (mzML run/@sampleRef).
+
+    start_time_stamp:
+      type: datetime
+      label:
+        en: Run start timestamp
+      help:
+        en: UTC timestamp when the run started (mzML run/@startTimeStamp).
+
+    run_cv_params:
+      type: array
+      label:
+        en: Run CV parameters
+      help:
+        en: Run-level CV parameters (PSI-MS MS:1000857 and children).
+      items:
+        type: CvParam
+
+    spectrum_count:
+      type: int
+      label:
+        en: Number of spectra
+      help:
+        en: Total number of spectra in this run (mzML spectrumList/@count).
+
+    default_spectrum_data_processing_ref:
+      type: keyword
+      label:
+        en: Default spectrum data processing reference
+      help:
+        en: Reference to the default dataProcessing for the spectrumList (mzML spectrumList/@defaultDataProcessingRef).
+
+    # =========================================================
+    # mzML chromatogramList
+    # =========================================================
+
+    chromatogram_list:
+      type: array
+      label:
+        en: Chromatograms
+      help:
+        en: >
+          Chromatograms recorded during this run
+          (mzML/run/chromatogramList/chromatogram).
+      items:
+        type: object
+        properties:
+          chromatogram_id:
+            type: keyword
+            label:
+              en: Chromatogram identifier
+            help:
+              en: Unique identifier for this chromatogram (mzML chromatogram/@id).
+          index:
+            type: int
+            label:
+              en: Chromatogram index
+            help:
+              en: Zero-based index in the chromatogramList (mzML chromatogram/@index).
+          default_array_length:
+            type: int
+            label:
+              en: Default array length
+            help:
+              en: Default number of data points in the binary arrays (mzML chromatogram/@defaultArrayLength).
+          data_processing_ref:
+            type: keyword
+            label:
+              en: Data processing reference
+            help:
+              en: Reference to dataProcessing for this chromatogram (mzML chromatogram/@dataProcessingRef).
+          chromatogram_type:
+            type: CvParam
+            label:
+              en: Chromatogram type
+            help:
+              en: >
+                Type of chromatogram (PSI-MS MS:1000626, MUST),
+                e.g. "total ion current chromatogram" (MS:1000235).
+          cv_params:
+            type: array
+            label:
+              en: Chromatogram CV parameters
+            items:
+              type: CvParam
+          precursor:
+            type: object
+            label:
+              en: Precursor
+            help:
+              en: Precursor ion for this chromatogram (mzML chromatogram/precursor).
+            properties:
+              isolation_window:
+                type: object
+                label:
+                  en: Precursor isolation window
+                properties:
+                  target_mz:
+                    type: double
+                    label:
+                      en: Target m/z
+                    help:
+                      en: Centre m/z of the isolation window (PSI-MS MS:1000827).
+                  lower_offset:
+                    type: double
+                    label:
+                      en: Lower offset (Da)
+                    help:
+                      en: Lower m/z offset (PSI-MS MS:1000828).
+                  upper_offset:
+                    type: double
+                    label:
+                      en: Upper offset (Da)
+                    help:
+                      en: Upper m/z offset (PSI-MS MS:1000829).
+                  cv_params:
+                    type: array
+                    label:
+                      en: Isolation window CV parameters
+                    items:
+                      type: CvParam
+          product:
+            type: object
+            label:
+              en: Product
+            help:
+              en: Product ion isolation window (mzML chromatogram/product).
+            properties:
+              isolation_window:
+                type: object
+                label:
+                  en: Product isolation window
+                properties:
+                  target_mz:
+                    type: double
+                    label:
+                      en: Target m/z
+                    help:
+                      en: Centre m/z of the isolation window (PSI-MS MS:1000827).
+                  lower_offset:
+                    type: double
+                    label:
+                      en: Lower offset (Da)
+                    help:
+                      en: Lower m/z offset (PSI-MS MS:1000828).
+                  upper_offset:
+                    type: double
+                    label:
+                      en: Upper offset (Da)
+                    help:
+                      en: Upper m/z offset (PSI-MS MS:1000829).
+                  cv_params:
+                    type: array
+                    label:
+                      en: Isolation window CV parameters
+                    items:
+                      type: CvParam
+          binary_data_array_list:
+            type: array
+            label:
+              en: Binary data arrays
+            help:
+              en: >
+                Encoded chromatogram data arrays
+                (mzML chromatogram/binaryDataArrayList/binaryDataArray).
+            items:
+              type: object
+              properties:
+                array_length:
+                  type: int
+                  label:
+                    en: Array length
+                data_processing_ref:
+                  type: keyword
+                  label:
+                    en: Data processing reference
+                encoded_length:
+                  type: int
+                  label:
+                    en: Encoded length
+                array_type:
+                  type: CvParam
+                  label:
+                    en: Array type
+                  help:
+                    en: What the array encodes (PSI-MS MS:1000513, MUST).
+                binary_data_type:
+                  type: CvParam
+                  label:
+                    en: Binary data type
+                  help:
+                    en: Numeric precision (PSI-MS MS:1000518, MUST).
+                compression_type:
+                  type: CvParam
+                  label:
+                    en: Compression type
+                  help:
+                    en: Compression applied (PSI-MS MS:1000572, MUST).
+                additional_cv_params:
+                  type: array
+                  label:
+                    en: Additional CV parameters
+                  items:
+                    type: CvParam
+                binary:
+                  type: keyword
+                  label:
+                    en: Binary data
+                  help:
+                    en: Base64-encoded little-endian binary data (mzML binaryDataArray/binary).

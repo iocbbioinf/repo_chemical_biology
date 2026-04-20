@@ -32,6 +32,9 @@ translations = "i18n"
 [project.entry-points."invenio_db.alembic"]
 repository = "common:alembic"
 
+[project.entry-points."invenio_base.api_blueprints"]
+admin_auth = "common.admin_auth:blueprint"
+
 [project.entry-points."invenio_base.blueprints"]
 ui_spectrum = "ui.spectrum:create_blueprint"
 ui_dataset = "ui.dataset:create_blueprint"
@@ -48,6 +51,7 @@ module-name = [
     "ui",
     "spectrum",
     "dataset",
+    "msrun",
 ]
 
 [build-system]

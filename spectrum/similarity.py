@@ -1,4 +1,4 @@
-"""Similarity (kNN vector) search for spectrum records."""
+"""Similarity (kNN vector) search and binary retrieval for spectrum records."""
 
 from flask import g
 from flask_resources import resource_requestctx, response_handler, route
@@ -10,11 +10,12 @@ from invenio_search import current_search_client
 
 
 class SimilaritySearchResourceMixin:
-    """Adds POST /api/spectrum/records/search-similar endpoint."""
+    """Adds POST /api/spectrum/records/search-similar and GET /api/spectrum/records/by-run endpoints."""
 
     def create_url_rules(self):
         rules = super().create_url_rules()
         rules.append(route("POST", "/spectrum/records/search-similar", self.search_similar))
+        rules.append(route("GET", "/spectrum/records/by-run/<run_id>/<path:native_id>", self.get_spectrum_by_run))
         return rules
 
     @request_extra_args
@@ -41,7 +42,7 @@ class SimilaritySearchResourceMixin:
             from flask import abort
             abort(400, "Request body must contain a 'vector' list.")
 
-        hits = self.service.search_similar(
+        hits = self.service.search_similar(  # type: ignore[attr-defined]
             identity=identity,
             vector=vector,
             k=k,
@@ -49,6 +50,22 @@ class SimilaritySearchResourceMixin:
             expand=resource_requestctx.args.get("expand", False),
         )
         return hits.to_dict(), 200
+
+    @response_handler()
+    def get_spectrum_by_run(self, run_id, native_id):
+        """Return a single spectrum with binaries, looked up by run_id + native_id.
+
+        Fetches the full spectrum record (including binary_data_array_list) from
+        PostgreSQL — binaries are stored there and excluded from OpenSearch.
+
+        URL: GET /api/spectrum/records/by-run/<run_id>/<native_id>
+
+        native_id may contain slashes (e.g. "sample=1 period=1 cycle=22"),
+        declared with <path:native_id> so Flask preserves the whole string.
+        """
+        identity = g.identity
+        item = self.service.get_spectrum_by_run(identity, run_id, native_id)
+        return item.to_dict(), 200
 
 
 class SimilaritySearchServiceMixin:
@@ -121,3 +138,58 @@ class SimilaritySearchServiceMixin:
             links_item_tpl=self.links_item_tpl,
             expand=expand,
         )
+
+    def get_spectrum_by_run(self, identity, run_id, native_id):
+        """Fetch a single spectrum from PostgreSQL by run_id + native_id.
+
+        Queries OpenSearch to resolve the record PID, then reads the full
+        record (including binary_data_array_list) from PostgreSQL.
+
+        Raises werkzeug 404 if no matching spectrum is found.
+        """
+        from flask import abort
+
+        self.require_permission(identity, "search")
+
+        # Use OpenSearch to find the PID — only metadata fields are needed here,
+        # binaries are not in the index so we just need the record id.
+        search = self.search_request(
+            identity,
+            {},
+            self.record_cls,
+            self.config.search,
+            permission_action="read",
+        )
+        index = ",".join(search._index) if search._index else "_all"
+
+        existing = search.to_dict()
+        permission_filter = existing.get("query")
+
+        must_clauses = [
+            {"term": {"metadata.msrun.metadata.run_id": run_id}},
+            {"term": {"metadata.native_id": native_id}},
+        ]
+
+        if permission_filter:
+            query_body = {
+                "query": {
+                    "bool": {
+                        "must": must_clauses,
+                        "filter": permission_filter,
+                    }
+                },
+                "size": 1,
+            }
+        else:
+            query_body = {
+                "query": {"bool": {"must": must_clauses}},
+                "size": 1,
+            }
+
+        raw = current_search_client.search(index=index, body=query_body)
+        hits = raw.get("hits", {}).get("hits", [])
+        if not hits:
+            abort(404, f"Spectrum '{native_id}' not found in run '{run_id}'.")
+
+        record_id = hits[0]["_source"]["id"]
+        return self.read(identity, record_id)

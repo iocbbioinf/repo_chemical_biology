@@ -81,20 +81,19 @@ Metadata:
 
     embedding:
       type: vector
-      dims: 2
+      dims: 300
 
-    # ----- Back-reference to parent dataset (mzML run) -----
+    # ----- Back-reference to parent MS Run -----
 
-    dataset:
+    msrun:
       type: pid-relation
-      pid_field: "spectrum.datatypes:dataset_pid_field"
+      pid_field: "spectrum.datatypes:msrun_pid_field"
       label:
-        en: Parent dataset
+        en: Parent MS Run
       help:
-        en: Reference to the dataset record that contains this spectrum.
+        en: Reference to the MSRun record (mzML file) that contains this spectrum.
       keys:
         - metadata.run_id
-        - metadata.contacts
 
     # =========================================================
     # mzML SpectrumType attributes
