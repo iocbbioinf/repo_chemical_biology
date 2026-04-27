@@ -100,7 +100,7 @@ class SimilaritySearchServiceMixin:
         existing_filter = existing.get("query")
 
         knn_clause = {
-            "metadata.embedding": {
+            "metadata.dreams_embedding": {
                 "vector": vector,
                 "k": k,
             }

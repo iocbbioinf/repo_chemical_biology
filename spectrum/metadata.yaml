@@ -79,12 +79,22 @@ Metadata:
         type: vocabulary
         vocabulary-type: languages
 
-    embedding:
+    dreams_embedding:
       type: vector
-      dims: 300
+      dims: 1024
+
+    # Back-reference to parent Dataset record
+    dataset:
+      type: pid-relation
+      pid_field: "msrun.datatypes:dataset_pid_field"
+      label:
+        en: Parent dataset
+      help:
+        en: Reference to the Dataset record that contains this MS run.
+      keys:
+        - metadata.title
 
     # ----- Back-reference to parent MS Run -----
-
     msrun:
       type: pid-relation
       pid_field: "spectrum.datatypes:msrun_pid_field"
