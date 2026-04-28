@@ -21,6 +21,20 @@ from .pids import SpectrumNoDOIServiceConfigMixin
 from .serializers import DataCiteJSONSerializer
 from .similarity import SimilaritySearchResourceMixin, SimilaritySearchServiceMixin
 
+class SpectrumSearchConfigMixin(ModelMixin):
+    sort_options = {
+        "bestmatch": dict(title=_("Best match"), fields=["_score"]),
+        "newest":    dict(title=_("Newest"),     fields=["-created"]),
+        "oldest":    dict(title=_("Oldest"),     fields=["created"]),
+        "native_id":       dict(title=_("Scan ID"),        fields=["metadata.native_id"]),
+        "native_id_desc":  dict(title=_("Scan ID (desc)"), fields=["-metadata.native_id"]),
+        "precmz":          dict(title=_("Precursor m/z"),        fields=["metadata.precursor_list.selected_ions.selected_ion_mz"]),
+        "precmz_desc":     dict(title=_("Precursor m/z (desc)"), fields=["-metadata.precursor_list.selected_ions.selected_ion_mz"]),
+        "charge":          dict(title=_("Charge"),        fields=["metadata.precursor_list.selected_ions.charge_state"]),
+        "charge_desc":     dict(title=_("Charge (desc)"), fields=["-metadata.precursor_list.selected_ions.charge_state"]),
+    }
+
+
 class SpectrumPermissionPolicyMixin(ModelMixin):
     """Custom permission policy for spectrum."""
 
@@ -53,6 +67,7 @@ spectrum_model = model(
         # TODO: remove this customization if you use oarepo-communities for RDM 14
         PrependMixin("PermissionPolicy", SpectrumPermissionPolicyMixin),
         PrependMixin("RecordServiceConfig", SpectrumNoDOIServiceConfigMixin),
+        PrependMixin("RecordServiceConfig", SpectrumSearchConfigMixin),
         PrependMixin("RecordResource", SimilaritySearchResourceMixin),
         PrependMixin("RecordService", SimilaritySearchServiceMixin),
         PatchJSONFile("record-mapping", {"settings": {"index": {"knn": True}}}),
