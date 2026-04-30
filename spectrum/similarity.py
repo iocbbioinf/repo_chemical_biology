@@ -94,10 +94,23 @@ class SimilaritySearchServiceMixin:
         # Extract the index name(s) from the DSL search object.
         index = ",".join(search._index) if search._index else "_all"
 
-        # Extract any permission/filter query already set on the search object
-        # (e.g. visibility filters) so we can AND it with the kNN query.
+        # Decompose the DSL query built by params interpreters (q=, permissions)
+        # into separate filter clauses so both can be applied alongside kNN.
+        # opensearch-dsl puts q= results in bool.must and permission checks in
+        # bool.filter; we flatten both into filter so the kNN pre-filter works.
         existing = search.to_dict()
-        existing_filter = existing.get("query")
+        existing_query = existing.get("query")
+
+        filter_clauses = []
+        if existing_query:
+            inner = existing_query.get("bool", {})
+            if inner:
+                for key in ("must", "filter", "should"):
+                    raw = inner.get(key, [])
+                    clauses = raw if isinstance(raw, list) else [raw]
+                    filter_clauses.extend(clauses)
+            else:
+                filter_clauses = [existing_query]
 
         knn_clause = {
             "metadata.dreams_embedding": {
@@ -106,12 +119,12 @@ class SimilaritySearchServiceMixin:
             }
         }
 
-        if existing_filter:
+        if filter_clauses:
             query_body = {
                 "query": {
                     "bool": {
-                        "must": [{"knn": knn_clause}],
-                        "filter": existing_filter,
+                        "must": {"knn": knn_clause},
+                        "filter": filter_clauses,
                     }
                 }
             }
