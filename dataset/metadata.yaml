@@ -4,30 +4,30 @@
 # A Dataset is a named collection of MS Runs (mzML files).
 # Run-level metadata (instrument, software, samples, chromatograms, spectra)
 # is stored in individual MSRun and Spectrum records that reference this Dataset.
+#
+# All standard dataset fields (title, description via additional_descriptions,
+# languages, subjects, contributors, resource_type, rights, funding, …) are
+# inherited from CCMMDataset via ccmm_production_preset_1_1_0.  Only fields
+# that are specific to mass-spectrometry datasets and not covered by CCMMDataset
+# should be added here.
+#
+# Field mapping for the requested metadata:
+#   Species              → subjects[]  (scheme: NCBITaxon)
+#   Instrument           → stored in MSRun, not here
+#   PTMs                 → subjects[]  (scheme: UNIMOD)
+#   Keywords             → subjects[]  (free text, no scheme)
+#   Dataset Type         → resource_type  (COAR c_ddb1 = dataset;
+#                          domain via subjects[] scheme: EDAM)
+#   Principal Investigator → contributors[]  (role: Principal Investigator)
+#     Name               → contributors[].person_or_org.name
+#     Email              → contributors[].person_or_org.identifiers[scheme=email]
+#     Institution        → contributors[].affiliations[].name
+#     Country            → contributors[].affiliations[].id  (ISO 3166-1 alpha-2)
+#   Description          → additional_descriptions[type=abstract].description
 
 # ---------------------------------------------------------------------------
 # Metadata blueprint
 # ---------------------------------------------------------------------------
 
 Metadata:
-  properties:
-
-    title:
-      type: fulltext+keyword
-      label:
-        en: Title
-      help:
-        en: Human-readable title of this mass spectrometry dataset.
-
-    description:
-      type: fulltext
-      label:
-        en: Description
-      help:
-        en: Free-text description of this mass spectrometry dataset.
-
-    languages:
-      type: array
-      items:
-        type: vocabulary
-        vocabulary-type: languages
+  properties: {}

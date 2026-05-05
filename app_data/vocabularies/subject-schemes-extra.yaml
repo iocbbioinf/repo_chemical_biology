@@ -1,0 +1,29 @@
+- id: EDAM
+  props:
+    iri: http://edamontology.org
+  title:
+    en: EDAM
+    cs: EDAM
+  description:
+    en: EDAM is a bioinformatics ontology covering topics, operations, data types, and formats.
+    cs: EDAM je ontologie bioinformatiky pokrývající témata, operace, datové typy a formáty.
+
+- id: NCBITaxon
+  props:
+    iri: https://www.ncbi.nlm.nih.gov/taxonomy
+  title:
+    en: NCBI Taxonomy
+    cs: NCBI Taxonomy
+  description:
+    en: NCBI Taxonomy provides taxonomic names for all organisms in the NCBI databases.
+    cs: NCBI Taxonomy poskytuje taxonomické názvy pro všechny organismy v databázích NCBI.
+
+- id: UNIMOD
+  props:
+    iri: https://www.unimod.org
+  title:
+    en: UNIMOD
+    cs: UNIMOD
+  description:
+    en: UNIMOD is a controlled vocabulary for protein modifications used in mass spectrometry.
+    cs: UNIMOD je řízený slovník pro modifikace proteinů používané v hmotnostní spektrometrii.

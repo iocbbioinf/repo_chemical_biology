@@ -1,0 +1,43 @@
+subjectschemes:
+  pid-type: v-sus
+  data-file: vocabularies/subject-schemes.yaml
+
+ms-instrument-model:
+  pid-type: v-msim
+  data-file: vocabularies/ms-instrument-model.yaml
+
+ms-ionization-type:
+  pid-type: v-msio
+  data-file: vocabularies/ms-ionization-type.yaml
+
+ms-mass-analyzer:
+  pid-type: v-msma
+  data-file: vocabularies/ms-mass-analyzer.yaml
+
+ms-detector-type:
+  pid-type: v-msdt
+  data-file: vocabularies/ms-detector-type.yaml
+
+ms-dissociation-method:
+  pid-type: v-msdm
+  data-file: vocabularies/ms-dissociation-method.yaml
+
+ms-spectrum-type:
+  pid-type: v-msst
+  data-file: vocabularies/ms-spectrum-type.yaml
+
+ms-spectrum-representation:
+  pid-type: v-mssr
+  data-file: vocabularies/ms-spectrum-representation.yaml
+
+ms-scan-polarity:
+  pid-type: v-mssp
+  data-file: vocabularies/ms-scan-polarity.yaml
+
+ms-spectra-combination:
+  pid-type: v-mssc
+  data-file: vocabularies/ms-spectra-combination.yaml
+
+ms-file-format:
+  pid-type: v-msff
+  data-file: vocabularies/ms-file-format.yaml

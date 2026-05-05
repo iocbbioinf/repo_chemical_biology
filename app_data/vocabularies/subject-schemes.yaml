@@ -1,0 +1,79 @@
+# Full subject schemes vocabulary.
+# This file is loaded via app_data/vocabularies.yaml under key "subjectschemes"
+# (pid-type: v-sus), which has loading priority over the ccmm_invenio package
+# fixture. It must therefore include the base CCMM entries (Frascati, EuroSciVoc,
+# MeSH, GEMET) as well as the domain-specific additions below.
+
+# ── base entries from ccmm_invenio (ccmm_subject_schemes.yaml) ────────────────
+
+- id: frascati
+  props:
+    iri: https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/
+  title:
+    en: Frascati
+    cs: Frascati
+  description:
+    en: Frascati is an international classification of research and development activities.
+    cs: Frascati je mezinárodní klasifikace výzkumných a vývojových aktivit.
+
+- id: EuroSciVoc
+  props:
+    iri: https://op.europa.eu/en/web/eu-vocabularies/euroscivoc
+  title:
+    en: EuroVoc
+    cs: EuroVoc
+  description:
+    en: EuroVoc is a multilingual thesaurus covering the activities of the European Union.
+    cs: EuroVoc je vícejazyčná klasifikace pojmů, která pokrývá oblasti činnosti Evropské unie.
+
+- id: MeSH
+  props:
+    iri: https://www.nlm.nih.gov/mesh/meshhome.html
+  title:
+    en: MeSH
+    cs: MeSH
+  description:
+    en: MeSH is a controlled vocabulary for biomedical and health information.
+    cs: MeSH je kontrolovaný slovník pro biomedicínské a zdravotnické informace.
+
+- id: GEMET
+  props:
+    iri: https://www.eionet.europa.eu/gemet/en/about/
+  title:
+    en: GEMET
+    cs: GEMET
+  description:
+    en: GEMET is a multilingual thesaurus focused on the environment.
+    cs: GEMET je vícejazyčná klasifikace pojmů zaměřená na životní prostředí.
+
+# ── domain-specific additions ─────────────────────────────────────────────────
+
+- id: EDAM
+  props:
+    iri: http://edamontology.org
+  title:
+    en: EDAM
+    cs: EDAM
+  description:
+    en: EDAM is a bioinformatics ontology covering topics, operations, data types, and formats.
+    cs: EDAM je ontologie bioinformatiky pokrývající témata, operace, datové typy a formáty.
+
+- id: NCBITaxon
+  props:
+    iri: https://www.ncbi.nlm.nih.gov/taxonomy
+  title:
+    en: NCBI Taxonomy
+    cs: NCBI Taxonomy
+  description:
+    en: NCBI Taxonomy provides taxonomic names for all organisms in the NCBI databases.
+    cs: NCBI Taxonomy poskytuje taxonomické názvy pro všechny organismy v databázích NCBI.
+
+- id: UNIMOD
+  props:
+    iri: https://www.unimod.org
+  title:
+    en: UNIMOD
+    cs: UNIMOD
+  description:
+    en: UNIMOD is a controlled vocabulary for protein modifications used in mass spectrometry.
+    cs: UNIMOD je řízený slovník pro modifikace proteinů používané v hmotnostní spektrometrii.
