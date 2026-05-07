@@ -19,6 +19,7 @@ from oarepo_rdm.model.presets import rdm_complete_preset
 from .datatypes import DATATYPES
 from .pids import SpectrumNoDOIServiceConfigMixin
 from .serializers import DataCiteJSONSerializer
+from .bulk import BulkCreateResourceMixin, BulkCreateServiceMixin
 from .similarity import SimilaritySearchResourceMixin, SimilaritySearchServiceMixin
 
 class SpectrumSearchConfigMixin(ModelMixin):
@@ -68,7 +69,9 @@ spectrum_model = model(
         PrependMixin("PermissionPolicy", SpectrumPermissionPolicyMixin),
         PrependMixin("RecordServiceConfig", SpectrumNoDOIServiceConfigMixin),
         PrependMixin("RecordServiceConfig", SpectrumSearchConfigMixin),
+        PrependMixin("RecordResource", BulkCreateResourceMixin),
         PrependMixin("RecordResource", SimilaritySearchResourceMixin),
+        PrependMixin("RecordService", BulkCreateServiceMixin),
         PrependMixin("RecordService", SimilaritySearchServiceMixin),
         PatchJSONFile("record-mapping", {"settings": {"index": {"knn": True}}}),
         PatchJSONFile("draft-mapping", {"settings": {"index": {"knn": True}}}),
