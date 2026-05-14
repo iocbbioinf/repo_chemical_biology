@@ -112,24 +112,23 @@ class SimilaritySearchServiceMixin:
             else:
                 filter_clauses = [existing_query]
 
-        knn_clause = {
-            "metadata.dreams_embedding": {
-                "vector": vector,
-                "k": k,
-            }
+        knn_field_clause = {
+            "vector": vector,
+            "k": k,
         }
 
+        # Pass filters as a pre-filter *inside* the kNN clause so OpenSearch
+        # restricts the candidate set before ANN scoring — a post-filter via
+        # bool.filter is applied after the top-k are already chosen, which
+        # means records outside the filter range can still be returned.
         if filter_clauses:
-            query_body = {
-                "query": {
-                    "bool": {
-                        "must": {"knn": knn_clause},
-                        "filter": filter_clauses,
-                    }
-                }
-            }
-        else:
-            query_body = {"query": {"knn": knn_clause}}
+            knn_field_clause["filter"] = (
+                filter_clauses[0] if len(filter_clauses) == 1
+                else {"bool": {"must": filter_clauses}}
+            )
+
+        knn_clause = {"metadata.dreams_embedding": knn_field_clause}
+        query_body = {"query": {"knn": knn_clause}}
 
         query_body["size"] = k
 
