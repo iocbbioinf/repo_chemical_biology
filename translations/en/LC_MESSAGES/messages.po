@@ -1,0 +1,120 @@
+# English translations for PROJECT.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-04-14 11:00+0200\n"
+"PO-Revision-Date: 2026-04-14 11:00+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/common/workflows/default.py:360
+msgid "state:draft"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/common/workflows/default.py:361
+msgid "state:published"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/common/workflows/default.py:362
+msgid "state:submitted"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/common/workflows/default.py:363
+msgid "state:retracting"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/common/workflows/default.py:364
+msgid "state:deleted"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/spectrum/model.py:55
+msgid "Datacite export"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/templates/footer.html:24
+msgid "Contact"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/templates/semantic-ui/invenio_app_rdm/intro_section.html:5
+msgid "You've successfully installed Invenio RDM!"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/templates/semantic-ui/invenio_app_rdm/intro_section.html:7
+msgid "What is ahead?"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/templates/semantic-ui/invenio_app_rdm/intro_section.html:17
+msgid "Configure"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/templates/semantic-ui/invenio_app_rdm/intro_section.html:20
+msgid ""
+"Configure the datamodel, resource types, permissions and much more to "
+"make it suit your needs! For more information on how to do it visit the"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/templates/semantic-ui/invenio_app_rdm/intro_section.html:22
+msgid "configuration section in the docs"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/templates/semantic-ui/invenio_app_rdm/intro_section.html:34
+msgid "Customize"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/templates/semantic-ui/invenio_app_rdm/intro_section.html:37
+msgid ""
+"Customize the layout and adapt the styling to match your institution's. "
+"See how to do so"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/templates/semantic-ui/invenio_app_rdm/intro_section.html:39
+msgid "here"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/templates/semantic-ui/invenio_app_rdm/intro_section.html:50
+msgid "Use it!"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/templates/semantic-ui/invenio_app_rdm/intro_section.html:52
+msgid "Use and explore your InvenioRDM instance."
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/templates/semantic-ui/invenio_app_rdm/intro_section.html:54
+msgid "Use"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/templates/semantic-ui/invenio_app_rdm/intro_section.html:68
+msgid "Docs"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/templates/semantic-ui/invenio_app_rdm/intro_section.html:77
+msgid "Code"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/templates/semantic-ui/invenio_app_rdm/intro_section.html:84
+msgid "To disable this section, add"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/templates/semantic-ui/invenio_app_rdm/intro_section.html:86
+msgid "to your invenio.cfg file."
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/ui/spectrum/__init__.py:90
+msgid "New Spectrum"
+msgstr ""
+
+#: /home/marek/uochb/ccmm/invenio/repo_chemical_biology/ui/spectrum/templates/semantic-ui/spectrum/record_detail/main.html:62
+msgid "Record title"
+msgstr ""
+

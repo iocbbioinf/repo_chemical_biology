@@ -366,6 +366,7 @@ vite.config.ts.timestamp-*
 # Editors
 .vscode/
 .idea/
+*.iml
 *.swp
 *.swo
 *.swn

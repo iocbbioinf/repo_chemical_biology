@@ -1,0 +1,6 @@
+# Changes here will be overwritten by Copier
+_commit: 54b85b0
+_src_path: https://github.com/oarepo/nrp-model-copier
+base_model: ccmm
+model_description: Mass Spectrum Dataset
+model_human_name: MS Dataset
