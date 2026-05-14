@@ -22,7 +22,7 @@
 #     Name               → contributors[].person_or_org.name
 #     Email              → contributors[].person_or_org.identifiers[scheme=email]
 #     Institution        → contributors[].affiliations[].name
-#     Country            → contributors[].affiliations[].id  (ISO 3166-1 alpha-2)
+#     Country            → not stored (affiliations.id is a ROR vocabulary PID, not a country code)
 #   Description          → additional_descriptions[type=abstract].description
 
 # ---------------------------------------------------------------------------
