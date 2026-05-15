@@ -5,6 +5,7 @@ from flask_resources import resource_requestctx, response_handler, route
 from invenio_records_resources.resources.records.resource import (
     request_data,
     request_extra_args,
+    request_search_args,
 )
 from invenio_search import current_search_client
 
@@ -19,6 +20,7 @@ class SimilaritySearchResourceMixin:
         return rules
 
     @request_extra_args
+    @request_search_args
     @request_data
     @response_handler(many=True)
     def search_similar(self):
@@ -94,23 +96,12 @@ class SimilaritySearchServiceMixin:
         # Extract the index name(s) from the DSL search object.
         index = ",".join(search._index) if search._index else "_all"
 
-        # Decompose the DSL query built by params interpreters (q=, permissions)
-        # into separate filter clauses so both can be applied alongside kNN.
-        # opensearch-dsl puts q= results in bool.must and permission checks in
-        # bool.filter; we flatten both into filter so the kNN pre-filter works.
+        # Pass the full DSL query (permissions + q= filter) directly as the kNN
+        # pre-filter. opensearch-dsl already encodes both correctly: permission
+        # checks in bool.filter and q= in bool.must. Flattening them would lose
+        # minimum_should_match semantics from the permission should-block.
         existing = search.to_dict()
         existing_query = existing.get("query")
-
-        filter_clauses = []
-        if existing_query:
-            inner = existing_query.get("bool", {})
-            if inner:
-                for key in ("must", "filter", "should"):
-                    raw = inner.get(key, [])
-                    clauses = raw if isinstance(raw, list) else [raw]
-                    filter_clauses.extend(clauses)
-            else:
-                filter_clauses = [existing_query]
 
         knn_field_clause = {
             "vector": vector,
@@ -121,11 +112,8 @@ class SimilaritySearchServiceMixin:
         # restricts the candidate set before ANN scoring — a post-filter via
         # bool.filter is applied after the top-k are already chosen, which
         # means records outside the filter range can still be returned.
-        if filter_clauses:
-            knn_field_clause["filter"] = (
-                filter_clauses[0] if len(filter_clauses) == 1
-                else {"bool": {"must": filter_clauses}}
-            )
+        if existing_query:
+            knn_field_clause["filter"] = existing_query
 
         knn_clause = {"metadata.dreams_embedding": knn_field_clause}
         query_body = {"query": {"knn": knn_clause}}

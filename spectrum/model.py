@@ -33,6 +33,18 @@ class SpectrumSearchConfigMixin(ModelMixin):
         "precmz_desc":     dict(title=_("Precursor m/z (desc)"), fields=["-metadata.precursor_list.selected_ions.selected_ion_mz"]),
         "charge":          dict(title=_("Charge"),        fields=["metadata.precursor_list.selected_ions.charge_state"]),
         "charge_desc":     dict(title=_("Charge (desc)"), fields=["-metadata.precursor_list.selected_ions.charge_state"]),
+        "polarity":        dict(title=_("Mode"),           fields=["metadata.scan_polarity.id"]),
+        "polarity_desc":   dict(title=_("Mode (desc)"),    fields=["-metadata.scan_polarity.id"]),
+        "frag_method":     dict(title=_("Fragmentation"),       fields=["metadata.precursor_list.activation.dissociation_method.id"]),
+        "frag_method_desc":dict(title=_("Fragmentation (desc)"),fields=["-metadata.precursor_list.activation.dissociation_method.id"]),
+        "run_id":          dict(title=_("Run ID"),         fields=["metadata.msrun.metadata.run_id"]),
+        "run_id_desc":     dict(title=_("Run ID (desc)"),  fields=["-metadata.msrun.metadata.run_id"]),
+        "dataset":         dict(title=_("Dataset"),        fields=["metadata.dataset.metadata.title"]),
+        "dataset_desc":    dict(title=_("Dataset (desc)"), fields=["-metadata.dataset.metadata.title"]),
+        "ms_level":        dict(title=_("MS level"),       fields=["metadata.ms_level"]),
+        "ms_level_desc":   dict(title=_("MS level (desc)"),fields=["-metadata.ms_level"]),
+        "instrument_model":      dict(title=_("Instrument"),       fields=["metadata.instrument_model"]),
+        "instrument_model_desc": dict(title=_("Instrument (desc)"),fields=["-metadata.instrument_model"]),
     }
 
 
@@ -68,7 +80,8 @@ spectrum_model = model(
         # TODO: remove this customization if you use oarepo-communities for RDM 14
         PrependMixin("PermissionPolicy", SpectrumPermissionPolicyMixin),
         PrependMixin("RecordServiceConfig", SpectrumNoDOIServiceConfigMixin),
-        PrependMixin("RecordServiceConfig", SpectrumSearchConfigMixin),
+        PrependMixin("RecordSearchOptions", SpectrumSearchConfigMixin),
+        PrependMixin("DraftSearchOptions", SpectrumSearchConfigMixin),
         PrependMixin("RecordResource", BulkCreateResourceMixin),
         PrependMixin("RecordResource", SimilaritySearchResourceMixin),
         PrependMixin("RecordService", BulkCreateServiceMixin),

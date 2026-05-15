@@ -105,6 +105,21 @@ Metadata:
       keys:
         - metadata.run_id
 
+    # Denormalized scalar fields for efficient global sorting
+    ms_level:
+      type: keyword
+      label:
+        en: MS level
+      help:
+        en: MS level value extracted from spectrum_cv_params (MS:1000511).
+
+    instrument_model:
+      type: keyword
+      label:
+        en: Instrument model
+      help:
+        en: Instrument model name denormalized from the parent MSRun record.
+
     # =========================================================
     # mzML SpectrumType attributes
     # =========================================================
