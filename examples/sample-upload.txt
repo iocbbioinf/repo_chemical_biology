@@ -1,0 +1,4 @@
+Synthetic local test file for example record publication.
+
+This file is intentionally small and harmless. Upload it to draft records when
+testing the file-backed publication workflow with nrp-cmd.

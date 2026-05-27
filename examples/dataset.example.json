@@ -1,0 +1,76 @@
+{
+  "files": {
+    "enabled": true
+  },
+  "metadata": {
+    "title": "Example LC-MS/MS dataset for local testing",
+    "publication_date": "2026-05-26",
+    "publisher": "Repository for Chemical Biology Data",
+    "version": "1.0.0",
+    "resource_type": {
+      "id": "c_ddb1",
+      "title": {
+        "en": "dataset"
+      }
+    },
+    "creators": [
+      {
+        "person_or_org": {
+          "type": "personal",
+          "given_name": "Ada",
+          "family_name": "Novak",
+          "name": "Novak, Ada"
+        },
+        "affiliations": [
+          {
+            "name": "Example Institute of Chemical Biology"
+          }
+        ]
+      }
+    ],
+    "additional_descriptions": [
+      {
+        "description": "Small synthetic LC-MS/MS dataset used to test dataset, MSRun, and Spectrum record creation in a local development repository.",
+        "type": {
+          "id": "abstract",
+          "title": {
+            "en": "Abstract"
+          }
+        },
+        "lang": {
+          "id": "ENG",
+          "title": {
+            "en": "English"
+          }
+        }
+      }
+    ],
+    "languages": [
+      {
+        "id": "ENG",
+        "title": {
+          "en": "English"
+        }
+      }
+    ],
+    "subjects": [
+      {
+        "subject": "mass spectrometry"
+      },
+      {
+        "subject": "LC-MS/MS"
+      },
+      {
+        "subject": "local test data"
+      }
+    ],
+    "rights": [
+      {
+        "id": "CC0-1.0",
+        "title": {
+          "en": "Creative Commons Universal Public Domain Dedication"
+        }
+      }
+    ]
+  }
+}

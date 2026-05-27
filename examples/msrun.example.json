@@ -1,0 +1,198 @@
+{
+  "files": {
+    "enabled": true
+  },
+  "metadata": {
+    "dataset": {
+      "id": "REPLACE_WITH_PUBLISHED_DATASET_RECORD_ID",
+      "metadata": {
+        "title": "Example LC-MS/MS dataset for local testing"
+      }
+    },
+    "title": "Example mzML run for local testing",
+    "publication_date": "2026-05-26",
+    "publisher": "Repository for Chemical Biology Data",
+    "version": "1.0.0",
+    "resource_type": {
+      "id": "c_ddb1",
+      "title": {
+        "en": "dataset"
+      }
+    },
+    "creators": [
+      {
+        "person_or_org": {
+          "type": "personal",
+          "given_name": "Ada",
+          "family_name": "Novak",
+          "name": "Novak, Ada"
+        },
+        "affiliations": [
+          {
+            "name": "Example Institute of Chemical Biology"
+          }
+        ]
+      }
+    ],
+    "additional_descriptions": [
+      {
+        "description": "Synthetic mzML run metadata linked to the example dataset.",
+        "type": {
+          "id": "abstract",
+          "title": {
+            "en": "Abstract"
+          }
+        },
+        "lang": {
+          "id": "ENG",
+          "title": {
+            "en": "English"
+          }
+        }
+      }
+    ],
+    "languages": [
+      {
+        "id": "ENG",
+        "title": {
+          "en": "English"
+        }
+      }
+    ],
+    "rights": [
+      {
+        "id": "CC0-1.0",
+        "title": {
+          "en": "Creative Commons Universal Public Domain Dedication"
+        }
+      }
+    ],
+    "mzml_accession": "MSRUN-LOCAL-0001",
+    "mzml_version": "1.1.1",
+    "mzml_id": "example_mzml_document",
+    "cv_list": [
+      {
+        "cv_ref": "MS",
+        "full_name": "Proteomics Standards Initiative Mass Spectrometry Ontology",
+        "version": "4.1.153",
+        "uri": "https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.obo"
+      }
+    ],
+    "file_content": [
+      {
+        "accession": "MS:1000579",
+        "name": "MS1 spectrum"
+      },
+      {
+        "accession": "MS:1000580",
+        "name": "MSn spectrum"
+      }
+    ],
+    "source_files": [
+      {
+        "source_file_id": "SF1",
+        "name": "example.raw",
+        "location": "file:///tmp/example.raw",
+        "file_format": {
+          "accession": "MS:1000563",
+          "name": "Thermo RAW format"
+        },
+        "checksum_type": {
+          "accession": "MS:1000569",
+          "name": "SHA-1"
+        },
+        "checksum_value": "0000000000000000000000000000000000000000",
+        "native_id_format": {
+          "accession": "MS:1000776",
+          "name": "scan number only nativeID format"
+        }
+      }
+    ],
+    "contacts": [
+      {
+        "name": "Ada Novak",
+        "affiliation": "Example Institute of Chemical Biology",
+        "email": "ada.novak@example.org"
+      }
+    ],
+    "samples": [
+      {
+        "sample_id": "sample-1",
+        "name": "Synthetic peptide mixture"
+      }
+    ],
+    "software_list": [
+      {
+        "software_id": "pwiz",
+        "version": "3.0",
+        "cv_params": [
+          {
+            "accession": "MS:1000615",
+            "name": "ProteoWizard software"
+          }
+        ]
+      }
+    ],
+    "instrument_configurations": [
+      {
+        "config_id": "IC1",
+        "instrument_model": {
+          "accession": "MS:1001911",
+          "name": "Q Exactive"
+        },
+        "sources": [
+          {
+            "order": 1,
+            "ionization_type": {
+              "accession": "MS:1000073",
+              "name": "electrospray ionization"
+            }
+          }
+        ],
+        "analyzers": [
+          {
+            "order": 2,
+            "mass_analyzer_type": {
+              "accession": "MS:1000484",
+              "name": "orbitrap"
+            }
+          }
+        ],
+        "detectors": [
+          {
+            "order": 3,
+            "detector_type": {
+              "accession": "MS:1000624",
+              "name": "inductive detector"
+            }
+          }
+        ],
+        "software_ref": "pwiz"
+      }
+    ],
+    "data_processing_list": [
+      {
+        "processing_id": "DP1",
+        "processing_methods": [
+          {
+            "order": 1,
+            "software_ref": "pwiz",
+            "cv_params": [
+              {
+                "accession": "MS:1000544",
+                "name": "Conversion to mzML"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "run_id": "example-run-0001",
+    "default_instrument_configuration_ref": "IC1",
+    "default_source_file_ref": "SF1",
+    "sample_ref": "sample-1",
+    "start_time_stamp": "2026-05-26T10:00:00+00:00",
+    "spectrum_count": 1,
+    "default_spectrum_data_processing_ref": "DP1"
+  }
+}

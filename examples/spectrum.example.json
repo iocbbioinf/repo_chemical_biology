@@ -1,0 +1,187 @@
+{
+  "files": {
+    "enabled": true
+  },
+  "metadata": {
+    "dataset": {
+      "id": "REPLACE_WITH_PUBLISHED_DATASET_RECORD_ID",
+      "metadata": {
+        "title": "Example LC-MS/MS dataset for local testing"
+      }
+    },
+    "msrun": {
+      "id": "REPLACE_WITH_PUBLISHED_MSRUN_RECORD_ID",
+      "metadata": {
+        "run_id": "example-run-0001"
+      }
+    },
+    "title": "Example MS/MS spectrum scan 1",
+    "publication_date": "2026-05-26",
+    "publisher": "Repository for Chemical Biology Data",
+    "version": "1.0.0",
+    "resource_type": {
+      "id": "c_ddb1",
+      "title": {
+        "en": "dataset"
+      }
+    },
+    "creators": [
+      {
+        "person_or_org": {
+          "type": "personal",
+          "given_name": "Ada",
+          "family_name": "Novak",
+          "name": "Novak, Ada"
+        },
+        "affiliations": [
+          {
+            "name": "Example Institute of Chemical Biology"
+          }
+        ]
+      }
+    ],
+    "description": "Synthetic centroid MS/MS spectrum used for local record creation tests.",
+    "languages": [
+      {
+        "id": "ENG",
+        "title": {
+          "en": "English"
+        }
+      }
+    ],
+    "rights": [
+      {
+        "id": "CC0-1.0"
+      }
+    ],
+    "ms_level": "2",
+    "instrument_model": "Q Exactive",
+    "native_id": "scan=1",
+    "index": 0,
+    "default_array_length": 2,
+    "data_processing_ref": "DP1",
+    "source_file_ref": "SF1",
+    "spectrum_type": {
+      "id": "MS:1000580",
+      "title": {
+        "en": "MSn spectrum"
+      }
+    },
+    "spectrum_representation": {
+      "id": "MS:1000127",
+      "title": {
+        "en": "centroid spectrum"
+      }
+    },
+    "scan_polarity": {
+      "id": "MS:1000130",
+      "title": {
+        "en": "positive scan"
+      }
+    },
+    "spectrum_cv_params": [
+      {
+        "accession": "MS:1000511",
+        "name": "ms level",
+        "value": "2"
+      },
+      {
+        "accession": "MS:1000285",
+        "name": "total ion current",
+        "value": "3500"
+      }
+    ],
+    "scan_list": {
+      "spectra_combination": {
+        "id": "MS:1000795",
+        "title": {
+          "en": "no combination"
+        }
+      },
+      "scans": [
+        {
+          "instrument_configuration_ref": "IC1",
+          "cv_params": [
+            {
+              "accession": "MS:1000016",
+              "name": "scan start time",
+              "value": "5.25",
+              "unit_accession": "UO:0000031",
+              "unit_name": "minute"
+            }
+          ],
+          "scan_window_list": [
+            {
+              "lower_limit": 100.0,
+              "upper_limit": 1000.0
+            }
+          ]
+        }
+      ]
+    },
+    "precursor_list": [
+      {
+        "spectrum_ref": "scan=0",
+        "isolation_window": {
+          "target_mz": 445.34,
+          "lower_offset": 1.0,
+          "upper_offset": 1.0
+        },
+        "selected_ions": [
+          {
+            "selected_ion_mz": 445.34,
+            "charge_state": 2,
+            "intensity": 12000.0
+          }
+        ],
+        "activation": {
+          "dissociation_method": {
+            "id": "MS:1000133",
+            "title": {
+              "en": "collision-induced dissociation"
+            }
+          },
+          "activation_energy": 28.0
+        }
+      }
+    ],
+    "binary_data_array_list": [
+      {
+        "array_length": 2,
+        "data_processing_ref": "DP1",
+        "encoded_length": 24,
+        "array_type": {
+          "accession": "MS:1000514",
+          "name": "m/z array"
+        },
+        "binary_data_type": {
+          "accession": "MS:1000523",
+          "name": "64-bit float"
+        },
+        "compression_type": {
+          "accession": "MS:1000576",
+          "name": "no compression"
+        },
+        "binary": "AAAAAAAAWUAAAAAAAMBiQA=="
+      },
+      {
+        "array_length": 2,
+        "data_processing_ref": "DP1",
+        "encoded_length": 24,
+        "array_type": {
+          "accession": "MS:1000515",
+          "name": "intensity array"
+        },
+        "binary_data_type": {
+          "accession": "MS:1000523",
+          "name": "64-bit float"
+        },
+        "compression_type": {
+          "accession": "MS:1000576",
+          "name": "no compression"
+        },
+        "binary": "AAAAAABAj0AAAAAAAIijQA=="
+      }
+    ]
+  }
+}
