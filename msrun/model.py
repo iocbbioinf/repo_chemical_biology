@@ -58,3 +58,5 @@ msrun_model = model(
     ],
     configuration={}
 )
+
+MSRunRecord = msrun_model.Record

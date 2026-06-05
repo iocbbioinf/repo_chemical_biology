@@ -6,17 +6,6 @@ import marshmallow as ma
 from oarepo_model.datatypes.base import DataType
 
 
-def msrun_pid_field(element: dict[str, Any]) -> Any:
-    """Return the PID field for the parent MSRun record.
-
-    Used as pid_field in the spectrum metadata.yaml pid-relation.
-    Imported lazily to avoid circular imports during app initialisation.
-    """
-    from msrun import msrun_model  # noqa: PLC0415
-
-    return msrun_model.Record.pid
-
-
 class VectorMarshmallowField(ma.fields.List):
     """A list of floats representing a vector/embedding."""
 

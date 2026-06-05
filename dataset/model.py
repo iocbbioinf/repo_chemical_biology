@@ -59,3 +59,5 @@ dataset_model = model(
         "ui_blueprint_name": "dataset_ui"
     }
 )
+
+DatasetRecord = dataset_model.Record

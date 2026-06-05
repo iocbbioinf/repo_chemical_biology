@@ -61,7 +61,7 @@ Metadata:
     # Back-reference to parent Dataset record
     dataset:
       type: pid-relation
-      pid_field: "msrun.datatypes:dataset_pid_field"
+      record_cls: "dataset.model:DatasetRecord"
       label:
         en: Parent dataset
       help:
