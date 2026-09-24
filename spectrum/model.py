@@ -6,7 +6,7 @@ from __future__ import annotations
 from invenio_i18n import lazy_gettext as _
 from invenio_records_permissions.generators import AuthenticatedUser
 from oarepo_model.api import model
-from oarepo_model.customizations import PrependMixin, AddMetadataExport
+from oarepo_model.customizations import PrependMixin, AddMetadataExport, AddServiceComponent
 from oarepo_model.customizations.patch_json_file import PatchJSONFile
 from oarepo_model.customizations.high_level.index_mapping import PatchIndexPropertyMapping
 from oarepo_model.model import ModelMixin
@@ -21,6 +21,7 @@ from .pids import SpectrumNoDOIServiceConfigMixin
 from .serializers import DataCiteJSONSerializer
 from .bulk import BulkCreateResourceMixin, BulkCreateServiceMixin
 from .similarity import SimilaritySearchResourceMixin, SimilaritySearchServiceMixin
+from .usi import SpectrumUSIComponent
 
 class SpectrumSearchConfigMixin(ModelMixin):
     sort_options = {
@@ -86,6 +87,8 @@ spectrum_model = model(
         PrependMixin("RecordResource", SimilaritySearchResourceMixin),
         PrependMixin("RecordService", BulkCreateServiceMixin),
         PrependMixin("RecordService", SimilaritySearchServiceMixin),
+        # Computes metadata.usi (Universal Spectrum Identifier) from dataset + msrun + native_id.
+        AddServiceComponent(SpectrumUSIComponent),
         PatchJSONFile("record-mapping", {"settings": {"index": {"knn": True}}}),
         PatchJSONFile("draft-mapping", {"settings": {"index": {"knn": True}}}),
         # Exclude binary spectral data from OpenSearch indexing.

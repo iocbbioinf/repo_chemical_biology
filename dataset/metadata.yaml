@@ -30,4 +30,20 @@
 # ---------------------------------------------------------------------------
 
 Metadata:
-  properties: {}
+  properties:
+
+    # Universal Spectrum Identifier collection (https://www.psidev.info/usi).
+    # Kept separate from the DOI: USI allows only the collection identifiers
+    # listed in HUPO-PSI/usi CollectionIdentifiers.md. While empty, spectrum
+    # USIs use the placeholder USI000000.
+    usi_collection:
+      type: keyword
+      pattern: "^(PXD\\d{6}|RPXD\\d{6}|PXL\\d{6}|MSV\\d{9}|RMSV\\d{9})$"
+      label:
+        en: USI collection identifier
+      help:
+        en: >
+          ProteomeXchange or MassIVE accession of this dataset
+          (PXDnnnnnn, RPXDnnnnnn, PXLnnnnnn, MSVnnnnnnnnn, RMSVnnnnnnnnn),
+          used as the collection part of spectrum USIs. Leave empty until
+          the dataset is registered; USIs then use the placeholder USI000000.

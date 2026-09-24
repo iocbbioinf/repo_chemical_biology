@@ -93,6 +93,7 @@ Metadata:
         en: Reference to the Dataset record that contains this MS run.
       keys:
         - metadata.title
+        - metadata.usi_collection
 
     # ----- Back-reference to parent MS Run -----
     msrun:
@@ -104,6 +105,20 @@ Metadata:
         en: Reference to the MSRun record (mzML file) that contains this spectrum.
       keys:
         - metadata.run_id
+        - metadata.usi_run_name
+
+    # Universal Spectrum Identifier — computed by SpectrumUSIComponent
+    # (spectrum/usi.py) on create, update and publish; client input is ignored.
+    usi:
+      type: keyword
+      label:
+        en: Universal Spectrum Identifier
+      help:
+        en: >
+          mzspec:<collection>:<msRun>:<indexType>:<indexNumber>
+          (https://www.psidev.info/usi). Uses the placeholder collection
+          USI000000 until the parent dataset has a ProteomeXchange/MassIVE
+          accession.
 
     # Denormalized scalar fields for efficient global sorting
     ms_level:

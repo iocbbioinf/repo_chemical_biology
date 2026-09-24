@@ -600,6 +600,16 @@ Metadata:
       help:
         en: Unique identifier for this run (mzML run/@id).
 
+    usi_run_name:
+      type: keyword
+      label:
+        en: USI MS run name
+      help:
+        en: >
+          msRun part of the Universal Spectrum Identifier: root name of the
+          original RAW/mzML file, without path or extension. If empty, the name
+          of the default source file (default_source_file_ref) is used.
+
     default_instrument_configuration_ref:
       type: keyword
       label:

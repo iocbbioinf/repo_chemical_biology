@@ -11,6 +11,7 @@ dependencies = [
     "oarepo[s3,rdm]>=14.2.1b10.dev6,<15.0.0",
     "oarepo-app[production,ccmm]==4.0.0",  # <---- here
     "python-dotenv",
+    "jinjax>=0.60,<0.64",
 ]
 requires-python = ">=3.14,<3.15"
 
@@ -28,6 +29,9 @@ repository = "common:alembic"
 
 [project.entry-points."invenio_base.api_blueprints"]
 admin_auth = "common.admin_auth:blueprint"
+
+[project.entry-points."flask.commands"]
+usi = "spectrum.cli:usi"
 
 [project.entry-points."invenio_base.blueprints"]
 ui_spectrum = "ui.spectrum:create_blueprint"

@@ -19,6 +19,12 @@ services:
   mq:
     image: rabbitmq:3-management
     restart: "unless-stopped"
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 2
+      start_period: 30s
     environment:
       RABBITMQ_DEFAULT_USER: "${INVENIO_RABBIT_USER}"
       RABBITMQ_DEFAULT_PASS: "${INVENIO_RABBIT_PASSWORD}"
