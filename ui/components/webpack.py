@@ -11,7 +11,9 @@ theme = WebpackThemeBundle(
             },
             "dependencies": {},
             "devDependencies": {},
-            "aliases": {},
+            "aliases": {
+                "@js/mass_spec": "./js/mass_spec",
+            },
         }
     },
 )

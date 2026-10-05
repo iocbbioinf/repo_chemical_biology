@@ -1,0 +1,27 @@
+{#- Helpers for the mass spectra record detail pages (proteomics_dataset,
+    metabolomics_dataset). Field labels come from the model (metadata.yaml),
+    enum values are shown via the `labels` dictionary when given. -#}
+
+{%- macro ms_value(fd, labels=None) -%}
+  {%- set raw = fd.value(fd) -%}
+  {{- labels.get(raw, raw) if labels else fd.ui_value(fd) -}}
+{%- endmacro -%}
+
+{#- One table row; nothing is rendered when the field is empty. -#}
+{%- macro ms_row(fd, labels=None, multiple=False) -%}
+  {%- if fd.value(fd) -%}
+  <tr>
+    <th class="ui field-label">{{ fd.label(fd, "") }}</th>
+    <td class="ui field-data">
+      {%- if multiple -%}
+        {#- raw API values; FieldData.array() needs UI serialized list data -#}
+        {%- for raw in fd.value(fd) -%}
+          {{- ", " if not loop.first }}{{ labels.get(raw, raw) if labels else raw -}}
+        {%- endfor -%}
+      {%- else -%}
+        {{- ms_value(fd, labels) -}}
+      {%- endif -%}
+    </td>
+  </tr>
+  {%- endif -%}
+{%- endmacro -%}
