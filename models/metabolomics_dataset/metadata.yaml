@@ -1,0 +1,57 @@
+# Definition of metadata for metabolomics dataset (GC-MS / LC-MS data submitted
+# as vendor binary raw files). Please do not add ccmm model here, add the ccmm_preset instead.
+# MassSpecCommon is defined in models/common/mass_spec.yaml.
+Metadata:
+  properties:
+    title:
+      type: fulltext+keyword
+    languages:
+      type: array
+      items:
+        type: vocabulary
+        vocabulary-type: languages
+    mass_spec:
+      type: MassSpecCommon
+      required: true
+    metabolomics:
+      type: MetabolomicsMetadata
+      required: true
+
+MetabolomicsMetadata:
+  type: object
+  label:
+    en: Metabolomics
+    cs: Metabolomika
+  properties:
+    raw_format:
+      type: keyword
+      required: true
+      enum:
+        - thermo_raw    # Thermo .raw
+        - bruker_d      # Bruker .d directory (BAF / TDF), zipped
+        - waters_raw    # Waters .raw directory, zipped
+        - sciex_wiff    # SCIEX .wiff / .wiff2 (+ .wiff.scan)
+        - agilent_d     # Agilent .d directory, zipped
+        - shimadzu_lcd  # Shimadzu .lcd / .qgd
+        - andi_cdf      # ANDI-MS netCDF .cdf
+      label:
+        en: Raw data format
+        cs: Formát surových dat
+
+    acquisition_software:
+      type: keyword
+      required: true
+      label:
+        en: Acquisition software
+        cs: Akviziční software
+      hint:
+        en: Name and version, e.g. "Xcalibur 4.5".
+        cs: Název a verze, např. „Xcalibur 4.5“.
+
+    separation:
+      type: keyword
+      required: true
+      enum: [gc, lc, ce, direct_infusion]
+      label:
+        en: Separation technique
+        cs: Separační technika

@@ -1,0 +1,60 @@
+# Definition of metadata for proteomics dataset (LC-MS/MS data submitted
+# as open mzML files). Please do not add ccmm model here, add the ccmm_preset instead.
+# MassSpecCommon is defined in models/common/mass_spec.yaml.
+Metadata:
+  properties:
+    title:
+      type: fulltext+keyword
+    languages:
+      type: array
+      items:
+        type: vocabulary
+        vocabulary-type: languages
+    mass_spec:
+      type: MassSpecCommon
+      required: true
+    proteomics:
+      type: ProteomicsMetadata
+      required: true
+
+ProteomicsMetadata:
+  type: object
+  label:
+    en: Proteomics
+    cs: Proteomika
+  properties:
+    organism:
+      type: fulltext+keyword
+      required: true
+      label:
+        en: Organism
+        cs: Organismus
+      hint:
+        en: Scientific name, e.g. "Homo sapiens".
+        cs: Vědecký název, např. „Homo sapiens“.
+
+    ncbi_taxon_id:
+      type: keyword
+      pattern: "^[0-9]+$"
+      label:
+        en: NCBI Taxonomy ID
+        cs: NCBI Taxonomy ID
+      hint:
+        en: For example 9606 for Homo sapiens.
+        cs: Například 9606 pro Homo sapiens.
+
+    digestion_enzyme:
+      type: keyword
+      required: true
+      enum: [trypsin, trypsin_lys_c, lys_c, chymotrypsin, glu_c, asp_n, none]
+      label:
+        en: Digestion enzyme
+        cs: Štěpící enzym
+
+    acquisition_mode:
+      type: keyword
+      required: true
+      enum: [dda, dia, prm, srm]
+      label:
+        en: Acquisition mode
+        cs: Režim akvizice
