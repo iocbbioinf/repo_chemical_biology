@@ -3,3 +3,27 @@ metadata:
   title: Generic community
 access:
   visibility: public
+---
+# Proteomics core facility - submits LC-MS/MS data as mzML (proteomics_dataset model)
+slug: proteomics
+metadata:
+  title: Proteomics core facility
+  description: LC-MS/MS proteomics datasets submitted as open mzML files.
+  type:
+    id: organization
+access:
+  visibility: public
+custom_fields:
+  workflow: community
+---
+# Metabolomics laboratory - submits GC-MS / LC-MS data as vendor raw files (metabolomics_dataset model)
+slug: metabolomics
+metadata:
+  title: Metabolomics laboratory
+  description: GC-MS and LC-MS metabolomics datasets submitted as vendor binary raw files.
+  type:
+    id: organization
+access:
+  visibility: public
+custom_fields:
+  workflow: community
