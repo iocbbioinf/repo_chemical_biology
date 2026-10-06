@@ -88,7 +88,14 @@ class RequiredDataFilesComponent(ServiceComponent):
     def publish(self, identity: Any, draft: Any = None, record: Any = None) -> None:
         """Check that the draft contains a data file."""
         expected = self.expected_extensions(draft)
-        keys = list(draft.files.entries.keys()) if draft.files.enabled else []
+        # RDMDraftFilesComponent moves the files from the draft to the published
+        # record during publish, so depending on the component order they are
+        # either in the draft or already in the record.
+        keys: set[str] = set()
+        if draft.files.enabled:
+            keys.update(draft.files.entries.keys())
+            if record is not None and record.files is not None:
+                keys.update(record.files.entries.keys())
         if not any(has_extension(key, expected) for key in keys):
             raise ValidationError(
                 _("The dataset must contain at least one data file (%(expected)s).")
