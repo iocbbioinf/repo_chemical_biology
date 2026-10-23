@@ -1,0 +1,43 @@
+{#- Helpers for the dataset record detail page. Field labels come from the
+    model (metadata.yaml), enum values are shown via the `labels` dictionary
+    when given. -#}
+
+{%- macro detail_value(fd, labels=None) -%}
+  {%- set raw = fd.value(fd) -%}
+  {{- labels.get(raw, raw) if labels else fd.ui_value(fd) -}}
+{%- endmacro -%}
+
+{#- One table row; nothing is rendered when the field is empty. -#}
+{%- macro detail_row(fd, labels=None, multiple=False) -%}
+  {%- if fd.value(fd) -%}
+  <tr>
+    <th class="ui field-label">{{ fd.label(fd, "") }}</th>
+    <td class="ui field-data">
+      {%- if multiple -%}
+        {#- raw API values; FieldData.array() needs UI serialized list data -#}
+        {%- for raw in fd.value(fd) -%}
+          {{- ", " if not loop.first }}{{ labels.get(raw, raw) if labels else raw -}}
+        {%- endfor -%}
+      {%- else -%}
+        {{- detail_value(fd, labels) -}}
+      {%- endif -%}
+    </td>
+  </tr>
+  {%- endif -%}
+{%- endmacro -%}
+
+{#- Row with a ContactPerson: name, e-mail, institution, country. -#}
+{%- macro contact_row(fd) -%}
+  {%- if fd.value(fd) -%}
+  {%- set email = fd.email.value(fd.email) -%}
+  {%- set place = [fd.institution.value(fd.institution), fd.country.value(fd.country)] | select | join(", ") -%}
+  <tr>
+    <th class="ui field-label">{{ fd.label(fd, "") }}</th>
+    <td class="ui field-data">
+      {{ fd.name.value(fd.name) }}
+      {%- if email %} (<a href="mailto:{{ email }}">{{ email }}</a>){% endif %}
+      {%- if place %}<br>{{ place }}{% endif %}
+    </td>
+  </tr>
+  {%- endif -%}
+{%- endmacro -%}

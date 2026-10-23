@@ -65,3 +65,51 @@ Note: Context variables available:
   </h1>
 </section>
 {%- endblock record_title -%}
+
+{#- Sample, analysis and contact metadata, then the default additional details. -#}
+{%- block additional_record_details -%}
+  {%- from "dataset/record_detail/macros.html" import detail_row, contact_row -%}
+  {%- set domain_labels = {
+    "proteomics": _("Proteomics"), "metabolomics": _("Metabolomics"),
+    "lipidomics": _("Lipidomics"), "other": _("Other"),
+  } -%}
+  {%- set analysis_labels = {
+    "general": _("General"), "microbiology": _("Microbiology"),
+    "plant_biology": _("Plant biology"), "clinical": _("Clinical"),
+  } -%}
+  {%- set analysis_type = m.analysis_type.value(m.analysis_type) -%}
+  <section id="sample-details" class="rel-mt-2" aria-label="{{ _('Sample and analysis') }}">
+    <h2 class="ui small header">{{ _('Sample and analysis') }}</h2>
+    <table class="ui very basic compact table">
+      {{ detail_row(m.domain_type, domain_labels) }}
+      {{ detail_row(m.analysis_type, analysis_labels) }}
+      {{ detail_row(m.sample_type) }}
+      {{ detail_row(m.tissue_type) }}
+      {{ detail_row(m.post_translational_modifications, multiple=True) }}
+    </table>
+    {%- if analysis_type == "microbiology" %}
+    {%- set mb = m.microbiology %}
+    <h2 class="ui small header">{{ _('Microbiology') }}</h2>
+    <table class="ui very basic compact table">
+      {{ detail_row(mb.species_name) }}
+      {{ detail_row(mb.cultivation_conditions) }}
+      {{ detail_row(mb.extraction_protocol) }}
+    </table>
+    {%- elif analysis_type == "plant_biology" %}
+    {%- set pb = m.plant_biology %}
+    <h2 class="ui small header">{{ _('Plant biology') }}</h2>
+    <table class="ui very basic compact table">
+      {{ detail_row(pb.species_name) }}
+      {{ detail_row(pb.tissue) }}
+      {{ detail_row(pb.collection_protocol) }}
+      {{ detail_row(pb.extraction_protocol) }}
+    </table>
+    {%- endif %}
+    <h2 class="ui small header">{{ _('Contacts') }}</h2>
+    <table class="ui very basic compact table">
+      {{ contact_row(m.principal_investigator) }}
+      {{ contact_row(m.sample_prepared_by) }}
+    </table>
+  </section>
+  {{ super() }}
+{%- endblock additional_record_details -%}
