@@ -14,8 +14,6 @@ requires-python = ">=3.14,<3.15"
 i18n = "i18n.webpack:theme"
 components = "ui.components.webpack:theme"
 ui_dataset = "ui.dataset.webpack:theme"
-ui_proteomics_dataset = "ui.proteomics_dataset.webpack:theme"
-ui_metabolomics_dataset = "ui.metabolomics_dataset.webpack:theme"
 
 [project.entry-points."invenio_i18n.translations"]
 translations = "i18n"
@@ -25,13 +23,9 @@ repository = "common:alembic"
 
 [project.entry-points."invenio_base.blueprints"]
 ui_dataset = "ui.dataset:create_blueprint"
-ui_proteomics_dataset = "ui.proteomics_dataset:create_blueprint"
-ui_metabolomics_dataset = "ui.metabolomics_dataset:create_blueprint"
 
 [project.entry-points."invenio_base.finalize_app"]
 ui_dataset = "ui.dataset:finalize_app"
-ui_proteomics_dataset = "ui.proteomics_dataset:finalize_app"
-ui_metabolomics_dataset = "ui.metabolomics_dataset:finalize_app"
 
 [tool.uv.build-backend]
 module-root = ""
