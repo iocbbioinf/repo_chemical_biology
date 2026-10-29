@@ -1,7 +1,8 @@
 """Generate vocabulary fixtures from established ontologies.
 
-Writes fixtures/edam-topics.yaml, fixtures/ncbitaxon.yaml and fixtures/unimod.yaml.
-Sources are downloaded from the ontology providers:
+Writes app_data/vocabularies/{edamtopics,ncbitaxon,unimod}.yaml, which are loaded
+by the InvenioRDM fixtures (app_data/vocabularies.yaml, `invenio rdm-records fixtures`
+and repository setup). Sources are downloaded from the ontology providers:
 
 * EDAM topics - https://edamontology.org/EDAM.tsv (curated subset, EDAM_TOPICS)
 * NCBI Taxonomy - NCBI E-utilities (curated subset, NCBI_TAXA)
@@ -21,7 +22,7 @@ from pathlib import Path
 
 import yaml
 
-FIXTURES = Path(__file__).resolve().parent.parent / "fixtures"
+VOCABULARIES = Path(__file__).resolve().parent.parent / "app_data" / "vocabularies"
 
 # Dataset domain types (EDAM topics), title is the EDAM preferred label
 # unless overridden here.
@@ -55,8 +56,9 @@ def fetch(url: str) -> str:
 
 
 def dump(path: Path, items: list[dict]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w") as f:
-        yaml.safe_dump_all(items, f, allow_unicode=True, sort_keys=False, width=100)
+        yaml.safe_dump(items, f, allow_unicode=True, sort_keys=False, width=100)
     print(f"{path}: {len(items)} items")
 
 
@@ -90,7 +92,11 @@ def ncbi_taxa() -> list[dict]:
         }
         if taxon["commonname"]:
             props["common_name"] = taxon["commonname"]
-        items.append({"id": f"NCBITaxon:{uid}", "title": {"en": taxon["scientificname"]}, "props": props})
+        # search works on the title, so include the common name (e.g. "human") too
+        title = taxon["scientificname"]
+        if taxon["commonname"]:
+            title = f"{title} ({taxon['commonname']})"
+        items.append({"id": f"NCBITaxon:{uid}", "title": {"en": title}, "props": props})
     return items
 
 
@@ -121,6 +127,6 @@ def unimod() -> list[dict]:
 
 
 if __name__ == "__main__":
-    dump(FIXTURES / "edam-topics.yaml", edam_topics())
-    dump(FIXTURES / "ncbitaxon.yaml", ncbi_taxa())
-    dump(FIXTURES / "unimod.yaml", unimod())
+    dump(VOCABULARIES / "edamtopics.yaml", edam_topics())
+    dump(VOCABULARIES / "ncbitaxon.yaml", ncbi_taxa())
+    dump(VOCABULARIES / "unimod.yaml", unimod())

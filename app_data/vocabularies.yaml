@@ -1,0 +1,14 @@
+# Custom vocabularies loaded by the InvenioRDM fixtures (repository setup or
+# `invenio rdm-records fixtures`). Data files are generated from the ontologies
+# by scripts/build_ontology_fixtures.py.
+edamtopics:
+  pid-type: v-edam
+  data-file: vocabularies/edamtopics.yaml
+
+ncbitaxon:
+  pid-type: v-tax
+  data-file: vocabularies/ncbitaxon.yaml
+
+unimod:
+  pid-type: v-umod
+  data-file: vocabularies/unimod.yaml

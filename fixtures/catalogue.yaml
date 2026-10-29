@@ -30,30 +30,6 @@ vocabulary-community-types:
       en: Community types
   - source: community-types.yaml
 
-vocabulary-edamtopics:
-  - writer: vocabulary
-    vocabulary: edamtopics
-    pid_type: v-edam
-    title:
-      en: EDAM topics
-  - source: edam-topics.yaml
-
-vocabulary-ncbitaxon:
-  - writer: vocabulary
-    vocabulary: ncbitaxon
-    pid_type: v-tax
-    title:
-      en: NCBI Taxonomy
-  - source: ncbitaxon.yaml
-
-vocabulary-unimod:
-  - writer: vocabulary
-    vocabulary: unimod
-    pid_type: v-umod
-    title:
-      en: UNIMOD protein modifications
-  - source: unimod.yaml
-
 communities:
   - writer: service
     service: communities

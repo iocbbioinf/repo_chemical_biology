@@ -51,24 +51,28 @@
   {%- endif -%}
 {%- endmacro -%}
 
-{#- Row with contributors of the given role (principal investigator = ProjectLeader,
-    sample preparer = DataCollector) and the e-mail kept next to them. -#}
-{%- macro contact_row(label, contributors, role, email_fd) -%}
-  {%- set people = contributors | selectattr("role") | selectattr("role.id", "equalto", role) | list -%}
+{#- Row with one person of the dataset: name, institution (affiliation, linked to
+    ROR when chosen from it), country and e-mail. The person is a CCMM creator or
+    contributor; e-mail and country are dataset fields (email_fd, country_fd). -#}
+{%- macro person_row(label, person, email_fd, country_fd) -%}
   {%- set email = email_fd.value(email_fd) -%}
-  {%- if people or email -%}
+  {%- set country = country_fd.value(country_fd) -%}
+  {%- if person or email -%}
   <tr>
     <th class="ui field-label">{{ label }}</th>
     <td class="ui field-data">
-      {%- for c in people %}
-        {{- "<br>" | safe if not loop.first }}{{ c.person_or_org.name }}
-        {%- for aff in c.affiliations or [] %}
-          {{- " (" if loop.first else ", " -}}
-          {%- if aff.id %}<a href="https://ror.org/{{ aff.id }}">{{ aff.name or aff.id }}</a>{% else %}{{ aff.name }}{% endif -%}
-          {{- ")" if loop.last -}}
-        {%- endfor %}
-      {%- endfor %}
-      {%- if email %}{{ "<br>" | safe if people }}<a href="mailto:{{ email }}">{{ email }}</a>{% endif %}
+      {%- if person %}{{ person.person_or_org.name }}{% endif %}
+      {%- set places = [] -%}
+      {%- for aff in (person.affiliations if person else []) or [] -%}
+        {%- if aff.id -%}
+          {%- set _ = places.append('<a href="https://ror.org/%s">%s</a>' | format(aff.id | e, (aff.name or aff.id) | e)) -%}
+        {%- else -%}
+          {%- set _ = places.append(aff.name | e) -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if country %}{% set _ = places.append(country | country_name | e) %}{% endif -%}
+      {%- if places %}<br>{{ places | join(", ") | safe }}{% endif %}
+      {%- if email %}<br><a href="mailto:{{ email }}">{{ email }}</a>{% endif %}
     </td>
   </tr>
   {%- endif -%}

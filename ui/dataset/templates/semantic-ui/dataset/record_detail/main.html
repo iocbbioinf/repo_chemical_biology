@@ -66,9 +66,9 @@ Note: Context variables available:
 </section>
 {%- endblock record_title -%}
 
-{#- Sample, analysis and contact metadata, then the default additional details. -#}
+{#- Sample, analysis and persons, then the default additional details. -#}
 {%- block additional_record_details -%}
-  {%- from "dataset/record_detail/macros.html" import detail_row, vocab_row, contact_row, locations_row -%}
+  {%- from "dataset/record_detail/macros.html" import detail_row, vocab_row, person_row, locations_row -%}
   {%- set analysis_labels = {
     "general": _("General"), "microbiology": _("Microbiology"),
     "plant_biology": _("Plant biology"), "clinical": _("Clinical"),
@@ -102,11 +102,13 @@ Note: Context variables available:
       {{ detail_row(pb.extraction_protocol) }}
     </table>
     {%- endif %}
-    <h2 class="ui small header">{{ _('Contacts') }}</h2>
+    <h2 class="ui small header">{{ _('Persons') }}</h2>
     <table class="ui very basic compact table">
-      {%- set contributors = m.contributors.value(m.contributors) or [] %}
-      {{ contact_row(_("Principal investigator"), contributors, "ProjectLeader", m.principal_investigator_email) }}
-      {{ contact_row(_("Sample prepared by"), contributors, "DataCollector", m.sample_preparer_email) }}
+      {#- PI is the creator, the sample preparer the Data Collector contributor -#}
+      {%- set creators = m.creators.value(m.creators) or [] %}
+      {%- set preparers = (m.contributors.value(m.contributors) or []) | selectattr("role") | selectattr("role.id", "equalto", "DataCollector") | list %}
+      {{ person_row(_("PI"), creators | first, m.principal_investigator_email, m.principal_investigator_country) }}
+      {{ person_row(_("Sample prepared by"), preparers | first, m.sample_preparer_email, m.sample_preparer_country) }}
     </table>
   </section>
   {{ super() }}

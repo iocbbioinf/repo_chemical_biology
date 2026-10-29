@@ -3,10 +3,11 @@
 #
 # Fields taken from the ccmm preset (not defined here): title, description,
 # subjects (keywords), locations (geolocation), publication_date,
-# resource_type (COAR resource types) and contributors. The principal
-# investigator is a contributor with role ProjectLeader, the person who
-# prepared the sample a contributor with role DataCollector; their
-# institution and country come from the ROR affiliation.
+# resource_type (COAR resource types), creators and contributors.
+# A dataset has two persons: the principal investigator is the (only) creator,
+# the person who prepared the sample is the (only) contributor, with role
+# DataCollector. Their institution is the affiliation (ROR or free text);
+# e-mail and country are not part of CCMM/RDM persons, so they are kept here.
 # Record id and creation date are invenio system fields (id, created).
 #
 # Vocabularies edamtopics, ncbitaxon and unimod are generated from the
@@ -77,23 +78,32 @@ Metadata:
         type: vocabulary
         vocabulary-type: unimod
 
-    # e-mails are not part of CCMM/RDM contributors, so they are kept here
+    # e-mail and country of the persons (creator / contributor), which CCMM/RDM
+    # persons do not have; country is an ISO 3166-1 alpha-2 code
     principal_investigator_email:
       type: keyword
       required: true
       pattern: "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
       label:
-        en: Principal investigator e-mail
-      hint:
-        en: Add the principal investigator to Contributors with the role Project Leader.
+        en: PI e-mail
+
+    principal_investigator_country:
+      type: keyword
+      pattern: "^[A-Z]{2}$"
+      label:
+        en: PI country
 
     sample_preparer_email:
       type: keyword
       pattern: "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
       label:
         en: Sample preparer e-mail
-      hint:
-        en: Add the person who prepared the sample to Contributors with the role Data Collector.
+
+    sample_preparer_country:
+      type: keyword
+      pattern: "^[A-Z]{2}$"
+      label:
+        en: Sample preparer country
 
 MicrobiologyMetadata:
   type: object

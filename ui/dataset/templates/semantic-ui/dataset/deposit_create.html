@@ -15,3 +15,10 @@
    - deposit_create/form.html - Custom form container layout
    - deposit_create/javascript.html - Custom JavaScript includes (optional)
 #}
+
+{#- styles of the deposit form bundle (e.g. the geolocation map), the parent
+    template loads only its javascript -#}
+{%- block css %}
+  {{ super() }}
+  {{ webpack["dataset_deposit_form.css"] }}
+{%- endblock css %}

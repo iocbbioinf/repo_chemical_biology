@@ -7,6 +7,8 @@ import {
   TextAreaField as InvenioTextAreaField,
 } from "react-invenio-forms";
 import { useFieldData, mergeFieldData } from "@js/oarepo_ui/forms";
+import { i18next } from "@translations/i18next";
+import { COUNTRIES } from "./countries";
 
 export const toOptions = (pairs) =>
   pairs.map(([value, text]) => ({ key: value, value, text }));
@@ -86,40 +88,30 @@ TextAreaField.propTypes = {
   /* eslint-enable react/require-default-props */
 };
 
-const vocabularyTitle = (title) =>
+const localizedTitle = (title) =>
   typeof title === "string" ? title : title?.en || Object.values(title || {})[0] || "";
 
-// Options for vocabulary API hits as well as for stored values. A stored value
-// without an id is a free text value (not in the vocabulary).
-const serializeVocabularyOptions = (items) =>
-  items
-    .filter((item) => item?.id || item?.title)
-    .map((item) => {
-      const text = vocabularyTitle(item.title) || item.id;
-      return item.id
-        ? { key: item.id, value: item.id, text, id: item.id }
-        : { key: text, value: text, text, freeText: true };
-    });
+// Label of a vocabulary API hit (title_l10n with the vnd.inveniordm serialization)
+// or of a stored value ({id, title} vocabulary item, {title} or {name} free text).
+const defaultItemText = (item) =>
+  item.title_l10n || localizedTitle(item.title) || item.name || item.id || "";
+
+const defaultFreeTextValue = (text) => ({ title: { en: text } });
 
 const serializeAddedValue = (value) => ({ key: value, value, text: value, freeText: true });
 
-// SUI calls onChange before onAddItem, so a value that is not a known vocabulary
-// suggestion is a newly typed free text value.
-const toStoredValue = (value, suggestions) => {
-  const option = suggestions.find((o) => o.value === value);
-  return option && !option.freeText ? { id: option.id } : { title: { en: value } };
-};
-
-const toDropdownValue = (item) => item?.id ?? vocabularyTitle(item?.title);
-
 /**
  * Vocabulary select that also accepts values outside the vocabulary. Vocabulary
- * items are stored as {id}, typed in values as {title: {en}} (no id), which the
- * backend accepts without the vocabulary check.
+ * items are stored as {id}, typed in values without an id (by default as
+ * {title: {en}}), which the backend accepts without the vocabulary check.
  */
 export const FreeTextVocabularyField = ({
   fieldPath,
   vocabularyName,
+  suggestionAPIUrl,
+  suggestionAPIHeaders = { Accept: "application/vnd.inveniordm.v1+json" },
+  itemText = defaultItemText,
+  freeTextValue = defaultFreeTextValue,
   multiple = false,
   label,
   required,
@@ -136,12 +128,32 @@ export const FreeTextVocabularyField = ({
   const stored = getIn(values, fieldPath);
   const storedItems = multiple ? stored || [] : stored ? [stored] : [];
 
+  // options for API hits and stored values; a value without an id is free text
+  const serializeOptions = (items) =>
+    items
+      .filter((item) => item && (item.id || itemText(item)))
+      .map((item) => {
+        const text = itemText(item);
+        return item.id
+          ? { key: item.id, value: item.id, text, id: item.id }
+          : { key: text, value: text, text, freeText: true };
+      });
+
+  // SUI calls onChange before onAddItem, so a value that is not a known vocabulary
+  // suggestion is a newly typed free text value.
+  const toStoredValue = (value, suggestions) => {
+    const option = suggestions.find((o) => o.value === value);
+    return option && !option.freeText ? { id: option.id } : freeTextValue(value);
+  };
+
+  const toDropdownValue = (item) => item?.id ?? (item ? itemText(item) : "");
+
   return (
     <RemoteSelectField
       fieldPath={fieldPath}
-      suggestionAPIUrl={`/api/vocabularies/${vocabularyName}`}
-      suggestionAPIHeaders={{ Accept: "application/vnd.inveniordm.v1+json" }}
-      serializeSuggestions={serializeVocabularyOptions}
+      suggestionAPIUrl={suggestionAPIUrl || `/api/vocabularies/${vocabularyName}`}
+      suggestionAPIHeaders={suggestionAPIHeaders}
+      serializeSuggestions={serializeOptions}
       serializeAddedValue={serializeAddedValue}
       initialSuggestions={storedItems}
       multiple={multiple}
@@ -150,7 +162,7 @@ export const FreeTextVocabularyField = ({
       deburr
       clearable={!fieldDataProps.required}
       selectOnBlur={false}
-      value={multiple ? storedItems.map(toDropdownValue) : toDropdownValue(stored) || ""}
+      value={multiple ? storedItems.map(toDropdownValue) : toDropdownValue(stored)}
       onValueChange={({ data, formikProps }, selectedSuggestions) => {
         if (multiple) {
           formikProps.form.setFieldValue(
@@ -172,11 +184,38 @@ export const FreeTextVocabularyField = ({
 
 FreeTextVocabularyField.propTypes = {
   fieldPath: PropTypes.string.isRequired,
-  vocabularyName: PropTypes.string.isRequired,
   /* eslint-disable react/require-default-props */
+  vocabularyName: PropTypes.string,
+  suggestionAPIUrl: PropTypes.string,
+  suggestionAPIHeaders: PropTypes.object,
+  itemText: PropTypes.func,
+  freeTextValue: PropTypes.func,
   multiple: PropTypes.bool,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   required: PropTypes.bool,
   helpText: PropTypes.string,
   /* eslint-enable react/require-default-props */
+};
+
+const countryOptions = COUNTRIES.map(([code, name]) => ({ key: code, value: code, text: name }));
+
+/** Country select storing the ISO 3166-1 alpha-2 code (e.g. "CZ"). */
+export const CountrySelectField = ({ fieldPath, label, ...rest }) => (
+  <SelectField
+    fieldPath={fieldPath}
+    label={label}
+    options={countryOptions}
+    search
+    selection
+    clearable
+    optimized
+    placeholder={i18next.t("Select a country")}
+    {...rest}
+  />
+);
+
+CountrySelectField.propTypes = {
+  fieldPath: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/require-default-props
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 };

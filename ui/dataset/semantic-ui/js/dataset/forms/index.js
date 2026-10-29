@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { EDTFSingleDatePicker } from "@js/oarepo_ui/forms";
 import { parametrize } from "react-overridable";
-import { CCMMDepositRecordSerializer } from "@js/ccmm_invenio/forms";
+import { DatasetDepositRecordSerializer } from "./DatasetDepositRecordSerializer";
 import {
   GeneralInformationSection,
   CCMMFiles,
@@ -12,11 +12,11 @@ import {
 
 const { rootEl, config, ...rest } = parseFormAppConfig();
 
-// Only three tabs: general information (incl. sample, analysis and contacts),
+// Only three tabs: general information (incl. persons, sample and analysis),
 // files and community & access. CCMM funding, alternative identifiers and
 // related works tabs are not used.
 const sections = [GeneralInformationSection, CCMMFiles, CCMMCommunityAndAccess];
-const recordSerializer = new CCMMDepositRecordSerializer(
+const recordSerializer = new DatasetDepositRecordSerializer(
   config.default_locale,
   config.custom_fields.vocabularies,
 );

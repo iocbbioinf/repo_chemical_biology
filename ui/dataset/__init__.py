@@ -1,3 +1,4 @@
+from babel import Locale
 from ccmm_invenio.ui.config import CCMMRecordsUIResourceConfig
 from ccmm_invenio.ui.resource import CCMMRecordsUIResource
 from oarepo_ui.utils import can_view_deposit_page
@@ -61,7 +62,13 @@ def finalize_app(app):
     init_menu(app)
     ui_overrides(app)
 
+def country_name(code):
+    """English name of an ISO 3166-1 alpha-2 country code (e.g. "CZ" -> "Czechia")."""
+    return Locale("en").territories.get(code, code) if code else ""
+
+
 def create_blueprint(app):
     """Register blueprint for this resource."""
     blueprint = DatasetUIResource(DatasetUIResourceConfig()).as_blueprint()
+    blueprint.add_app_template_filter(country_name, "country_name")
     return blueprint

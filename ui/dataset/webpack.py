@@ -10,7 +10,10 @@ theme = WebpackThemeBundle(
                 "dataset_search": "./js/dataset/search/index.js",
                 "dataset_deposit_form": "./js/dataset/forms/index.js",
             },
-            dependencies={},
+            dependencies={
+                # map in the geolocation field of the deposit form
+                "leaflet": "^1.9.4",
+            },
             devDependencies={},
             aliases={
                 "@js/dataset": "./js/dataset"
