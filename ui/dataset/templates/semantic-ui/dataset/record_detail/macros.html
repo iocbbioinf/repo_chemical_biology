@@ -73,3 +73,25 @@
   </tr>
   {%- endif -%}
 {%- endmacro -%}
+
+{#- Row with geolocations (metadata.locations.features): place, description and
+    point coordinates linked to OpenStreetMap. -#}
+{%- macro locations_row(fd, label) -%}
+  {%- set features = (fd.value(fd) or {}).get("features") or [] -%}
+  {%- if features -%}
+  <tr>
+    <th class="ui field-label">{{ label }}</th>
+    <td class="ui field-data">
+      {%- for f in features %}
+        {%- set coords = (f.geometry or {}).get("coordinates") if (f.geometry or {}).get("type") == "Point" else None -%}
+        {{- "<br>" | safe if not loop.first }}{{ f.place or "" }}
+        {%- if f.description %}{{ " – " if f.place }}{{ f.description }}{% endif %}
+        {%- if coords %}
+          {%- set lat, lon = coords[1], coords[0] -%}
+          {{ " " if f.place or f.description }}<a href="https://www.openstreetmap.org/?mlat={{ lat }}&amp;mlon={{ lon }}#map=12/{{ lat }}/{{ lon }}">{{ lat }}, {{ lon }}</a>
+        {%- endif %}
+      {%- endfor %}
+    </td>
+  </tr>
+  {%- endif -%}
+{%- endmacro -%}

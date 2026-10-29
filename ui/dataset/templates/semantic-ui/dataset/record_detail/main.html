@@ -68,7 +68,7 @@ Note: Context variables available:
 
 {#- Sample, analysis and contact metadata, then the default additional details. -#}
 {%- block additional_record_details -%}
-  {%- from "dataset/record_detail/macros.html" import detail_row, vocab_row, contact_row -%}
+  {%- from "dataset/record_detail/macros.html" import detail_row, vocab_row, contact_row, locations_row -%}
   {%- set analysis_labels = {
     "general": _("General"), "microbiology": _("Microbiology"),
     "plant_biology": _("Plant biology"), "clinical": _("Clinical"),
@@ -82,6 +82,7 @@ Note: Context variables available:
       {{ detail_row(m.sample_type) }}
       {{ detail_row(m.tissue_type) }}
       {{ vocab_row(m.post_translational_modifications, multiple=True) }}
+      {{ locations_row(m.locations, _("Geolocation")) }}
     </table>
     {%- if analysis_type == "microbiology" %}
     {%- set mb = m.microbiology %}

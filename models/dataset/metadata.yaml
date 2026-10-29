@@ -23,6 +23,14 @@ Metadata:
         type: vocabulary
         vocabulary-type: languages
 
+    # Geolocations (CCMM metadata.locations) validated with RDM's location schema.
+    # The preset declares geometry as a dynamic object whose schema drops the
+    # GeoJSON geometry from API responses (it is stored, but never returned, so
+    # editing a record erased it) and does not validate it.
+    locations:
+      type: RDMLocations
+      marshmallow_schema_class: models.dataset.schemas.DatasetFeatureSchema
+
     domain_type:
       type: vocabulary
       vocabulary-type: edamtopics
