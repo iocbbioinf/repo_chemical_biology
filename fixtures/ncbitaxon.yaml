@@ -1,0 +1,353 @@
+id: NCBITaxon:9606
+title:
+  en: Homo sapiens
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_9606
+  rank: species
+  common_name: human
+---
+id: NCBITaxon:10090
+title:
+  en: Mus musculus
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_10090
+  rank: species
+  common_name: house mouse
+---
+id: NCBITaxon:10116
+title:
+  en: Rattus norvegicus
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_10116
+  rank: species
+  common_name: Norway rat
+---
+id: NCBITaxon:9913
+title:
+  en: Bos taurus
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_9913
+  rank: species
+  common_name: domestic cattle
+---
+id: NCBITaxon:9823
+title:
+  en: Sus scrofa
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_9823
+  rank: species
+  common_name: pig
+---
+id: NCBITaxon:9031
+title:
+  en: Gallus gallus
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_9031
+  rank: species
+  common_name: chicken
+---
+id: NCBITaxon:7955
+title:
+  en: Danio rerio
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_7955
+  rank: species
+  common_name: zebrafish
+---
+id: NCBITaxon:7227
+title:
+  en: Drosophila melanogaster
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_7227
+  rank: species
+  common_name: fruit fly
+---
+id: NCBITaxon:6239
+title:
+  en: Caenorhabditis elegans
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_6239
+  rank: species
+---
+id: NCBITaxon:8355
+title:
+  en: Xenopus laevis
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_8355
+  rank: species
+  common_name: African clawed frog
+---
+id: NCBITaxon:4932
+title:
+  en: Saccharomyces cerevisiae
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_4932
+  rank: species
+  common_name: brewer's yeast
+---
+id: NCBITaxon:559292
+title:
+  en: Saccharomyces cerevisiae S288C
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_559292
+  rank: strain
+---
+id: NCBITaxon:4896
+title:
+  en: Schizosaccharomyces pombe
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_4896
+  rank: species
+  common_name: fission yeast
+---
+id: NCBITaxon:5476
+title:
+  en: Candida albicans
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_5476
+  rank: species
+---
+id: NCBITaxon:5061
+title:
+  en: Aspergillus niger
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_5061
+  rank: species
+---
+id: NCBITaxon:162425
+title:
+  en: Aspergillus nidulans
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_162425
+  rank: species
+---
+id: NCBITaxon:562
+title:
+  en: Escherichia coli
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_562
+  rank: species
+  common_name: E. coli
+---
+id: NCBITaxon:83333
+title:
+  en: Escherichia coli K-12
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_83333
+  rank: strain
+---
+id: NCBITaxon:1423
+title:
+  en: Bacillus subtilis
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_1423
+  rank: species
+---
+id: NCBITaxon:287
+title:
+  en: Pseudomonas aeruginosa
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_287
+  rank: species
+---
+id: NCBITaxon:1280
+title:
+  en: Staphylococcus aureus
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_1280
+  rank: species
+---
+id: NCBITaxon:1773
+title:
+  en: Mycobacterium tuberculosis
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_1773
+  rank: species
+---
+id: NCBITaxon:28901
+title:
+  en: Salmonella enterica
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_28901
+  rank: species
+---
+id: NCBITaxon:573
+title:
+  en: Klebsiella pneumoniae
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_573
+  rank: species
+---
+id: NCBITaxon:1902
+title:
+  en: Streptomyces coelicolor
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_1902
+  rank: species
+---
+id: NCBITaxon:1148
+title:
+  en: Synechocystis sp. PCC 6803
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_1148
+  rank: species
+---
+id: NCBITaxon:1590
+title:
+  en: Lactiplantibacillus plantarum
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_1590
+  rank: species
+---
+id: NCBITaxon:1351
+title:
+  en: Enterococcus faecalis
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_1351
+  rank: species
+---
+id: NCBITaxon:1313
+title:
+  en: Streptococcus pneumoniae
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_1313
+  rank: species
+---
+id: NCBITaxon:210
+title:
+  en: Helicobacter pylori
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_210
+  rank: species
+---
+id: NCBITaxon:1718
+title:
+  en: Corynebacterium glutamicum
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_1718
+  rank: species
+---
+id: NCBITaxon:3702
+title:
+  en: Arabidopsis thaliana
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_3702
+  rank: species
+  common_name: thale cress
+---
+id: NCBITaxon:4530
+title:
+  en: Oryza sativa
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_4530
+  rank: species
+  common_name: Asian cultivated rice
+---
+id: NCBITaxon:4577
+title:
+  en: Zea mays
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_4577
+  rank: species
+  common_name: maize
+---
+id: NCBITaxon:4081
+title:
+  en: Solanum lycopersicum
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_4081
+  rank: species
+  common_name: tomato
+---
+id: NCBITaxon:4113
+title:
+  en: Solanum tuberosum
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_4113
+  rank: species
+  common_name: potato
+---
+id: NCBITaxon:4565
+title:
+  en: Triticum aestivum
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_4565
+  rank: species
+  common_name: bread wheat
+---
+id: NCBITaxon:4513
+title:
+  en: Hordeum vulgare
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_4513
+  rank: species
+  common_name: barley
+---
+id: NCBITaxon:3708
+title:
+  en: Brassica napus
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_3708
+  rank: species
+  common_name: rape
+---
+id: NCBITaxon:3847
+title:
+  en: Glycine max
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_3847
+  rank: species
+  common_name: soybean
+---
+id: NCBITaxon:3880
+title:
+  en: Medicago truncatula
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_3880
+  rank: species
+  common_name: barrel medic
+---
+id: NCBITaxon:3218
+title:
+  en: Physcomitrium patens
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_3218
+  rank: species
+---
+id: NCBITaxon:3055
+title:
+  en: Chlamydomonas reinhardtii
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_3055
+  rank: species
+---
+id: NCBITaxon:4097
+title:
+  en: Nicotiana tabacum
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_4097
+  rank: species
+  common_name: common tobacco
+---
+id: NCBITaxon:4100
+title:
+  en: Nicotiana benthamiana
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_4100
+  rank: species
+---
+id: NCBITaxon:29760
+title:
+  en: Vitis vinifera
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_29760
+  rank: species
+  common_name: wine grape
+---
+id: NCBITaxon:3694
+title:
+  en: Populus trichocarpa
+props:
+  iri: http://purl.obolibrary.org/obo/NCBITaxon_3694
+  rank: species
+  common_name: black cottonwood

@@ -4,16 +4,19 @@ import Overridable from "react-overridable";
 import { getIn, useFormikContext } from "formik";
 import { Form, Header } from "semantic-ui-react";
 import { i18next } from "@translations/i18next";
-import { TextField, StringArrayField } from "@js/oarepo_ui/forms";
-import { EnumSelectField, TextAreaField } from "./fields";
-import { domainTypeOptions, analysisTypeOptions } from "./options";
+import { TextField } from "@js/oarepo_ui/forms";
+import { EnumSelectField, FreeTextVocabularyField, TextAreaField } from "./fields";
+import { analysisTypeOptions } from "./options";
 
 const MicrobiologyFields = () => (
   <>
     <Header as="h3" size="small">
       {i18next.t("Microbiology")}
     </Header>
-    <TextField fieldPath="metadata.microbiology.species_name" />
+    <FreeTextVocabularyField
+      fieldPath="metadata.microbiology.species"
+      vocabularyName="ncbitaxon"
+    />
     <TextAreaField fieldPath="metadata.microbiology.cultivation_conditions" />
     <TextAreaField fieldPath="metadata.microbiology.extraction_protocol" />
   </>
@@ -25,7 +28,10 @@ const PlantBiologyFields = () => (
       {i18next.t("Plant biology")}
     </Header>
     <Form.Group widths="equal">
-      <TextField fieldPath="metadata.plant_biology.species_name" />
+      <FreeTextVocabularyField
+        fieldPath="metadata.plant_biology.species"
+        vocabularyName="ncbitaxon"
+      />
       <TextField fieldPath="metadata.plant_biology.tissue" />
     </Form.Group>
     <TextAreaField fieldPath="metadata.plant_biology.collection_protocol" />
@@ -39,9 +45,9 @@ const SampleFields = () => {
   return (
     <>
       <Form.Group widths="equal">
-        <EnumSelectField
+        <FreeTextVocabularyField
           fieldPath="metadata.domain_type"
-          options={domainTypeOptions}
+          vocabularyName="edamtopics"
         />
         <EnumSelectField
           fieldPath="metadata.analysis_type"
@@ -52,9 +58,10 @@ const SampleFields = () => {
         <TextField fieldPath="metadata.sample_type" />
         <TextField fieldPath="metadata.tissue_type" />
       </Form.Group>
-      <StringArrayField
+      <FreeTextVocabularyField
         fieldPath="metadata.post_translational_modifications"
-        addButtonLabel={i18next.t("Add modification")}
+        vocabularyName="unimod"
+        multiple
       />
       {/* analysis specific metadata, shown only for the selected type of analysis */}
       {analysisType === "microbiology" && <MicrobiologyFields />}

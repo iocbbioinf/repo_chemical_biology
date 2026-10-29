@@ -2,8 +2,17 @@
 # add the ccmm_preset instead.
 #
 # Fields taken from the ccmm preset (not defined here): title, description,
-# subjects (keywords), locations (geolocation), publication_date, resource_type.
+# subjects (keywords), locations (geolocation), publication_date,
+# resource_type (COAR resource types) and contributors. The principal
+# investigator is a contributor with role ProjectLeader, the person who
+# prepared the sample a contributor with role DataCollector; their
+# institution and country come from the ROR affiliation.
 # Record id and creation date are invenio system fields (id, created).
+#
+# Vocabularies edamtopics, ncbitaxon and unimod are generated from the
+# ontologies by scripts/build_ontology_fixtures.py. Values outside these
+# vocabularies are accepted: they are stored without an id, only with
+# a title ({"title": {"en": "..."}}), and are not checked against the vocabulary.
 Metadata:
   properties:
     title:
@@ -15,11 +24,13 @@ Metadata:
         vocabulary-type: languages
 
     domain_type:
-      type: keyword
+      type: vocabulary
+      vocabulary-type: edamtopics
       required: true
-      enum: [proteomics, metabolomics, lipidomics, other]
       label:
         en: Dataset domain type
+      hint:
+        en: EDAM topic, e.g. Proteomics or Metabolomics. Other values can be typed in.
 
     sample_type:
       type: fulltext+keyword
@@ -53,32 +64,41 @@ Metadata:
       label:
         en: Post-translational modifications
       hint:
-        en: For example "Phosphorylation" or "Acetylation".
+        en: UNIMOD modifications, e.g. Phosphorylation or Acetylation. Other values can be typed in.
       items:
-        type: fulltext+keyword
+        type: vocabulary
+        vocabulary-type: unimod
 
-    principal_investigator:
-      type: ContactPerson
+    # e-mails are not part of CCMM/RDM contributors, so they are kept here
+    principal_investigator_email:
+      type: keyword
       required: true
+      pattern: "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
       label:
-        en: Principal investigator
+        en: Principal investigator e-mail
+      hint:
+        en: Add the principal investigator to Contributors with the role Project Leader.
 
-    sample_prepared_by:
-      type: ContactPerson
+    sample_preparer_email:
+      type: keyword
+      pattern: "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
       label:
-        en: Sample prepared by
+        en: Sample preparer e-mail
+      hint:
+        en: Add the person who prepared the sample to Contributors with the role Data Collector.
 
 MicrobiologyMetadata:
   type: object
   label:
     en: Microbiology
   properties:
-    species_name:
-      type: fulltext+keyword
+    species:
+      type: vocabulary
+      vocabulary-type: ncbitaxon
       label:
         en: Species name
       hint:
-        en: Scientific name, e.g. "Escherichia coli".
+        en: NCBI Taxonomy, e.g. Escherichia coli. Other species can be typed in.
 
     cultivation_conditions:
       type: fulltext
@@ -95,12 +115,13 @@ PlantBiologyMetadata:
   label:
     en: Plant biology
   properties:
-    species_name:
-      type: fulltext+keyword
+    species:
+      type: vocabulary
+      vocabulary-type: ncbitaxon
       label:
         en: Species name
       hint:
-        en: Scientific name, e.g. "Arabidopsis thaliana".
+        en: NCBI Taxonomy, e.g. Arabidopsis thaliana. Other species can be typed in.
 
     tissue:
       type: fulltext+keyword
@@ -116,29 +137,3 @@ PlantBiologyMetadata:
       type: fulltext
       label:
         en: Extraction protocol
-
-ContactPerson:
-  type: object
-  properties:
-    name:
-      type: fulltext+keyword
-      required: true
-      label:
-        en: Name
-
-    email:
-      type: keyword
-      required: true
-      pattern: "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
-      label:
-        en: E-mail
-
-    institution:
-      type: fulltext+keyword
-      label:
-        en: Institution
-
-    country:
-      type: fulltext+keyword
-      label:
-        en: Country

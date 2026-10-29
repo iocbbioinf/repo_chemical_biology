@@ -68,11 +68,7 @@ Note: Context variables available:
 
 {#- Sample, analysis and contact metadata, then the default additional details. -#}
 {%- block additional_record_details -%}
-  {%- from "dataset/record_detail/macros.html" import detail_row, contact_row -%}
-  {%- set domain_labels = {
-    "proteomics": _("Proteomics"), "metabolomics": _("Metabolomics"),
-    "lipidomics": _("Lipidomics"), "other": _("Other"),
-  } -%}
+  {%- from "dataset/record_detail/macros.html" import detail_row, vocab_row, contact_row -%}
   {%- set analysis_labels = {
     "general": _("General"), "microbiology": _("Microbiology"),
     "plant_biology": _("Plant biology"), "clinical": _("Clinical"),
@@ -81,17 +77,17 @@ Note: Context variables available:
   <section id="sample-details" class="rel-mt-2" aria-label="{{ _('Sample and analysis') }}">
     <h2 class="ui small header">{{ _('Sample and analysis') }}</h2>
     <table class="ui very basic compact table">
-      {{ detail_row(m.domain_type, domain_labels) }}
+      {{ vocab_row(m.domain_type) }}
       {{ detail_row(m.analysis_type, analysis_labels) }}
       {{ detail_row(m.sample_type) }}
       {{ detail_row(m.tissue_type) }}
-      {{ detail_row(m.post_translational_modifications, multiple=True) }}
+      {{ vocab_row(m.post_translational_modifications, multiple=True) }}
     </table>
     {%- if analysis_type == "microbiology" %}
     {%- set mb = m.microbiology %}
     <h2 class="ui small header">{{ _('Microbiology') }}</h2>
     <table class="ui very basic compact table">
-      {{ detail_row(mb.species_name) }}
+      {{ vocab_row(mb.species) }}
       {{ detail_row(mb.cultivation_conditions) }}
       {{ detail_row(mb.extraction_protocol) }}
     </table>
@@ -99,7 +95,7 @@ Note: Context variables available:
     {%- set pb = m.plant_biology %}
     <h2 class="ui small header">{{ _('Plant biology') }}</h2>
     <table class="ui very basic compact table">
-      {{ detail_row(pb.species_name) }}
+      {{ vocab_row(pb.species) }}
       {{ detail_row(pb.tissue) }}
       {{ detail_row(pb.collection_protocol) }}
       {{ detail_row(pb.extraction_protocol) }}
@@ -107,8 +103,9 @@ Note: Context variables available:
     {%- endif %}
     <h2 class="ui small header">{{ _('Contacts') }}</h2>
     <table class="ui very basic compact table">
-      {{ contact_row(m.principal_investigator) }}
-      {{ contact_row(m.sample_prepared_by) }}
+      {%- set contributors = m.contributors.value(m.contributors) or [] %}
+      {{ contact_row(_("Principal investigator"), contributors, "ProjectLeader", m.principal_investigator_email) }}
+      {{ contact_row(_("Sample prepared by"), contributors, "DataCollector", m.sample_preparer_email) }}
     </table>
   </section>
   {{ super() }}

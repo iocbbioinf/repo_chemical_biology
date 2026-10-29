@@ -1,0 +1,47 @@
+id: topic_0121
+title:
+  en: Proteomics
+props:
+  iri: http://edamontology.org/topic_0121
+---
+id: topic_3172
+title:
+  en: Metabolomics
+props:
+  iri: http://edamontology.org/topic_3172
+---
+id: topic_0153
+title:
+  en: Lipidomics
+props:
+  iri: http://edamontology.org/topic_0153
+---
+id: topic_3922
+title:
+  en: Proteogenomics
+props:
+  iri: http://edamontology.org/topic_3922
+---
+id: topic_3955
+title:
+  en: Fluxomics
+props:
+  iri: http://edamontology.org/topic_3955
+---
+id: topic_3308
+title:
+  en: Transcriptomics
+props:
+  iri: http://edamontology.org/topic_3308
+---
+id: topic_0622
+title:
+  en: Genomics
+props:
+  iri: http://edamontology.org/topic_0622
+---
+id: topic_3174
+title:
+  en: Metagenomics
+props:
+  iri: http://edamontology.org/topic_3174

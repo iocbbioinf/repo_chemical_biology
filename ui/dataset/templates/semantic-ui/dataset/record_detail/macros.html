@@ -26,17 +26,49 @@
   {%- endif -%}
 {%- endmacro -%}
 
-{#- Row with a ContactPerson: name, e-mail, institution, country. -#}
-{%- macro contact_row(fd) -%}
+{#- English title of a vocabulary item, falls back to its id. The UI serialization
+    of custom vocabulary fields is empty, so the stored (API) title is used. -#}
+{%- macro vocab_title(fd) -%}
+  {%- set title = fd.title.value(fd.title) -%}
+  {{- title.get("en") if title is mapping and title.get("en") else fd.id.value(fd.id) -}}
+{%- endmacro -%}
+
+{#- One table row with a vocabulary item or an array of them. -#}
+{%- macro vocab_row(fd, multiple=False) -%}
   {%- if fd.value(fd) -%}
-  {%- set email = fd.email.value(fd.email) -%}
-  {%- set place = [fd.institution.value(fd.institution), fd.country.value(fd.country)] | select | join(", ") -%}
   <tr>
     <th class="ui field-label">{{ fd.label(fd, "") }}</th>
     <td class="ui field-data">
-      {{ fd.name.value(fd.name) }}
-      {%- if email %} (<a href="mailto:{{ email }}">{{ email }}</a>){% endif %}
-      {%- if place %}<br>{{ place }}{% endif %}
+      {%- if multiple -%}
+        {%- for item in fd.array(fd) -%}
+          {{- ", " if not loop.first }}{{ vocab_title(item) -}}
+        {%- endfor -%}
+      {%- else -%}
+        {{- vocab_title(fd) -}}
+      {%- endif -%}
+    </td>
+  </tr>
+  {%- endif -%}
+{%- endmacro -%}
+
+{#- Row with contributors of the given role (principal investigator = ProjectLeader,
+    sample preparer = DataCollector) and the e-mail kept next to them. -#}
+{%- macro contact_row(label, contributors, role, email_fd) -%}
+  {%- set people = contributors | selectattr("role") | selectattr("role.id", "equalto", role) | list -%}
+  {%- set email = email_fd.value(email_fd) -%}
+  {%- if people or email -%}
+  <tr>
+    <th class="ui field-label">{{ label }}</th>
+    <td class="ui field-data">
+      {%- for c in people %}
+        {{- "<br>" | safe if not loop.first }}{{ c.person_or_org.name }}
+        {%- for aff in c.affiliations or [] %}
+          {{- " (" if loop.first else ", " -}}
+          {%- if aff.id %}<a href="https://ror.org/{{ aff.id }}">{{ aff.name or aff.id }}</a>{% else %}{{ aff.name }}{% endif -%}
+          {{- ")" if loop.last -}}
+        {%- endfor %}
+      {%- endfor %}
+      {%- if email %}{{ "<br>" | safe if people }}<a href="mailto:{{ email }}">{{ email }}</a>{% endif %}
     </td>
   </tr>
   {%- endif -%}
