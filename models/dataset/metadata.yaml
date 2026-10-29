@@ -20,22 +20,18 @@ Metadata:
       enum: [proteomics, metabolomics, lipidomics, other]
       label:
         en: Dataset domain type
-        cs: Doménový typ datové sady
 
     sample_type:
       type: fulltext+keyword
       label:
         en: Type of sample
-        cs: Typ vzorku
       hint:
         en: For example "cell culture", "plasma" or "leaf extract".
-        cs: Například „buněčná kultura“, „plazma“ nebo „extrakt z listů“.
 
     tissue_type:
       type: fulltext+keyword
       label:
         en: Type of tissue
-        cs: Typ tkáně
 
     analysis_type:
       type: keyword
@@ -43,7 +39,6 @@ Metadata:
       enum: [general, microbiology, plant_biology, clinical]
       label:
         en: Type of analysis
-        cs: Typ analýzy
 
     # filled only when analysis_type is microbiology
     microbiology:
@@ -57,10 +52,8 @@ Metadata:
       type: array
       label:
         en: Post-translational modifications
-        cs: Posttranslační modifikace
       hint:
         en: For example "Phosphorylation" or "Acetylation".
-        cs: Například „Fosforylace“ nebo „Acetylace“.
       items:
         type: fulltext+keyword
 
@@ -69,73 +62,60 @@ Metadata:
       required: true
       label:
         en: Principal investigator
-        cs: Hlavní řešitel
 
     sample_prepared_by:
       type: ContactPerson
       label:
         en: Sample prepared by
-        cs: Vzorek připravil
 
 MicrobiologyMetadata:
   type: object
   label:
     en: Microbiology
-    cs: Mikrobiologie
   properties:
     species_name:
       type: fulltext+keyword
       label:
         en: Species name
-        cs: Název druhu
       hint:
         en: Scientific name, e.g. "Escherichia coli".
-        cs: Vědecký název, např. „Escherichia coli“.
 
     cultivation_conditions:
       type: fulltext
       label:
         en: Cultivation conditions
-        cs: Podmínky kultivace
 
     extraction_protocol:
       type: fulltext
       label:
         en: Extraction protocol
-        cs: Extrakční protokol
 
 PlantBiologyMetadata:
   type: object
   label:
     en: Plant biology
-    cs: Biologie rostlin
   properties:
     species_name:
       type: fulltext+keyword
       label:
         en: Species name
-        cs: Název druhu
       hint:
         en: Scientific name, e.g. "Arabidopsis thaliana".
-        cs: Vědecký název, např. „Arabidopsis thaliana“.
 
     tissue:
       type: fulltext+keyword
       label:
         en: Tissue
-        cs: Tkáň
 
     collection_protocol:
       type: fulltext
       label:
         en: Collection protocol
-        cs: Protokol sběru
 
     extraction_protocol:
       type: fulltext
       label:
         en: Extraction protocol
-        cs: Extrakční protokol
 
 ContactPerson:
   type: object
@@ -145,7 +125,6 @@ ContactPerson:
       required: true
       label:
         en: Name
-        cs: Jméno
 
     email:
       type: keyword
@@ -153,16 +132,13 @@ ContactPerson:
       pattern: "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
       label:
         en: E-mail
-        cs: E-mail
 
     institution:
       type: fulltext+keyword
       label:
         en: Institution
-        cs: Instituce
 
     country:
       type: fulltext+keyword
       label:
         en: Country
-        cs: Země
