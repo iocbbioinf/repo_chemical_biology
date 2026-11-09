@@ -9,7 +9,7 @@ REPO="$(cd "$REPO" && pwd)"
 }
 
 if ! grep -q 'from invenio_i18n import lazy_gettext as _lab_' "$REPO/invenio.cfg"; then
-    cp --update=none "$REPO/invenio.cfg" "$REPO/invenio.cfg.before-lab-setup"
+    [[ -e "$REPO/invenio.cfg.before-lab-setup" ]] || cp "$REPO/invenio.cfg" "$REPO/invenio.cfg.before-lab-setup"
     cat >> "$REPO/invenio.cfg" <<'ROLECFG'
 
 from invenio_i18n import lazy_gettext as _lab_
