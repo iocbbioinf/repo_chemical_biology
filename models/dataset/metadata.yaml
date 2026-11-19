@@ -115,6 +115,12 @@ MicrobiologyMetadata:
       vocabulary-type: ncbitaxon
       label:
         en: Species name
+      # separate facet label: both species fields would otherwise be "Species name"
+      facet-def:
+        facet: invenio_records_resources.services.records.facets.TermsFacet
+        field: metadata.microbiology.species.id
+        label:
+          en: Species (microbiology)
       hint:
         en: NCBI Taxonomy, e.g. Escherichia coli. Other species can be typed in.
 
@@ -138,6 +144,12 @@ PlantBiologyMetadata:
       vocabulary-type: ncbitaxon
       label:
         en: Species name
+      # separate facet label: both species fields would otherwise be "Species name"
+      facet-def:
+        facet: invenio_records_resources.services.records.facets.TermsFacet
+        field: metadata.plant_biology.species.id
+        label:
+          en: Species (plant biology)
       hint:
         en: NCBI Taxonomy, e.g. Arabidopsis thaliana. Other species can be typed in.
 

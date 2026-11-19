@@ -1,2 +1,0 @@
-
-from ccmm_invenio.serializers import CCMMProductionDataCiteJSONSerializer_1_1_0 as DataCiteJSONSerializer
